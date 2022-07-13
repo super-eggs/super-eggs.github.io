@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Deploy - PHP的部署工具 | SuperEggs</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/log.ico" type="image/jpg">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script src="/js/jquery-3.5.min.js"></script>
+    <script src="/js/cursor.min.js"></script>
+    <meta name="description" content="分享生活高效技能,保持勇敢，坚持有趣，生命不息，折腾不止！">
+    <meta property="og:site_name" content="SuperEggs">
+    <meta property="og:title" content="Deploy - PHP的部署工具">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/Laravel_Package/deploy.html">
+    <meta name="twitter:title" content="Deploy - PHP的部署工具">
+    <meta name="twitter:url" content="/Laravel_Package/deploy.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="html,css,jquery,thinkphp,laravel,docker,linux,manjaro">
+    <meta name="auther" content="SuperEggs">
+    <link rel="preload" href="/assets/css/0.styles.5f689f29.css" as="style"><link rel="preload" href="/assets/js/app.693e6c19.js" as="script"><link rel="preload" href="/assets/js/2.3304c2e1.js" as="script"><link rel="preload" href="/assets/js/39.6b308832.js" as="script"><link rel="prefetch" href="/assets/js/10.34123518.js"><link rel="prefetch" href="/assets/js/11.f0e24eb8.js"><link rel="prefetch" href="/assets/js/12.5e75a974.js"><link rel="prefetch" href="/assets/js/13.db0bf381.js"><link rel="prefetch" href="/assets/js/14.ed324319.js"><link rel="prefetch" href="/assets/js/15.f40e8254.js"><link rel="prefetch" href="/assets/js/16.d8f963c5.js"><link rel="prefetch" href="/assets/js/17.250470cc.js"><link rel="prefetch" href="/assets/js/18.5161c52b.js"><link rel="prefetch" href="/assets/js/19.afb8dd7a.js"><link rel="prefetch" href="/assets/js/20.c8248808.js"><link rel="prefetch" href="/assets/js/21.e818d83d.js"><link rel="prefetch" href="/assets/js/22.69d0a99c.js"><link rel="prefetch" href="/assets/js/23.92b9837f.js"><link rel="prefetch" href="/assets/js/24.124a82a4.js"><link rel="prefetch" href="/assets/js/25.1c0271e6.js"><link rel="prefetch" href="/assets/js/26.34e44644.js"><link rel="prefetch" href="/assets/js/27.4f89b112.js"><link rel="prefetch" href="/assets/js/28.82ed427e.js"><link rel="prefetch" href="/assets/js/29.64fae044.js"><link rel="prefetch" href="/assets/js/3.1c0cc69b.js"><link rel="prefetch" href="/assets/js/30.dc7d1b9b.js"><link rel="prefetch" href="/assets/js/31.a273a940.js"><link rel="prefetch" href="/assets/js/32.ca99c448.js"><link rel="prefetch" href="/assets/js/33.4129d67d.js"><link rel="prefetch" href="/assets/js/34.a49e24e6.js"><link rel="prefetch" href="/assets/js/35.4ba458c0.js"><link rel="prefetch" href="/assets/js/36.7412ff8c.js"><link rel="prefetch" href="/assets/js/37.35c3a72c.js"><link rel="prefetch" href="/assets/js/38.ebf390fb.js"><link rel="prefetch" href="/assets/js/4.e5a930e9.js"><link rel="prefetch" href="/assets/js/40.968d571d.js"><link rel="prefetch" href="/assets/js/41.a1f587bf.js"><link rel="prefetch" href="/assets/js/42.9f358bc3.js"><link rel="prefetch" href="/assets/js/43.4f19f41e.js"><link rel="prefetch" href="/assets/js/44.a27ad98a.js"><link rel="prefetch" href="/assets/js/45.fb26a2d8.js"><link rel="prefetch" href="/assets/js/46.aa66c6d7.js"><link rel="prefetch" href="/assets/js/47.00ae1556.js"><link rel="prefetch" href="/assets/js/48.699e8e33.js"><link rel="prefetch" href="/assets/js/49.0f79ef04.js"><link rel="prefetch" href="/assets/js/5.2d78753d.js"><link rel="prefetch" href="/assets/js/50.2428dcc2.js"><link rel="prefetch" href="/assets/js/51.829dcccc.js"><link rel="prefetch" href="/assets/js/52.f2dfda6b.js"><link rel="prefetch" href="/assets/js/53.225de2db.js"><link rel="prefetch" href="/assets/js/54.b91ed453.js"><link rel="prefetch" href="/assets/js/55.25bacde7.js"><link rel="prefetch" href="/assets/js/56.2a58cece.js"><link rel="prefetch" href="/assets/js/57.48eab866.js"><link rel="prefetch" href="/assets/js/58.5cf8ca6e.js"><link rel="prefetch" href="/assets/js/59.458178cc.js"><link rel="prefetch" href="/assets/js/6.66329e4b.js"><link rel="prefetch" href="/assets/js/60.7898b9b9.js"><link rel="prefetch" href="/assets/js/61.5f651468.js"><link rel="prefetch" href="/assets/js/62.cd190cb0.js"><link rel="prefetch" href="/assets/js/63.0d472232.js"><link rel="prefetch" href="/assets/js/64.e8a8ffe7.js"><link rel="prefetch" href="/assets/js/65.8a66ff7d.js"><link rel="prefetch" href="/assets/js/66.0492741b.js"><link rel="prefetch" href="/assets/js/67.204dadcb.js"><link rel="prefetch" href="/assets/js/68.7d5b0a8f.js"><link rel="prefetch" href="/assets/js/69.ed735059.js"><link rel="prefetch" href="/assets/js/7.44229983.js"><link rel="prefetch" href="/assets/js/70.0f643f0b.js"><link rel="prefetch" href="/assets/js/71.a226be62.js"><link rel="prefetch" href="/assets/js/8.51a4d2f9.js"><link rel="prefetch" href="/assets/js/9.ee30d1ab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5f689f29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/log.png" alt="SuperEggs" class="logo"> <span class="site-name can-hide">SuperEggs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Laravel_Package</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Laravel_Package/" aria-current="page" class="sidebar-link">/Laravel_Package/</a></li><li><a href="/Laravel_Package/deploy.html" aria-current="page" class="active sidebar-link">Deploy - PHP的部署工具</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Laravel_Package/deploy.html#什么是-deploy" class="sidebar-link">什么是 Deploy？</a></li><li class="sidebar-sub-header"><a href="/Laravel_Package/deploy.html#入门指南" class="sidebar-link">入门指南</a></li><li class="sidebar-sub-header"><a href="/Laravel_Package/deploy.html#详细的官网文档" class="sidebar-link">详细的官网文档</a></li><li class="sidebar-sub-header"><a href="/Laravel_Package/deploy.html#laravel-demo" class="sidebar-link">Laravel Demo</a></li><li class="sidebar-sub-header"><a href="/Laravel_Package/deploy.html#常见问题" class="sidebar-link">常见问题：</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="deploy-php的部署工具"><a href="#deploy-php的部署工具" class="header-anchor">#</a> Deploy - PHP的部署工具</h1> <p>![image-20210624114126082](/Users/guozhiyuan/Library/Application Support/typora-user-images/image-20210624114126082.png)</p> <h2 id="什么是-deploy"><a href="#什么是-deploy" class="header-anchor">#</a> 什么是 Deploy？</h2> <p>以 PHP 编写的部署工具，支持开箱即用的热门框架。</p> <img src="/Users/guozhiyuan/Library/Application Support/typora-user-images/image-20210624114347263.png" alt="image-20210624114347263" style="zoom:33%;"> <h3 id="特征"><a href="#特征" class="header-anchor">#</a> 特征：</h3> <ul><li><strong>简单的</strong>设置过程和最小的学习曲线</li> <li>准备使用<strong>大多数框架的配置方法</strong></li> <li>不扩展的<strong>并行</strong>执行</li> <li>出什么事了？<strong>回滚</strong>到上一个版本</li> <li><strong>无需代理</strong>，这只是SSH</li> <li><strong>零停机时间</strong>部署</li></ul> <p>Deployer是一个 cli 工具，用于部署任何PHP应用程序，包括 Laravel, Symfony, Zend Framework 等框架。</p> <p>Deployer的主要概念是 recipe，这是一个包含任务定义的 php 文件。Recipe 可以要求其他配方和扩展/覆盖功能。下面是一个简单任务的例子：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>task<span class="token punctuation">(</span><span class="token string">'uptime'</span>, <span class="token function-name function">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token variable">$result</span> <span class="token operator">=</span> run<span class="token punctuation">(</span><span class="token string">'uptime'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    writeln<span class="token punctuation">(</span><span class="token string">&quot;{{hostname}} uptime: <span class="token variable">$result</span>&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="入门指南"><a href="#入门指南" class="header-anchor">#</a> 入门指南</h2> <h3 id="安装"><a href="#安装" class="header-anchor">#</a> 安装 ：</h3> <p>安装 Deploy 有三种方法：</p> <ol><li>下载 phar 归档</li> <li>源 composer 安装</li> <li>分布 composer 安装</li></ol> <h3 id="下载-phar-归档"><a href="#下载-phar-归档" class="header-anchor">#</a> 下载 phar 归档</h3> <p>要将 Deploy 安装为 phar 存档，运行以下命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">curl</span> -LO https://deployer.org/deployer.phar
+<span class="token function">mv</span> deployer.phar /usr/local/bin/dep
+<span class="token function">chmod</span> +x /usr/local/bin/dep
+</code></pre></div><p>如果您需要另一个版本的 Deploy ，您可以在<a href="https://deployer.org/download" target="_blank" rel="noopener noreferrer">下载页面<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>上找到它。稍后，要升级 Deploy ，运行命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>dep self-update
+</code></pre></div><p>若有需要，请升级到下一个主要版本，请使用该选项：<code>--upgrade (-u)</code></p> <div class="language-sh extra-class"><pre class="language-sh"><code>dep self-update --upgrade
+</code></pre></div><h3 id="源-composer-安装"><a href="#源-composer-安装" class="header-anchor">#</a> 源 composer 安装</h3> <p>要将部署源版本安装为&quot;Composer&quot;，可以运行命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>composer require deployer/deployer --dev
+</code></pre></div><p>您也可以在全局范围内安装它：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>composer global require deployer/deployer
+</code></pre></div><p>更多信息： https://getcomposer.org/doc/03-cli.md#global</p> <p>然后要使用 Deploy ，请运行以下命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>php vendor/bin/dep
+</code></pre></div><blockquote><p>如果您使用<strong>这两</strong>种方法安装了部署器，则运行命令将更喜欢 Composer 安装的版本。<code>dep</code></p></blockquote> <blockquote><p>如果您有依赖冲突，您可以使用&quot;分配作曲家安装&quot;</p></blockquote> <h3 id="分配作曲家安装"><a href="#分配作曲家安装" class="header-anchor">#</a> 分配作曲家安装</h3> <p>要将Deploy 分发版本安装为&quot;Composer &quot;，要运行命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>composer require deployer/dist --dev
+</code></pre></div><p>然后要使用 Deploy ，请运行以下命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>php vendor/bin/dep
+</code></pre></div><h3 id="自己的构建phar"><a href="#自己的构建phar" class="header-anchor">#</a> 自己的构建phar</h3> <p>如果您想从源代码构建部署程序，则从 GitHub 克隆项目：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">git</span> clone https://github.com/deployphp/deployer.git
+</code></pre></div><p>然后在项目目录中运行以下命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>php bin/build
+</code></pre></div><p>这将构建法尔档案。<code>deployer.phar</code></p> <h3 id="自动完成"><a href="#自动完成" class="header-anchor">#</a> 自动完成</h3> <p>部署器附带一个自动完成脚本的 bash/zsh/fish,，所以你不需要记住所有的任务和选项。要安装，运行以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>dep autocomplete
+</code></pre></div><p>并按照说明操作。</p> <h2 id="详细的官网文档"><a href="#详细的官网文档" class="header-anchor">#</a> 详细的官网文档</h2> <p><a href="https://deployer.org/docs/getting-started.html" target="_blank" rel="noopener noreferrer">Getting Started | Deployer – A deployment tool for php<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="laravel-demo"><a href="#laravel-demo" class="header-anchor">#</a> Laravel Demo</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword">namespace</span> <span class="token package">Deployer</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 引入官方的 Laravel 部署脚本</span>
+<span class="token keyword">require</span> <span class="token single-quoted-string string">'recipe/laravel.php'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Project name</span>
+<span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'application'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'yikaowang'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 设置一个名为 repository，值为初始化脚本时输入的 github 仓库地址</span>
+<span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'repository'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'git@gitee.com:pulapula/yikaowang.git'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// [Optional] Allocate tty for git clone. Default value is false. </span>
+
+<span class="token comment">// Shared files/dirs between deploys  这两个环境变量是数组格式，add 函数可以往数组里添加值</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'shared_files'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'shared_dirs'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Deployer 会把这个变量下的目录加上写权限</span>
+<span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'writable_dirs'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// Hosts</span>
+<span class="token function">host</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'xxx.xxx.xxx.xxx'</span><span class="token punctuation">)</span>
+    <span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">user</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'root'</span><span class="token punctuation">)</span>
+    <span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'branch'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'master'</span><span class="token punctuation">)</span>
+    <span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">identityFile</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'~/.ssh/xxx.pem'</span><span class="token punctuation">)</span>
+    <span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">become</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'www-data'</span><span class="token punctuation">)</span>
+    <span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy_path'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'/var/www/xxxx-dep'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+
+
+    <span class="token comment">// 定义一个前端编译的任务</span>
+<span class="token function">desc</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'Yarn'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">task</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:yarn'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// release_path 是 Deployer 的一个内部变量，代表当前代码目录路径</span>
+    <span class="token comment">// run() 的默认超时时间是 5 分钟，而 yarn 相关的操作又比较费时，因此我们在第二个参数传入 timeout = 600，指定这个命令的超时时间是 10 分钟</span>
+    <span class="token function">run</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'cd {{release_path}} &amp;&amp; SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass yarn &amp;&amp; yarn production'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">'timeout'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token number">600</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+
+<span class="token comment">// 定义一个后置钩子，当 deploy:failed 任务被执行之后，Deployer 会执行 deploy:unlock 任务</span>
+<span class="token function">after</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:failed'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'deploy:unlock'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定义一个上传 .env 文件的任务</span>
+<span class="token function">desc</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'Upload .env file'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">task</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'env:upload'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 将本地的 .env 文件上传到代码目录的 .env</span>
+    <span class="token function">upload</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'.env'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'{{release_path}}/.env'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定义一个后置钩子，在 deploy:shared 之后执行 env:upload 任务</span>
+<span class="token function">after</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:shared'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'env:upload'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// 定义一个前置钩子，在执行 deploy:symlink 任务之前先执行 artisan:migrate</span>
+<span class="token function">before</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:symlink'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'artisan:migrate'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">desc</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'Restart Horizon'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">task</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'horizon:terminate'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">run</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'{{bin/php}} {{release_path}}/artisan horizon:terminate'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 在 deploy:symlink 任务之后执行 horizon:terminate 任务</span>
+<span class="token function">after</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:symlink'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'horizon:terminate'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 顺便把 composer 的 vendor 目录也加进来</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'copy_dirs'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">'node_modules'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'vendor'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 在 deploy:vendors 之前调用 deploy:copy_dirs</span>
+<span class="token function">before</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:vendors'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'deploy:copy_dirs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定义一个后置钩子，在 deploy:vendors 之后执行 deploy:yarn 任务</span>
+<span class="token function">after</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:vendors'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'deploy:yarn'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</span></code></pre></div><h2 id="常见问题"><a href="#常见问题" class="header-anchor">#</a> 常见问题：</h2> <h3 id="秘钥权限太开放了-报错-warning-unprotected-private-key-file"><a href="#秘钥权限太开放了-报错-warning-unprotected-private-key-file" class="header-anchor">#</a> 秘钥权限太开放了,报错 WARNING: UNPROTECTED PRIVATE KEY FILE!</h3> <div class="language-jsx extra-class"><pre class="language-jsx"><code>The command <span class="token string">&quot;rm -f /root/wwwroot/blog/.dep/deploy.lock&quot;</span> failed<span class="token punctuation">.</span>
+
+  Exit Code<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">(</span>Unknown error<span class="token punctuation">)</span>
+
+  Host Name<span class="token operator">:</span> xx<span class="token punctuation">.</span>xx<span class="token punctuation">.</span>xxx<span class="token punctuation">.</span>xx
+
+  <span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">===</span><span class="token operator">=</span>
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @         <span class="token constant">WARNING</span><span class="token operator">:</span> <span class="token constant">UNPROTECTED</span> <span class="token constant">PRIVATE</span> <span class="token constant">KEY</span> <span class="token constant">FILE</span><span class="token operator">!</span>          @
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  Permissions <span class="token number">0644</span> <span class="token keyword">for</span> <span class="token string">'/root/.ssh/supereggs.pem'</span> are too open<span class="token punctuation">.</span>
+  It is required that your <span class="token keyword">private</span> key files are <span class="token constant">NOT</span> accessible by others<span class="token punctuation">.</span>
+  This <span class="token keyword">private</span> key will be ignored<span class="token punctuation">.</span>
+  Load key <span class="token string">&quot;/root/.ssh/supereggs.pem&quot;</span><span class="token operator">:</span> bad permissions
+  root@xxx<span class="token punctuation">.</span>xxx<span class="token punctuation">.</span>xxx<span class="token punctuation">.</span>xxx<span class="token operator">:</span> Permission <span class="token function">denied</span> <span class="token punctuation">(</span>publickey<span class="token punctuation">,</span>gssapi<span class="token operator">-</span>keyex<span class="token punctuation">,</span>gssapi<span class="token operator">-</span><span class="token keyword">with</span><span class="token operator">-</span>mi
+  c<span class="token punctuation">)</span><span class="token punctuation">.</span>
+</code></pre></div><p>秘钥权限太开放了,需要执行</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code>chmod <span class="token number">700</span> supereggs<span class="token punctuation">.</span>pem
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/super-eggs/vuepress-blog/edit/master/docs/Laravel_Package/deploy.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Laravel_Package/" class="prev router-link-active">
+        /Laravel_Package/
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.693e6c19.js" defer></script><script src="/assets/js/2.3304c2e1.js" defer></script><script src="/assets/js/39.6b308832.js" defer></script>
+  </body>
+</html>

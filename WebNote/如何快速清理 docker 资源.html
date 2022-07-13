@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何快速清理 docker 资源 | SuperEggs</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/log.ico" type="image/jpg">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script src="/js/jquery-3.5.min.js"></script>
+    <script src="/js/cursor.min.js"></script>
+    <meta name="description" content="分享生活高效技能,保持勇敢，坚持有趣，生命不息，折腾不止！">
+    <meta property="og:site_name" content="SuperEggs">
+    <meta property="og:title" content="如何快速清理 docker 资源">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/WebNote/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%B8%85%E7%90%86%20docker%20%E8%B5%84%E6%BA%90.html">
+    <meta name="twitter:title" content="如何快速清理 docker 资源">
+    <meta name="twitter:url" content="/WebNote/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%B8%85%E7%90%86%20docker%20%E8%B5%84%E6%BA%90.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="html,css,jquery,thinkphp,laravel,docker,linux,manjaro">
+    <meta name="auther" content="SuperEggs">
+    <link rel="preload" href="/assets/css/0.styles.5f689f29.css" as="style"><link rel="preload" href="/assets/js/app.693e6c19.js" as="script"><link rel="preload" href="/assets/js/2.3304c2e1.js" as="script"><link rel="preload" href="/assets/js/67.204dadcb.js" as="script"><link rel="prefetch" href="/assets/js/10.34123518.js"><link rel="prefetch" href="/assets/js/11.f0e24eb8.js"><link rel="prefetch" href="/assets/js/12.5e75a974.js"><link rel="prefetch" href="/assets/js/13.db0bf381.js"><link rel="prefetch" href="/assets/js/14.ed324319.js"><link rel="prefetch" href="/assets/js/15.f40e8254.js"><link rel="prefetch" href="/assets/js/16.d8f963c5.js"><link rel="prefetch" href="/assets/js/17.250470cc.js"><link rel="prefetch" href="/assets/js/18.5161c52b.js"><link rel="prefetch" href="/assets/js/19.afb8dd7a.js"><link rel="prefetch" href="/assets/js/20.c8248808.js"><link rel="prefetch" href="/assets/js/21.e818d83d.js"><link rel="prefetch" href="/assets/js/22.69d0a99c.js"><link rel="prefetch" href="/assets/js/23.92b9837f.js"><link rel="prefetch" href="/assets/js/24.124a82a4.js"><link rel="prefetch" href="/assets/js/25.1c0271e6.js"><link rel="prefetch" href="/assets/js/26.34e44644.js"><link rel="prefetch" href="/assets/js/27.4f89b112.js"><link rel="prefetch" href="/assets/js/28.82ed427e.js"><link rel="prefetch" href="/assets/js/29.64fae044.js"><link rel="prefetch" href="/assets/js/3.1c0cc69b.js"><link rel="prefetch" href="/assets/js/30.dc7d1b9b.js"><link rel="prefetch" href="/assets/js/31.a273a940.js"><link rel="prefetch" href="/assets/js/32.ca99c448.js"><link rel="prefetch" href="/assets/js/33.4129d67d.js"><link rel="prefetch" href="/assets/js/34.a49e24e6.js"><link rel="prefetch" href="/assets/js/35.4ba458c0.js"><link rel="prefetch" href="/assets/js/36.7412ff8c.js"><link rel="prefetch" href="/assets/js/37.35c3a72c.js"><link rel="prefetch" href="/assets/js/38.ebf390fb.js"><link rel="prefetch" href="/assets/js/39.6b308832.js"><link rel="prefetch" href="/assets/js/4.e5a930e9.js"><link rel="prefetch" href="/assets/js/40.968d571d.js"><link rel="prefetch" href="/assets/js/41.a1f587bf.js"><link rel="prefetch" href="/assets/js/42.9f358bc3.js"><link rel="prefetch" href="/assets/js/43.4f19f41e.js"><link rel="prefetch" href="/assets/js/44.a27ad98a.js"><link rel="prefetch" href="/assets/js/45.fb26a2d8.js"><link rel="prefetch" href="/assets/js/46.aa66c6d7.js"><link rel="prefetch" href="/assets/js/47.00ae1556.js"><link rel="prefetch" href="/assets/js/48.699e8e33.js"><link rel="prefetch" href="/assets/js/49.0f79ef04.js"><link rel="prefetch" href="/assets/js/5.2d78753d.js"><link rel="prefetch" href="/assets/js/50.2428dcc2.js"><link rel="prefetch" href="/assets/js/51.829dcccc.js"><link rel="prefetch" href="/assets/js/52.f2dfda6b.js"><link rel="prefetch" href="/assets/js/53.225de2db.js"><link rel="prefetch" href="/assets/js/54.b91ed453.js"><link rel="prefetch" href="/assets/js/55.25bacde7.js"><link rel="prefetch" href="/assets/js/56.2a58cece.js"><link rel="prefetch" href="/assets/js/57.48eab866.js"><link rel="prefetch" href="/assets/js/58.5cf8ca6e.js"><link rel="prefetch" href="/assets/js/59.458178cc.js"><link rel="prefetch" href="/assets/js/6.66329e4b.js"><link rel="prefetch" href="/assets/js/60.7898b9b9.js"><link rel="prefetch" href="/assets/js/61.5f651468.js"><link rel="prefetch" href="/assets/js/62.cd190cb0.js"><link rel="prefetch" href="/assets/js/63.0d472232.js"><link rel="prefetch" href="/assets/js/64.e8a8ffe7.js"><link rel="prefetch" href="/assets/js/65.8a66ff7d.js"><link rel="prefetch" href="/assets/js/66.0492741b.js"><link rel="prefetch" href="/assets/js/68.7d5b0a8f.js"><link rel="prefetch" href="/assets/js/69.ed735059.js"><link rel="prefetch" href="/assets/js/7.44229983.js"><link rel="prefetch" href="/assets/js/70.0f643f0b.js"><link rel="prefetch" href="/assets/js/71.a226be62.js"><link rel="prefetch" href="/assets/js/8.51a4d2f9.js"><link rel="prefetch" href="/assets/js/9.ee30d1ab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5f689f29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/log.png" alt="SuperEggs" class="logo"> <span class="site-name can-hide">SuperEggs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link router-link-active">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link router-link-active">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>WebNote</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/WebNote/Git webhook 实现自动部署教程.html" class="sidebar-link">Git webhook 实现自动部署教程</a></li><li><a href="/WebNote/Git 配置多个 SSH-Key.html" class="sidebar-link">Git 配置多个 SSH-Key</a></li><li><a href="/WebNote/" aria-current="page" class="sidebar-link">WebNote</a></li><li><a href="/WebNote/UserAgent.html" class="sidebar-link">UserAgent</a></li><li><a href="/WebNote/php中call_user_func 与 call_user_func_array的使用 .html" class="sidebar-link">php-calluserfunc使用</a></li><li><a href="/WebNote/十个催泪虐心的小故事.html" class="sidebar-link">十个催泪虐心的小故事</a></li><li><a href="/WebNote/如何快速清理 docker 资源.html" class="active sidebar-link">如何快速清理 docker 资源</a></li><li><a href="/WebNote/打包压缩命令.html" class="sidebar-link">linux常用打包压缩格式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>如果经常使用 docker，你会发现 docker 占用的资源膨胀很快，其中最明显也最容易被察觉的应该是对磁盘空间的占用。本文将介绍如何快速的清理 docker 占用的系统资源，具体点说就是删除那些无用的 镜像、容器、网络和数据卷。</p> <h1 id="查看-docker-占用的资源"><a href="#查看-docker-占用的资源" class="header-anchor">#</a> 查看 docker 占用的资源</h1> <p>在进行资源清理之前我们有必要搞清楚 docker 都占用了哪些系统的资源。这需要综合使用不同的命令来完成。<br> <strong>docker container ls</strong>：默认只列出正在运行的容器，-a 选项会列出包括停止的所有容器。<br> <strong>docker image ls</strong>：列出镜像信息，-a 选项会列出 intermediate 镜像(就是其它镜像依赖的层)。<br> <strong>docker volume ls</strong>：列出数据卷。<br> <strong>docker network ls</strong>：列出 network。<br> <strong>docker info</strong>：显示系统级别的信息，比如容器和镜像的数量等。</p> <p>通过这些命令查看 docker 使用的资源情况后，相信你已经决定要清理 docker 占用的一些资源了！让我们先从那些未被使用的资源开始。</p> <h1 id="只删除那些未被使用的资源"><a href="#只删除那些未被使用的资源" class="header-anchor">#</a> 只删除那些未被使用的资源</h1> <p>Docker 提供了方便的 docker system prune 命令来删除那些已停止的容器、dangling 镜像、未被容器引用的 network 和构建过程中的 cache：</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker system prune
+</code></pre></div><p><img src="https://images2018.cnblogs.com/blog/952033/201806/952033-20180613130828003-525835614.png" alt=""></p> <p>安全起见，这个命令默认不会删除那些未被任何容器引用的数据卷，如果需要同时删除这些数据卷，你需要显式的指定 --volumns 参数。比如你可能想要执行下面的命令：</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker system prune --all --force --volumes
+</code></pre></div><p>这次不仅会删除数据卷，而且连确认的过程都没有了！注意，使用 --all 参数后会删除所有未被引用的镜像而不仅仅是 dangling 镜像。<br>
+这里有必要解释一下何为 dangling images，其实可以简单的理解为未被任何镜像引用的镜像。比如在你重新构建了镜像后，那些之前构建的且不再被引用的镜像层就变成了 dangling images：</p> <p><img src="https://images2018.cnblogs.com/blog/952033/201806/952033-20180613130913846-62053387.png" alt=""></p> <p>在本地的镜像更新之后，就会出现类似图中红框内的 <none> 镜像。这表示旧的镜像已经不再被引用了，此时它们就变成了 dangling images。如果使用 -a 参数，你还会发现另外一种类型的 <none> 镜像，它们的 repository 和 tag 列都表现为 <none>：</none></none></none></p> <p><img src="https://images2018.cnblogs.com/blog/952033/201806/952033-20180613130946874-1564572085.png" alt=""></p> <p>这些镜像被称为 intermediate 镜像(就是其它镜像依赖的层)。</p> <p>我们还可在不同在子命令下执行 prune，这样删除的就是某类资源：<br> <strong>docker container prune</strong> # 删除所有退出状态的容器<br> <strong>docker volume prune</strong> # 删除未被使用的数据卷<br> <strong>docker image prune</strong> # 删除 dangling 或所有未被使用的镜像</p> <h1 id="让-docker-回到安装时的状态"><a href="#让-docker-回到安装时的状态" class="header-anchor">#</a> 让 docker 回到安装时的状态</h1> <p>这里的 &quot;安装时的状态&quot; 指资源占用情况而不是 docker 的相关配置。这也是一种比较常见的用例，比如笔者就需要在一个干净的 docker 环境中自动化的还原出某天的一个生产环境(使用生产环境的备份数据)用于 bug 调查。让我们一起来看看都需要做些什么？<br>
+回想我们前面介绍的 docker system prune --all --force --volumns 命令，如果在执行这个命令前系统中所有的容器都已停止，那么这个命令就会移除所有的资源！好，现在让我们想办法停掉系统中的所有容器。<br>
+docker container stop 命令可以停止一个或多个容器，我们只需要把系统中所有在运行的容器罗列出来就可以了。由于 docker 并不介意我们再次停止一个已经停止了的容器，干脆简单粗暴点，直接列出所有的容器(包括已经停止的)！</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker container ls -a -q
+</code></pre></div><p><img src="https://images2018.cnblogs.com/blog/952033/201806/952033-20180613131104642-45170848.png" alt=""></p> <p>-a 显示所有的容器，-q 只显示数字形式的容器 ID。<br>
+然后把这里命令执行的结果作为 docker container stop 命令的参数：</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker container stop $(docker container ls -a -q)
+</code></pre></div><p>完整的恢复 docker 环境的命令如下：</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker container stop $(docker container ls -a -q) &amp;&amp; docker system prune --all --force --volumns
+</code></pre></div><p>和前面的 prune 命令类似，也可以完全删除某一类资源：<br> <strong>删除容器</strong>：docker container rm $(docker container ls -a -q)<br> <strong>删除镜像</strong>：docker image rm $(docker image ls -a -q)<br> <strong>删除数据卷</strong>：docker volume rm $(docker volume ls -q)<br> <strong>删除 network</strong>：docker network rm $(docker network ls -q)</p> <h1 id="创建-shell-别名"><a href="#创建-shell-别名" class="header-anchor">#</a> 创建 shell 别名</h1> <p>上面的命令可以完成任务但是却很繁琐，我们可以通过 shell 的别名功能来简化这些命令的执行。</p> <div class="language- extra-class"><pre class="language-text"><code>alias docker-clean-unused='docker system prune --all --force --volumes'
+alias docker-clean-all='docker stop $(docker container ls -a -q) &amp;&amp; docker system prune --all --force --volumes'
+</code></pre></div><p>把上面的命令写入到用户的 ~/.bashrc 文件中就可以了！</p> <p><img src="https://images2018.cnblogs.com/blog/952033/201806/952033-20180613131228852-299627938.png" alt=""></p> <p>执行一次清理任务：</p> <p><img src="https://images2018.cnblogs.com/blog/952033/201806/952033-20180613131304527-2111007780.png" alt=""></p> <h1 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h1> <p>经常清理系统资源不仅能够让系统运行的更流畅，也利于我们把精力集中在相关的重点资源上面。所以建议大家能够使用相关的资源清理命令，让 docker 保持清爽和高效。</p> <p><strong>参考：</strong><br> <a href="https://hackernoon.com/clean-out-your-docker-images-containers-and-volumes-with-single-commands-b8e38253c271" target="_blank" rel="noopener noreferrer">Clean out your Docker images, containers and volumes with single commands<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/super-eggs/vuepress-blog/edit/master/docs/WebNote/如何快速清理 docker 资源.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/WebNote/十个催泪虐心的小故事.html" class="prev">
+        十个催泪虐心的小故事
+      </a></span> <span class="next"><a href="/WebNote/打包压缩命令.html">
+        linux常用打包压缩格式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.693e6c19.js" defer></script><script src="/assets/js/2.3304c2e1.js" defer></script><script src="/assets/js/67.204dadcb.js" defer></script>
+  </body>
+</html>

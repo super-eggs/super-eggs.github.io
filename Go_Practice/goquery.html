@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>goquery selector(选择器) 示例 | SuperEggs</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/log.ico" type="image/jpg">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script src="/js/jquery-3.5.min.js"></script>
+    <script src="/js/cursor.min.js"></script>
+    <meta name="description" content="分享生活高效技能,保持勇敢，坚持有趣，生命不息，折腾不止！">
+    <meta property="og:site_name" content="SuperEggs">
+    <meta property="og:title" content="goquery selector(选择器) 示例">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/Go_Practice/goquery.html">
+    <meta name="twitter:title" content="goquery selector(选择器) 示例">
+    <meta name="twitter:url" content="/Go_Practice/goquery.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="html,css,jquery,thinkphp,laravel,docker,linux,manjaro">
+    <meta name="auther" content="SuperEggs">
+    <link rel="preload" href="/assets/css/0.styles.5f689f29.css" as="style"><link rel="preload" href="/assets/js/app.693e6c19.js" as="script"><link rel="preload" href="/assets/js/2.3304c2e1.js" as="script"><link rel="preload" href="/assets/js/34.a49e24e6.js" as="script"><link rel="prefetch" href="/assets/js/10.34123518.js"><link rel="prefetch" href="/assets/js/11.f0e24eb8.js"><link rel="prefetch" href="/assets/js/12.5e75a974.js"><link rel="prefetch" href="/assets/js/13.db0bf381.js"><link rel="prefetch" href="/assets/js/14.ed324319.js"><link rel="prefetch" href="/assets/js/15.f40e8254.js"><link rel="prefetch" href="/assets/js/16.d8f963c5.js"><link rel="prefetch" href="/assets/js/17.250470cc.js"><link rel="prefetch" href="/assets/js/18.5161c52b.js"><link rel="prefetch" href="/assets/js/19.afb8dd7a.js"><link rel="prefetch" href="/assets/js/20.c8248808.js"><link rel="prefetch" href="/assets/js/21.e818d83d.js"><link rel="prefetch" href="/assets/js/22.69d0a99c.js"><link rel="prefetch" href="/assets/js/23.92b9837f.js"><link rel="prefetch" href="/assets/js/24.124a82a4.js"><link rel="prefetch" href="/assets/js/25.1c0271e6.js"><link rel="prefetch" href="/assets/js/26.34e44644.js"><link rel="prefetch" href="/assets/js/27.4f89b112.js"><link rel="prefetch" href="/assets/js/28.82ed427e.js"><link rel="prefetch" href="/assets/js/29.64fae044.js"><link rel="prefetch" href="/assets/js/3.1c0cc69b.js"><link rel="prefetch" href="/assets/js/30.dc7d1b9b.js"><link rel="prefetch" href="/assets/js/31.a273a940.js"><link rel="prefetch" href="/assets/js/32.ca99c448.js"><link rel="prefetch" href="/assets/js/33.4129d67d.js"><link rel="prefetch" href="/assets/js/35.4ba458c0.js"><link rel="prefetch" href="/assets/js/36.7412ff8c.js"><link rel="prefetch" href="/assets/js/37.35c3a72c.js"><link rel="prefetch" href="/assets/js/38.ebf390fb.js"><link rel="prefetch" href="/assets/js/39.6b308832.js"><link rel="prefetch" href="/assets/js/4.e5a930e9.js"><link rel="prefetch" href="/assets/js/40.968d571d.js"><link rel="prefetch" href="/assets/js/41.a1f587bf.js"><link rel="prefetch" href="/assets/js/42.9f358bc3.js"><link rel="prefetch" href="/assets/js/43.4f19f41e.js"><link rel="prefetch" href="/assets/js/44.a27ad98a.js"><link rel="prefetch" href="/assets/js/45.fb26a2d8.js"><link rel="prefetch" href="/assets/js/46.aa66c6d7.js"><link rel="prefetch" href="/assets/js/47.00ae1556.js"><link rel="prefetch" href="/assets/js/48.699e8e33.js"><link rel="prefetch" href="/assets/js/49.0f79ef04.js"><link rel="prefetch" href="/assets/js/5.2d78753d.js"><link rel="prefetch" href="/assets/js/50.2428dcc2.js"><link rel="prefetch" href="/assets/js/51.829dcccc.js"><link rel="prefetch" href="/assets/js/52.f2dfda6b.js"><link rel="prefetch" href="/assets/js/53.225de2db.js"><link rel="prefetch" href="/assets/js/54.b91ed453.js"><link rel="prefetch" href="/assets/js/55.25bacde7.js"><link rel="prefetch" href="/assets/js/56.2a58cece.js"><link rel="prefetch" href="/assets/js/57.48eab866.js"><link rel="prefetch" href="/assets/js/58.5cf8ca6e.js"><link rel="prefetch" href="/assets/js/59.458178cc.js"><link rel="prefetch" href="/assets/js/6.66329e4b.js"><link rel="prefetch" href="/assets/js/60.7898b9b9.js"><link rel="prefetch" href="/assets/js/61.5f651468.js"><link rel="prefetch" href="/assets/js/62.cd190cb0.js"><link rel="prefetch" href="/assets/js/63.0d472232.js"><link rel="prefetch" href="/assets/js/64.e8a8ffe7.js"><link rel="prefetch" href="/assets/js/65.8a66ff7d.js"><link rel="prefetch" href="/assets/js/66.0492741b.js"><link rel="prefetch" href="/assets/js/67.204dadcb.js"><link rel="prefetch" href="/assets/js/68.7d5b0a8f.js"><link rel="prefetch" href="/assets/js/69.ed735059.js"><link rel="prefetch" href="/assets/js/7.44229983.js"><link rel="prefetch" href="/assets/js/70.0f643f0b.js"><link rel="prefetch" href="/assets/js/71.a226be62.js"><link rel="prefetch" href="/assets/js/8.51a4d2f9.js"><link rel="prefetch" href="/assets/js/9.ee30d1ab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5f689f29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/log.png" alt="SuperEggs" class="logo"> <span class="site-name can-hide">SuperEggs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link router-link-active">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link router-link-active">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Go_Practice</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Go_Practice/Chromedp.html" class="sidebar-link">Chromedp 小尝试</a></li><li><a href="/Go_Practice/Cobra.html" class="sidebar-link">golang命令行库Cobra的使用</a></li><li><a href="/Go_Practice/" aria-current="page" class="sidebar-link">colly介绍</a></li><li><a href="/Go_Practice/Singo.html" class="sidebar-link">Singo 使用手册</a></li><li><a href="/Go_Practice/go-gin-api.html" class="sidebar-link">go-gin-api</a></li><li><a href="/Go_Practice/goquery.html" aria-current="page" class="active sidebar-link">goquery selector(选择器) 示例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#基于html-element-元素的选择器" class="sidebar-link">基于HTML Element 元素的选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#id-选择器" class="sidebar-link">ID 选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#element-id-选择器" class="sidebar-link">Element ID 选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#class选择器" class="sidebar-link">Class选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#element-class-选择器" class="sidebar-link">Element Class 选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#属性选择器" class="sidebar-link">属性选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#parent-child选择器" class="sidebar-link">parent&gt;child选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#prev-next相邻选择器" class="sidebar-link">prev+next相邻选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#prev-next选择器" class="sidebar-link">prev~next选择器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#内容过滤器" class="sidebar-link">内容过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#first-child过滤器" class="sidebar-link">:first-child过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#first-of-type过滤器" class="sidebar-link">:first-of-type过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#last-child-和-last-of-type过滤器" class="sidebar-link">:last-child 和 :last-of-type过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#nth-child-n-过滤器" class="sidebar-link">:nth-child(n) 过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#nth-of-type-n-过滤器" class="sidebar-link">:nth-of-type(n) 过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#nth-last-child-n-和-nth-last-of-type-n-过滤器" class="sidebar-link">nth-last-child(n) 和:nth-last-of-type(n) 过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#only-child-过滤器" class="sidebar-link">:only-child 过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#only-of-type-过滤器" class="sidebar-link">:only-of-type 过滤器</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#选择器或-运算" class="sidebar-link">选择器或(|)运算</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/goquery.html#小结" class="sidebar-link">小结</a></li></ul></li><li><a href="/Go_Practice/gui-walk.html" class="sidebar-link">使用golang制作GUI图形界面</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="goquery-selector-选择器-示例"><a href="#goquery-selector-选择器-示例" class="header-anchor">#</a> goquery selector(选择器) 示例</h1> <blockquote><p>文章转载自：http://www.flysnow.org/</p></blockquote> <p>最近研究Go爬虫相关的知识，使用到goquery这个库比较多，尤其是对爬取到的HTML进行选择和查找匹配的内容时，goquery的选择器使用尤其多，而且还有很多不常用但又很有用的选择器，这里总结下，以供参考。</p> <p>如果大家以前做过前端开发，对jquery不会陌生，goquery类似jquery，它是jquery的go版本实现。使用它，可以很方便的对HTML进行处理。</p> <h2 id="基于html-element-元素的选择器"><a href="#基于html-element-元素的选择器" class="header-anchor">#</a> 基于HTML Element 元素的选择器</h2> <p>这个比较简单，就是基于<code>a</code>,<code>p</code>等这些HTML的基本元素进行选择，这种直接使用Element名称作为选择器即可。比如<code>dom.Find(&quot;div&quot;)</code>。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div&gt;DIV1&lt;/div&gt;
+				&lt;div&gt;DIV2&lt;/div&gt;
+				&lt;span&gt;SPAN&lt;/span&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>以上示例，可以把<code>div</code>元素筛选出来，而<code>body</code>,<code>span</code>并不会被筛选。</p> <h2 id="id-选择器"><a href="#id-选择器" class="header-anchor">#</a> ID 选择器</h2> <p>这个是使用频次最多的，类似于上面的例子，有两个<code>div</code>元素，其实我们只需要其中的一个，那么我们只需要给这个标记一个唯一的<code>id</code>即可，这样我们就可以使用<code>id</code>选择器，精确定位了。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div id=&quot;div1&quot;&gt;DIV1&lt;/div&gt;
+				&lt;div&gt;DIV2&lt;/div&gt;
+				&lt;span&gt;SPAN&lt;/span&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;#div1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="element-id-选择器"><a href="#element-id-选择器" class="header-anchor">#</a> Element ID 选择器</h2> <p><code>id</code>选择器以<code>#</code>开头，紧跟着元素<code>id</code>的值，使用语法为<code>dom.Find(#id)</code>,后面的例子我会简写为<code>Find(#id)</code>,大家知道这是代表goquery选择器的即可。</p> <p>如果有相同的ID，但是它们又分别属于不同的HTML元素怎么办？有好办法，和Element结合起来。比如我们筛选元素为<code>div</code>,并且<code>id</code>是<code>div1</code>的元素，就可以使用<code>Find(div#div1)</code>这样的筛选器进行筛选。</p> <p>所以这类筛选器的语法为<code>Find(element#id)</code>，这是常用的组合方法，比如后面讲的过滤器也可以采用这种方式组合使用。</p> <h2 id="class选择器"><a href="#class选择器" class="header-anchor">#</a> Class选择器</h2> <p><code>class</code>也是HTML中常用的属性，我们可以通过<code>class</code>选择器来快速的筛选需要的HTML元素，它的用法和<code>ID</code>选择器类似，为<code>Find(&quot;.class&quot;)</code>。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div id=&quot;div1&quot;&gt;DIV1&lt;/div&gt;
+				&lt;div class=&quot;name&quot;&gt;DIV2&lt;/div&gt;
+				&lt;span&gt;SPAN&lt;/span&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;.name&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>以上示例中，就筛选出来<code>class</code>为<code>name</code>的这个<code>div</code>元素。</p> <h2 id="element-class-选择器"><a href="#element-class-选择器" class="header-anchor">#</a> Element Class 选择器</h2> <p><code>class</code>选择器和<code>id</code>选择器一样，也可以结合着HTML元素使用，他们的语法也类似<code>Find(element.class)</code>，这样就可以筛选特定element、并且指定class的元素。</p> <h2 id="属性选择器"><a href="#属性选择器" class="header-anchor">#</a> 属性选择器</h2> <p>一个HTML元素都有自己的属性以及属性值，所以我们也可以通过属性和值筛选元素。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div&gt;DIV1&lt;/div&gt;
+				&lt;div class=&quot;name&quot;&gt;DIV2&lt;/div&gt;
+				&lt;span&gt;SPAN&lt;/span&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div[class]&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>示例中我们通过<code>div[class]</code>这个选择器，筛选出Element为<code>div</code>并且有<code>class</code>这个属性的，所以第一个<code>div</code>没有被筛选到。</p> <p>刚刚上面这个示例是采用是否存在某个属性为筛选器，同理，我们可以筛选出属性为某个值的元素。</p> <div class="language-go extra-class"><pre class="language-go"><code>dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div[class=name]&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>这样我们就可以筛选出<code>class</code>这个属性值为<code>name</code>的<code>div</code>元素。</p> <p>当然我们这里以<code>class</code>属性为例，还可以用其他属性，比如<code>href</code>等很多，自定义属性也是可以的。</p> <p>除了完全相等，还有其他匹配方式，使用方式类似，这里统一列举下，不再举例</p> <table><thead><tr><th style="text-align:left;">选择器</th> <th style="text-align:left;">说明</th></tr></thead> <tbody><tr><td style="text-align:left;">Find(“div[lang]&quot;)</td> <td style="text-align:left;">筛选含有lang属性的div元素</td></tr> <tr><td style="text-align:left;">Find(“div[lang=zh]&quot;)</td> <td style="text-align:left;">筛选lang属性为zh的div元素</td></tr> <tr><td style="text-align:left;">Find(“div[lang!=zh]&quot;)</td> <td style="text-align:left;">筛选lang属性不等于zh的div元素</td></tr> <tr><td style="text-align:left;">Find(“div[lang¦=zh]&quot;)</td> <td style="text-align:left;">筛选lang属性为zh或者zh-开头的div元素</td></tr> <tr><td style="text-align:left;">Find(“div[lang*=zh]&quot;)</td> <td style="text-align:left;">筛选lang属性包含zh这个字符串的div元素</td></tr> <tr><td style="text-align:left;">Find(“div[lang~=zh]&quot;)</td> <td style="text-align:left;">筛选lang属性包含zh这个单词的div元素，单词以空格分开的</td></tr> <tr><td style="text-align:left;">Find(“div[lang$=zh]&quot;)</td> <td style="text-align:left;">筛选lang属性以zh结尾的div元素，区分大小写</td></tr> <tr><td style="text-align:left;">Find(“div[lang^=zh]&quot;)</td> <td style="text-align:left;">筛选lang属性以zh开头的div元素，区分大小写</td></tr></tbody></table> <p>以上是属性筛选器的用法，都是以一个属性筛选器为例，当然你也可以使用多个属性筛选器组合使用，比如： <code>Find(&quot;div[id][lang=zh]&quot;)</code>,用多个中括号连起来即可。当有多个属性筛选器的时候，要同时满足这些筛选器的元素才能被筛选出来。</p> <h2 id="parent-child选择器"><a href="#parent-child选择器" class="header-anchor">#</a> parent&gt;child选择器</h2> <p>如果我们想筛选出某个元素下符合条件的子元素，我们就可以使用子元素筛选器，它的语法为<code>Find(&quot;parent&gt;child&quot;)</code>,表示筛选parent这个父元素下，符合child这个条件的最直接（一级）的子元素。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div lang=&quot;ZH&quot;&gt;DIV1&lt;/div&gt;
+				&lt;div lang=&quot;zh-cn&quot;&gt;DIV2&lt;/div&gt;
+				&lt;div lang=&quot;en&quot;&gt;DIV3&lt;/div&gt;
+				&lt;span&gt;
+					&lt;div&gt;DIV4&lt;/div&gt;
+				&lt;/span&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;body&gt;div&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>以上示例，筛选出<code>body</code>这个父元素下，符合条件的最直接的子元素<code>div</code>，结果是<code>DIV1、DIV2、DIV3</code>，虽然<code>DIV4</code>也是<code>body</code>的子元素，但不是一级的，所以不会被筛选到。</p> <p>那么问题来了，我就是想把<code>DIV4</code>也筛选出来怎么办?就是要筛选<code>body</code>下所有的<code>div</code>元素，不管是一级、二级还是N级。有办法的，goquery考虑到了，只需要把大于号(<code>&gt;</code>)改为空格就好了。比如上面的例子，改为如下选择器即可。</p> <div class="language-go extra-class"><pre class="language-go"><code>dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;body div&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> 
+</code></pre></div><h2 id="prev-next相邻选择器"><a href="#prev-next相邻选择器" class="header-anchor">#</a> prev+next相邻选择器</h2> <p>假设我们要筛选的元素没有规律，但是该元素的上一个元素有规律，我们就可以使用这种下一个相邻选择器来进行选择。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div lang=&quot;zh&quot;&gt;DIV1&lt;/div&gt;
+				&lt;p&gt;P1&lt;/p&gt;
+				&lt;div lang=&quot;zh-cn&quot;&gt;DIV2&lt;/div&gt;
+				&lt;div lang=&quot;en&quot;&gt;DIV3&lt;/div&gt;
+				&lt;span&gt;
+					&lt;div&gt;DIV4&lt;/div&gt;
+				&lt;/span&gt;
+				&lt;p&gt;P2&lt;/p&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div[lang=zh]+p&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个示例演示了这种用法，我们想选择<code>&lt;p&gt;P1&lt;/p&gt;</code>这个元素，但是没啥规律，我们发现它前面的<code>&lt;div lang=&quot;zh&quot;&gt;DIV1&lt;/div&gt;</code>很有规律，可以选择，所以我们就可以采用<code>Find(&quot;div[lang=zh]+p&quot;)</code>达到选择<code>P</code>元素的目的。</p> <p>这种选择器的语法是<code>(&quot;prev+next&quot;)</code>，中间是一个加号(+)，+号前后也是选择器。</p> <h2 id="prev-next选择器"><a href="#prev-next选择器" class="header-anchor">#</a> prev~next选择器</h2> <p>有相邻就有兄弟，兄弟选择器就不一定要求相邻了，只要他们共有一个父元素就可以。</p> <div class="language-go extra-class"><pre class="language-go"><code>dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div[lang=zh]~p&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>刚刚的例子，只需要把<code>+</code>号换成<code>~</code>号,就可以把<code>P2</code>也筛选出来，因为<code>P2</code>、<code>P1</code>和<code>DIV1</code>都是兄弟。</p> <p>兄弟选择器的语法是<code>(&quot;prev~next&quot;)</code>,也就是相邻选择器的<code>+</code>换成了<code>~</code>。</p> <h2 id="内容过滤器"><a href="#内容过滤器" class="header-anchor">#</a> 内容过滤器</h2> <p>有时候我们使用选择器选择出来后后，希望再过滤一下，这时候就用到过滤器了，过滤器有很多，我们先讲内容过滤器这一种。</p> <div class="language-go extra-class"><pre class="language-go"><code>dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div:contains(DIV2)&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><code>Find(&quot;:contains(text)&quot;)</code>表示筛选出的元素要包含指定的文本，我们例子中要求选择出的<code>div</code>元素要包含<code>DIV2</code>文本，那么只有一个<code>DIV2</code>元素满足要求。</p> <p>此外还有<code>Find(&quot;:empty&quot;)</code>表示筛选出的元素都不能有子元素（包括文本元素），只筛选那些不包含任何子元素的元素。</p> <p><code>Find(&quot;:has(selector)&quot;)</code>和<code>contains</code>差不多，只不过这个是包含的是元素节点。</p> <div class="language-go extra-class"><pre class="language-go"><code> dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;span:has(div)&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>以上示例表示筛选出包含<code>div</code>元素的<code>span</code>节点。</p> <h2 id="first-child过滤器"><a href="#first-child过滤器" class="header-anchor">#</a> :first-child过滤器</h2> <p><code>:first-child</code>过滤器，语法为<code>Find(&quot;:first-child&quot;)</code>，表示筛选出的元素要是他们的父元素的第一个子元素，如果不是，则不会被筛选出来。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div lang=&quot;zh&quot;&gt;DIV1&lt;/div&gt;
+				&lt;p&gt;P1&lt;/p&gt;
+				&lt;div lang=&quot;zh-cn&quot;&gt;DIV2&lt;/div&gt;
+				&lt;div lang=&quot;en&quot;&gt;DIV3&lt;/div&gt;
+				&lt;span&gt;
+					&lt;div style=&quot;display:none;&quot;&gt;DIV4&lt;/div&gt;
+					&lt;div&gt;DIV5&lt;/div&gt;
+				&lt;/span&gt;
+				&lt;p&gt;P2&lt;/p&gt;
+				&lt;div&gt;&lt;/div&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div:first-child&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>以上例子中，我们使用<code>Find(&quot;div&quot;)</code>会筛选出所有的<code>div</code>元素，但是我们加了<code>:first-child</code>后，就只有<code>DIV1</code>和<code>DIV4</code>了，因为只有这两个是他们父元素的第一个子元素，其他的<code>DIV</code>都不满足。</p> <h2 id="first-of-type过滤器"><a href="#first-of-type过滤器" class="header-anchor">#</a> :first-of-type过滤器</h2> <p><code>:first-child</code>选择器限制的比较死，必须得是第一个子元素，如果该元素前有其他在前面，就不能用<code>:first-child</code>了，这时候<code>:first-of-type</code>就派上用场了，它要求只要是这个类型的第一个就可以，我们把上面的例子微调下。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div lang=&quot;zh&quot;&gt;DIV1&lt;/div&gt;
+				&lt;p&gt;P1&lt;/p&gt;
+				&lt;div lang=&quot;zh-cn&quot;&gt;DIV2&lt;/div&gt;
+				&lt;div lang=&quot;en&quot;&gt;DIV3&lt;/div&gt;
+				&lt;span&gt;
+					&lt;p&gt;P2&lt;/p&gt;
+					&lt;div&gt;DIV5&lt;/div&gt;
+				&lt;/span&gt;
+				&lt;div&gt;&lt;/div&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div:first-of-type&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>改动很简单，把原来的<code>DIV4</code>换成了<code>P2</code>，如果我们还使用<code>:first-child</code>,<code>DIV5</code>是不能被筛选出来的，因为它不是第一个子元素，它前面还有一个<code>P2</code>。这时候我们使用<code>:first-of-type</code>就可以达到目的，因为它要求是同类型第一个就可以。<code>DIV5</code>就是这个<code>div</code>类型的第一个元素，<code>P2</code>不是<code>div</code>类型，被忽略。</p> <h2 id="last-child-和-last-of-type过滤器"><a href="#last-child-和-last-of-type过滤器" class="header-anchor">#</a> :last-child 和 :last-of-type过滤器</h2> <p>这两个正好和上面的<code>:first-child</code>、<code>:first-of-type</code>相反，表示最后一个，这里不再举例，大家可以自己试试。</p> <h2 id="nth-child-n-过滤器"><a href="#nth-child-n-过滤器" class="header-anchor">#</a> :nth-child(n) 过滤器</h2> <p>这个表示筛选出的元素是其父元素的第n个元素，n以1开始。所以我们可以知道<code>:first-child</code>和<code>:nth-child(1)</code>是相等的。通过指定<code>n</code>，我们就很灵活的筛选出我们需要的元素。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+
+				&lt;div lang=&quot;zh&quot;&gt;DIV1&lt;/div&gt;
+				&lt;p&gt;P1&lt;/p&gt;
+				&lt;div lang=&quot;zh-cn&quot;&gt;DIV2&lt;/div&gt;
+				&lt;div lang=&quot;en&quot;&gt;DIV3&lt;/div&gt;
+				&lt;span&gt;
+					&lt;p&gt;P2&lt;/p&gt;
+					&lt;div&gt;DIV5&lt;/div&gt;
+				&lt;/span&gt;
+				&lt;div&gt;&lt;/div&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div:nth-child(3)&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个示例会筛选出<code>DIV2</code>，因为<code>DIV2</code>是其父元素<code>body</code>的第三个子元素。</p> <h2 id="nth-of-type-n-过滤器"><a href="#nth-of-type-n-过滤器" class="header-anchor">#</a> :nth-of-type(n) 过滤器</h2> <p><code>:nth-of-type(n)</code>和 <code>:nth-child(n)</code> 类似，只不过它表示的是同类型元素的第n个,所以<code>:nth-of-type(1)</code> 和 <code>:first-of-type</code>是相等的，大家可以自己试试，这里不再举例。</p> <h2 id="nth-last-child-n-和-nth-last-of-type-n-过滤器"><a href="#nth-last-child-n-和-nth-last-of-type-n-过滤器" class="header-anchor">#</a> nth-last-child(n) 和:nth-last-of-type(n) 过滤器</h2> <p>这两个和上面的类似，只不过是倒序开始计算的，最后一个元素被当成了第一个。大家自己测试下看看效果，很明显。</p> <h2 id="only-child-过滤器"><a href="#only-child-过滤器" class="header-anchor">#</a> :only-child 过滤器</h2> <p><code>Find(&quot;:only-child&quot;)</code> 过滤器，从字面上看，可以猜测出来，它表示筛选的元素，在其父元素中，只有它自己，它的父元素没有其他子元素，才会被匹配筛选出来。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+				&lt;div lang=&quot;zh&quot;&gt;DIV1&lt;/div&gt;
+				&lt;span&gt;
+					&lt;div&gt;DIV5&lt;/div&gt;
+				&lt;/span&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div:only-child&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>示例中<code>DIV5</code>就可以被筛选出来，因为它是它的父元素<code>span</code>达到唯一子元素，但<code>DIV1</code>就不是，所以不能呗筛选出来。</p> <h2 id="only-of-type-过滤器"><a href="#only-of-type-过滤器" class="header-anchor">#</a> :only-of-type 过滤器</h2> <p>上面的例子，如果想筛选出<code>DIV1</code>怎么办？可以使用<code>Find(&quot;:only-of-type&quot;)</code>,因为它是它的父元素中，唯一的<code>div</code>元素，这就是<code>:only-of-type</code>过滤器所要做的，同类型元素只要只有一个，就可以被筛选出来。大家把上面的例子改成<code>:only-of-type</code>试试，看看是否有<code>DIV1</code>。</p> <h2 id="选择器或-运算"><a href="#选择器或-运算" class="header-anchor">#</a> 选择器或(|)运算</h2> <p>如果我们想同时筛选出<code>div</code>,<code>span</code>等元素怎么办？这时候可以采用多个选择器进行组合使用，并且以逗号(,)分割，<code>Find(&quot;selector1, selector2, selectorN&quot;)</code>表示，只要满足其中一个选择器就可以被筛选出来，也就是选择器的或(|)运算操作。</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	html <span class="token operator">:=</span> <span class="token string">`&lt;body&gt;
+				&lt;div lang=&quot;zh&quot;&gt;DIV1&lt;/div&gt;
+				&lt;span&gt;
+					&lt;div&gt;DIV5&lt;/div&gt;
+				&lt;/span&gt;
+
+			&lt;/body&gt;
+			`</span>
+
+	dom<span class="token punctuation">,</span>err<span class="token operator">:=</span>goquery<span class="token punctuation">.</span><span class="token function">NewDocumentFromReader</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err<span class="token operator">!=</span><span class="token boolean">nil</span><span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	dom<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">&quot;div,span&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Each</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>i <span class="token builtin">int</span><span class="token punctuation">,</span> selection <span class="token operator">*</span>goquery<span class="token punctuation">.</span>Selection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>selection<span class="token punctuation">.</span><span class="token function">Html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h2> <p>goquery 是解析HTML网页必备的利器，在爬虫抓取网页的过程中，灵活的使用goquery不同的选择器，可以让我们的抓取工作事半功倍，大大提升爬虫的效率。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/super-eggs/vuepress-blog/edit/master/docs/Go_Practice/goquery.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Go_Practice/go-gin-api.html" class="prev">
+        go-gin-api
+      </a></span> <span class="next"><a href="/Go_Practice/gui-walk.html">
+        使用golang制作GUI图形界面
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.693e6c19.js" defer></script><script src="/assets/js/2.3304c2e1.js" defer></script><script src="/assets/js/34.a49e24e6.js" defer></script>
+  </body>
+</html>

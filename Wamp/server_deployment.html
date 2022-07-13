@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用一键脚本部署 | SuperEggs</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/log.ico" type="image/jpg">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script src="/js/jquery-3.5.min.js"></script>
+    <script src="/js/cursor.min.js"></script>
+    <meta name="description" content="分享生活高效技能,保持勇敢，坚持有趣，生命不息，折腾不止！">
+    <meta property="og:site_name" content="SuperEggs">
+    <meta property="og:title" content="使用一键脚本部署">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/Wamp/server_deployment.html">
+    <meta name="twitter:title" content="使用一键脚本部署">
+    <meta name="twitter:url" content="/Wamp/server_deployment.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="html,css,jquery,thinkphp,laravel,docker,linux,manjaro">
+    <meta name="auther" content="SuperEggs">
+    <link rel="preload" href="/assets/css/0.styles.5f689f29.css" as="style"><link rel="preload" href="/assets/js/app.693e6c19.js" as="script"><link rel="preload" href="/assets/js/2.3304c2e1.js" as="script"><link rel="preload" href="/assets/js/60.7898b9b9.js" as="script"><link rel="prefetch" href="/assets/js/10.34123518.js"><link rel="prefetch" href="/assets/js/11.f0e24eb8.js"><link rel="prefetch" href="/assets/js/12.5e75a974.js"><link rel="prefetch" href="/assets/js/13.db0bf381.js"><link rel="prefetch" href="/assets/js/14.ed324319.js"><link rel="prefetch" href="/assets/js/15.f40e8254.js"><link rel="prefetch" href="/assets/js/16.d8f963c5.js"><link rel="prefetch" href="/assets/js/17.250470cc.js"><link rel="prefetch" href="/assets/js/18.5161c52b.js"><link rel="prefetch" href="/assets/js/19.afb8dd7a.js"><link rel="prefetch" href="/assets/js/20.c8248808.js"><link rel="prefetch" href="/assets/js/21.e818d83d.js"><link rel="prefetch" href="/assets/js/22.69d0a99c.js"><link rel="prefetch" href="/assets/js/23.92b9837f.js"><link rel="prefetch" href="/assets/js/24.124a82a4.js"><link rel="prefetch" href="/assets/js/25.1c0271e6.js"><link rel="prefetch" href="/assets/js/26.34e44644.js"><link rel="prefetch" href="/assets/js/27.4f89b112.js"><link rel="prefetch" href="/assets/js/28.82ed427e.js"><link rel="prefetch" href="/assets/js/29.64fae044.js"><link rel="prefetch" href="/assets/js/3.1c0cc69b.js"><link rel="prefetch" href="/assets/js/30.dc7d1b9b.js"><link rel="prefetch" href="/assets/js/31.a273a940.js"><link rel="prefetch" href="/assets/js/32.ca99c448.js"><link rel="prefetch" href="/assets/js/33.4129d67d.js"><link rel="prefetch" href="/assets/js/34.a49e24e6.js"><link rel="prefetch" href="/assets/js/35.4ba458c0.js"><link rel="prefetch" href="/assets/js/36.7412ff8c.js"><link rel="prefetch" href="/assets/js/37.35c3a72c.js"><link rel="prefetch" href="/assets/js/38.ebf390fb.js"><link rel="prefetch" href="/assets/js/39.6b308832.js"><link rel="prefetch" href="/assets/js/4.e5a930e9.js"><link rel="prefetch" href="/assets/js/40.968d571d.js"><link rel="prefetch" href="/assets/js/41.a1f587bf.js"><link rel="prefetch" href="/assets/js/42.9f358bc3.js"><link rel="prefetch" href="/assets/js/43.4f19f41e.js"><link rel="prefetch" href="/assets/js/44.a27ad98a.js"><link rel="prefetch" href="/assets/js/45.fb26a2d8.js"><link rel="prefetch" href="/assets/js/46.aa66c6d7.js"><link rel="prefetch" href="/assets/js/47.00ae1556.js"><link rel="prefetch" href="/assets/js/48.699e8e33.js"><link rel="prefetch" href="/assets/js/49.0f79ef04.js"><link rel="prefetch" href="/assets/js/5.2d78753d.js"><link rel="prefetch" href="/assets/js/50.2428dcc2.js"><link rel="prefetch" href="/assets/js/51.829dcccc.js"><link rel="prefetch" href="/assets/js/52.f2dfda6b.js"><link rel="prefetch" href="/assets/js/53.225de2db.js"><link rel="prefetch" href="/assets/js/54.b91ed453.js"><link rel="prefetch" href="/assets/js/55.25bacde7.js"><link rel="prefetch" href="/assets/js/56.2a58cece.js"><link rel="prefetch" href="/assets/js/57.48eab866.js"><link rel="prefetch" href="/assets/js/58.5cf8ca6e.js"><link rel="prefetch" href="/assets/js/59.458178cc.js"><link rel="prefetch" href="/assets/js/6.66329e4b.js"><link rel="prefetch" href="/assets/js/61.5f651468.js"><link rel="prefetch" href="/assets/js/62.cd190cb0.js"><link rel="prefetch" href="/assets/js/63.0d472232.js"><link rel="prefetch" href="/assets/js/64.e8a8ffe7.js"><link rel="prefetch" href="/assets/js/65.8a66ff7d.js"><link rel="prefetch" href="/assets/js/66.0492741b.js"><link rel="prefetch" href="/assets/js/67.204dadcb.js"><link rel="prefetch" href="/assets/js/68.7d5b0a8f.js"><link rel="prefetch" href="/assets/js/69.ed735059.js"><link rel="prefetch" href="/assets/js/7.44229983.js"><link rel="prefetch" href="/assets/js/70.0f643f0b.js"><link rel="prefetch" href="/assets/js/71.a226be62.js"><link rel="prefetch" href="/assets/js/8.51a4d2f9.js"><link rel="prefetch" href="/assets/js/9.ee30d1ab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5f689f29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/log.png" alt="SuperEggs" class="logo"> <span class="site-name can-hide">SuperEggs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link router-link-active">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link router-link-active">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Wamp</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Wamp/Minikube.html" class="sidebar-link">minikube</a></li><li><a href="/Wamp/" aria-current="page" class="sidebar-link">Dockerfile</a></li><li><a href="/Wamp/deployer.html" class="sidebar-link">Deployer 部署工具</a></li><li><a href="/Wamp/docker.html" class="sidebar-link">Docker</a></li><li><a href="/Wamp/elasticsearch.html" class="sidebar-link">elasticsearch</a></li><li><a href="/Wamp/etcd.html" class="sidebar-link">etcd</a></li><li><a href="/Wamp/laradock.html" class="sidebar-link">LaraDock</a></li><li><a href="/Wamp/server_deployment.html" aria-current="page" class="active sidebar-link">使用一键脚本部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Wamp/server_deployment.html#初始化系统" class="sidebar-link">初始化系统</a></li><li class="sidebar-sub-header"><a href="/Wamp/server_deployment.html#安装-nginx" class="sidebar-link">安装 Nginx</a></li><li class="sidebar-sub-header"><a href="/Wamp/server_deployment.html#安装-php" class="sidebar-link">安装 PHP</a></li><li class="sidebar-sub-header"><a href="/Wamp/server_deployment.html#安装-git-和-composer" class="sidebar-link">安装 Git 和 Composer</a></li><li class="sidebar-sub-header"><a href="/Wamp/server_deployment.html#安装-mysql" class="sidebar-link">安装 MySQL</a></li><li class="sidebar-sub-header"><a href="/Wamp/server_deployment.html#部署应用代码" class="sidebar-link">部署应用代码</a></li><li class="sidebar-sub-header"><a href="/Wamp/server_deployment.html#配置-nginx-站点信息" class="sidebar-link">配置 Nginx 站点信息</a></li><li class="sidebar-sub-header"><a href="/Wamp/server_deployment.html#生产环境的必要优化" class="sidebar-link">生产环境的必要优化</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用一键脚本部署"><a href="#使用一键脚本部署" class="header-anchor">#</a> 使用一键脚本部署</h1> <p>GitHub: <a href="https://github.com/summerblue/laravel-ubuntu-init" target="_blank" rel="noopener noreferrer">https://github.com/summerblue/laravel-ubun...<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>适用于 Ubuntu 16.04 的 LNMP 安装脚本，并设置了国内镜像加速。</p> <p>请确保所有命令都以 root 账户执行，如果登录账户不是 root，则需要执行 <code>sudo -H -s</code> 切换为 root 账户后再下载安装。</p> <div class="language- extra-class"><pre class="language-text"><code>Welcome to Alibaba Cloud Elastic Compute Service !
+
+Last login: Tue Aug 13 13:17:16 2019 from 221.218.153.139
+root@iZwn1owkika3a8Z:~# wget -qO- https://raw.githubusercontent.com/summerblue/laravel-ubuntu-init/master/download.sh - | bash
+===&gt; 开始下载...
+===&gt; 下载完毕
+
+安装脚本位于： /root/laravel-ubuntu-init
+===&gt; 正在初始化系统...    [DONE]
+===&gt; 正在初始化软件源...    [DONE]
+===&gt; 正在安装基础软件...    [DONE]
+===&gt; 正在安装 PHP...    [DONE]
+===&gt; 正在安装 Mysql / Nginx / Redis / Memcached / Beanstalkd / Sqlite3...    [DONE]
+===&gt; 正在安装 Nodejs / Yarn...    [DONE]
+===&gt; 正在安装 Composer...    [DONE]
+安装完毕
+Mysql root 密码：ORAdqR7QwG1aHNk3jaGCpOWBu7owgVvf
+请手动执行 source ~/.bash_aliases 使 alias 指令生效。
+root@iZwn1owkika3a8Z:~# 
+</code></pre></div><p>出现以上输出，说明安装成功。注意保存密码，切勿丢失。随后请执行：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token builtin class-name">source</span> ~/.bash_aliases
+</code></pre></div><h3 id="配置运行环境"><a href="#配置运行环境" class="header-anchor">#</a> 配置运行环境</h3> <p>首先，我们需要增加 Nginx 站点：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ ~/laravel-ubuntu-init/16.04/nginx_add_site.sh
+</code></pre></div><p>根据提示，输入一些信息并回车：</p> <div class="language-php extra-class"><pre class="language-php"><code>请输入项目名：deployment
+请输入站点域名（多个域名用空格隔开）：laravel<span class="token operator">-</span>deployment<span class="token punctuation">.</span>wi1dcard<span class="token punctuation">.</span>cn
+</code></pre></div><p>请注意，站点名称（项目名）仅允许英文、数字、<code>-</code> 和 <code>_</code> 组合。另外，与上文宝塔面板类似，站点域名也可以使用公网 IP 代替。</p> <p>请注意以下输出：</p> <div class="language-php extra-class"><pre class="language-php"><code>域名列表：laravel<span class="token operator">-</span>deployment<span class="token punctuation">.</span>wi1dcard<span class="token punctuation">.</span>cn
+项目名：deployment
+项目目录：<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>deployment
+是否确认？ <span class="token punctuation">[</span>y<span class="token operator">/</span><span class="token constant">N</span><span class="token punctuation">]</span>
+</code></pre></div><p>记住此处的项目目录，后续将会使用。检查无误后，输入 <code>y</code> 并回车。</p> <p>没什么问题的话，将会看到成功提示：</p> <div class="language-php extra-class"><pre class="language-php"><code>配置文件创建成功
+Nginx 重启成功
+</code></pre></div><h3 id="修改linux的配置文件"><a href="#修改linux的配置文件" class="header-anchor">#</a> 修改linux的配置文件</h3> <p>/etc/nginx/sites-available/&lt;站点名&gt;.conf</p> <h1 id="手动部署"><a href="#手动部署" class="header-anchor">#</a> 手动部署</h1> <h2 id="初始化系统"><a href="#初始化系统" class="header-anchor">#</a> 初始化系统</h2> <p>全新的 Ubuntu Bionic 18.04 LTS 服务器</p> <h3 id="切换root用户"><a href="#切换root用户" class="header-anchor">#</a> 切换root用户</h3> <div class="language- extra-class"><pre class="language-text"><code>$ sudo -i
+</code></pre></div><h3 id="更新软件源"><a href="#更新软件源" class="header-anchor">#</a> 更新软件源</h3> <p>登录到服务器，我们首先要做的就是更新软件源：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt</span> update
+</code></pre></div><blockquote><p>注意：这里所说的「更新软件源」并非升级软件，在中文内更加准确的描述应当是 <strong>刷新软件源</strong>。在这个过程中，包管理器（也就是 APT，可以理解为「软件管家」之类）将会从 <strong>软件源</strong> 服务器上获取一份最新的包列表并建立本地缓存，包括软件名称、描述、最新版本、下载地址等等。</p></blockquote> <p>你将会看到类似这样的输出：</p> <div class="language-php extra-class"><pre class="language-php"><code>Get<span class="token punctuation">:</span><span class="token number">1</span> http<span class="token punctuation">:</span><span class="token comment">//mirrors.cloud.aliyuncs.com/ubuntu xenial InRelease [247 kB]</span>
+Get<span class="token punctuation">:</span><span class="token number">2</span> http<span class="token punctuation">:</span><span class="token comment">//mirrors.cloud.aliyuncs.com/ubuntu xenial-updates InRelease [109 kB]</span>
+Get<span class="token punctuation">:</span><span class="token number">3</span> http<span class="token punctuation">:</span><span class="token comment">//mirrors.cloud.aliyuncs.com/ubuntu xenial-security InRelease [109 kB]</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><p>稍等片刻即可刷新完毕，最后有可能提示：</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token number">186</span> packages can be upgraded<span class="token punctuation">.</span> Run <span class="token single-quoted-string string">'apt list --upgradable'</span> to see them<span class="token punctuation">.</span>
+</code></pre></div><p>意为有 186 个软件包可升级，执行 <code>apt list --upgradable</code> 命令来查看它们。</p> <p>我们暂且忽略，直接升级：</p> <div class="language-php extra-class"><pre class="language-php"><code>$ apt upgrade
+</code></pre></div><blockquote><p>注意：生产环境下，更新任何软件包前都需要仔细检查，确保更新日志内没有影响现有环境的改动。另外，你也可以先不升级，对后续部署基本没有影响。</p></blockquote> <p>你将会看到一大坨（是的，一坨）输出，它们是将被升级的软件列表；注意关注最后几行：</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token number">186</span> upgraded<span class="token punctuation">,</span> <span class="token number">8</span> newly installed<span class="token punctuation">,</span> <span class="token number">0</span> to remove <span class="token keyword">and</span> <span class="token number">0</span> not upgraded<span class="token punctuation">.</span>
+Need to get <span class="token number">249</span> <span class="token constant">MB</span> of archives<span class="token punctuation">.</span>
+After this operation<span class="token punctuation">,</span> <span class="token number">331</span> <span class="token constant">MB</span> of additional disk space will be used<span class="token punctuation">.</span>
+<span class="token keyword">Do</span> you want to <span class="token keyword">continue</span><span class="token operator">?</span> <span class="token punctuation">[</span><span class="token constant">Y</span><span class="token operator">/</span>n<span class="token punctuation">]</span>
+</code></pre></div><p>意为此操作将占用 331 MB 磁盘空间。此时输入 <code>Y</code>（注意关闭中文输入法），或直接回车即可开始升级。主流云服务厂商均有缓存软件源，数据流量是通过内网传输，所以该过程不会太慢。</p> <h3 id="本地化配置"><a href="#本地化配置" class="header-anchor">#</a> 本地化配置</h3> <p>所谓「本地化配置」，可理解为系统时区、单位、地址、语言等配置的统称。使其能够符合某一地区的习惯。虽然我们的母语是中文，但还是建议将服务器配置为英语，尽可能避免奇葩乱码等问题带来的影响。</p> <p>首先，执行以下命令生成美国本地化数据：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ locale-gen en_US.UTF-8
+</code></pre></div><p>随后将本地化配置修改为 <code>en_US.UTF-8</code> 即可：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ update-locale <span class="token assign-left variable"><span class="token environment constant">LC_ALL</span></span><span class="token operator">=</span>en_US.UTF-8
+</code></pre></div><p>如果服务器在国外，则服务商可能不会将其配置为东八区；我们还需手动修改时区为 <code>Asia/Shanghai</code>：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>timedatectl set-timezone Asia/Shanghai
+</code></pre></div><p>若你是在国内云服务商租用的服务器，那么极有可能时区已经配置好了。</p> <p>至此，系统初始化阶段完成。</p> <h2 id="安装-nginx"><a href="#安装-nginx" class="header-anchor">#</a> 安装 Nginx</h2> <p>由于我们执行 <code>apt update</code> 更新软件源不久，所以直接安装 Nginx 即可：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt</span> <span class="token function">install</span> nginx
+</code></pre></div><p>再次收到确认提示：</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token number">0</span> upgraded<span class="token punctuation">,</span> <span class="token number">10</span> newly installed<span class="token punctuation">,</span> <span class="token number">0</span> to remove <span class="token keyword">and</span> <span class="token number">0</span> not upgraded<span class="token punctuation">.</span>
+Need to get <span class="token number">2</span><span class="token punctuation">,</span><span class="token number">715</span> kB of archives<span class="token punctuation">.</span>
+After this operation<span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span><span class="token number">752</span> kB of additional disk space will be used<span class="token punctuation">.</span>
+<span class="token keyword">Do</span> you want to <span class="token keyword">continue</span><span class="token operator">?</span> <span class="token punctuation">[</span><span class="token constant">Y</span><span class="token operator">/</span>n<span class="token punctuation">]</span>
+</code></pre></div><p>上节为大家介绍过输入 <code>Y</code> 或直接回车均可继续，也就是说此处的询问默认结果为 <code>Y</code>。有个普遍共识是，在提供选项供用户选择时，以大写项为默认值。例如此处的 <code>[Y/n]</code> 那么 <code>Y</code> 即为默认值；同理，若是 <code>[a/b/c/D/e]</code>，那么 <code>D</code> 即为默认值。</p> <p>另外，上节介绍了更新软件源即为包管理器从软件源服务器拉取软件包列表并建立本地缓存。其实，当我们执行 <code>apt install</code> 操作时，包管理器便会从本地缓存中找到该软件包的指定版本，并进行下载、安装。</p> <p>稍等几秒钟即可安装成功：</p> <p><img src="https://raw.githubusercontent.com/wi1dcard/laravel-deployment/master/src/images/74389aa7e78e0030794cc74a3f20da1d.png" alt="img"></p> <h3 id="管理-nginx-服务"><a href="#管理-nginx-服务" class="header-anchor">#</a> 管理 Nginx 服务</h3> <p>我们可使用 <code>service</code> 命令管理服务状态，常用操作如下：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">service</span> nginx start <span class="token comment"># 启动 Nginx</span>
+$ <span class="token function">service</span> nginx stop <span class="token comment"># 停止 Nginx</span>
+$ <span class="token function">service</span> nginx restart <span class="token comment"># 重启 Nginx</span>
+</code></pre></div><p>同时，可使用 <code>systemctl</code> 命令开关服务的开机自启：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ systemctl <span class="token builtin class-name">enable</span> nginx <span class="token comment"># 启用 Nginx 开机启动</span>
+$ systemctl disable nginx <span class="token comment"># 禁用 Nginx 开机启动</span>
+</code></pre></div><blockquote><p>注意：通常情况下，在 APT 安装后已默认启用 Nginx 开机启动。</p></blockquote> <h3 id="确认-nginx-正常运行"><a href="#确认-nginx-正常运行" class="header-anchor">#</a> 确认 Nginx 正常运行</h3> <p>与一键脚本类似，在浏览器内输入服务器公网 IP（或域名）并打开，出现默认欢迎页面说明 Nginx 已经正常运行：</p> <p><img src="https://raw.githubusercontent.com/wi1dcard/laravel-deployment/master/src/images/305376a54fe7b7f8a2103abbf18b1943.png" alt="img"></p> <p>恭喜，Nginx 安装成功。</p> <h2 id="安装-php"><a href="#安装-php" class="header-anchor">#</a> 安装 PHP</h2> <h3 id="配置第三方软件源"><a href="#配置第三方软件源" class="header-anchor">#</a> 配置第三方软件源</h3> <p>由于 Ubuntu 的官方软件源通常不包含最新版本的 PHP，因此需要添加一个包含最新 PHP 的第三方软件源。</p> <p>在添加之前，我们首先安装名为 <code>software-properties-common</code> 的软件包，它提供了快速管理软件源的实用脚本：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt</span> <span class="token function">install</span> -y software-properties-common
+</code></pre></div><p>相比之前执行的 <code>apt install</code> 命令，这次我添加了 <code>-y</code> 选项，表示当 APT 遇到询问时默认确认，避免再次输入 <code>Y</code> 并回车。</p> <p>随后，执行以下脚本添加第三方 PHP 软件源：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ add-apt-repository -y ppa:ondrej/php
+</code></pre></div><p>成功后别忘记刷新：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt-get</span> update
+</code></pre></div><h3 id="安装-php-2"><a href="#安装-php-2" class="header-anchor">#</a> 安装 PHP</h3> <p>PHP 的安装实际上分为三个软件包：</p> <ul><li>PHP - PHP 自身。</li> <li>PHP-CLI - PHP 的命令行接口，通俗地说，在命令行内执行 <code>php</code> 便依赖于此包。</li> <li>PHP-FPM - 全称为 <code>PHP FastCGI Process Manager</code>，用于管理 PHP 进程，并提供 FastCGI 接口与 Nginx 交互；浏览网页时的请求便是由 Nginx 交由 PHP-FPM 处理的。</li></ul> <p><code>apt install</code> 支持多参数，所以我们不必执行多次安装，只需在单条命令内写明多个软件包即可：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt</span> <span class="token function">install</span> -y php7.2 php7.2-cli php7.2-fpm
+</code></pre></div><p>按照 <a href="https://learnku.com/docs/laravel/5.8/installation#installation" target="_blank" rel="noopener noreferrer">Laravel 5.8 安装文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 的说明，接着安装几个必备的 PHP 扩展：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt</span> <span class="token function">install</span> -y php7.2-mbstring php7.2-xml php7.2-bcmath
+</code></pre></div><blockquote><p>注意：由于 PDO 等扩展已经内置在 PHP 中，故无需额外安装。</p></blockquote> <p>对于不同项目的不同依赖，可能有必要安装以下扩展，根据实际情况选择即可：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt</span> <span class="token function">install</span> php7.2-curl php7.2-gd php7.2-mysql php7.2-opcache php7.2-zip php7.2-sqlite3
+</code></pre></div><p>有个小技巧是，你可以通过 <code>apt-cache</code> 命令来搜索当前软件源内的包：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt-cache</span> search php7.2
+</code></pre></div><p>例如以上命令，将会得到所有名称、描述等信息内包含 <code>php7.2</code> 字样的软件包：</p> <div class="language-php extra-class"><pre class="language-php"><code>php<span class="token operator">-</span>amqp <span class="token operator">-</span> <span class="token constant">AMQP</span> extension <span class="token keyword">for</span> <span class="token constant">PHP</span>
+php<span class="token operator">-</span>apcu <span class="token operator">-</span> <span class="token constant">APC</span> User Cache <span class="token keyword">for</span> <span class="token constant">PHP</span>
+php<span class="token operator">-</span>geoip <span class="token operator">-</span> GeoIP module <span class="token keyword">for</span> <span class="token constant">PHP</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><h3 id="管理-php-fpm-服务"><a href="#管理-php-fpm-服务" class="header-anchor">#</a> 管理 PHP-FPM 服务</h3> <p>与管理 Nginx 服务类似，你同样可以通过 <code>service</code> 和 <code>systemctl</code> 命令管理 PHP-FPM 服务：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">service</span> php7.2-fpm restart<span class="token comment"># 重启 PHP-FPM</span>
+$ <span class="token function">service</span> php7.2-fpm start <span class="token comment"># 启动 PHP-FPM</span>
+$ <span class="token function">service</span> php7.2-fpm stop <span class="token comment"># 停止 PHP-FPM</span>
+$ systemctl <span class="token builtin class-name">enable</span> php7.2-fpm <span class="token comment"># 启用 PHP-FPM 开机启动</span>
+$ systemctl disable php7.2-fpm <span class="token comment"># 禁用 PHP-FPM 开机启动</span>
+</code></pre></div><blockquote><p>注意：不同版本的 PHP-FPM 服务名是不一致的。例如 7.2 为 <code>php7.2-fpm</code>，7.3 为 <code>php7.3-fpm</code>，以此类推……</p></blockquote> <h3 id="确认-php-fpm-正常运行"><a href="#确认-php-fpm-正常运行" class="header-anchor">#</a> 确认 PHP-FPM 正常运行</h3> <p>通过以下命令可确认 PHP-FPM 进程正在运行：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> php
+</code></pre></div><p>其中：</p> <ul><li><code>ps aux</code> 用于列出系统当前正在运行的所有进程的所有信息。</li> <li><code>|</code> 名为管道操作符，将前一条命令的标准输出连接到下一条命令的标准输入。</li> <li><code>grep</code> 是一款文本搜索工具，常用来过滤命令行输出；<code>php</code> 是搜索的关键词。</li></ul> <p><code>ps</code> 将进程信息输出到 <code>grep</code> 进行过滤，后者筛选出包含 <code>php</code> 字样的行，再将它们输出。于是，它们相结合，产生的效果便是这样：</p> <div class="language-php extra-class"><pre class="language-php"><code>root      <span class="token number">6546</span>  <span class="token number">0.0</span>  <span class="token number">3.8</span> <span class="token number">315484</span> <span class="token number">19340</span> <span class="token operator">?</span>        Ss   <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">13</span>   <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">00</span> php<span class="token operator">-</span>fpm<span class="token punctuation">:</span> master process <span class="token punctuation">(</span><span class="token operator">/</span>etc<span class="token operator">/</span>php<span class="token operator">/</span><span class="token number">7.2</span><span class="token operator">/</span>fpm<span class="token operator">/</span>php<span class="token operator">-</span>fpm<span class="token punctuation">.</span>conf<span class="token punctuation">)</span>
+www<span class="token operator">-</span>data  <span class="token number">6550</span>  <span class="token number">0.0</span>  <span class="token number">1.0</span> <span class="token number">315484</span>  <span class="token number">5260</span> <span class="token operator">?</span>        <span class="token constant">S</span>    <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">13</span>   <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">00</span> php<span class="token operator">-</span>fpm<span class="token punctuation">:</span> pool www
+www<span class="token operator">-</span>data  <span class="token number">6551</span>  <span class="token number">0.0</span>  <span class="token number">1.0</span> <span class="token number">315484</span>  <span class="token number">5260</span> <span class="token operator">?</span>        <span class="token constant">S</span>    <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">13</span>   <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">00</span> php<span class="token operator">-</span>fpm<span class="token punctuation">:</span> pool www
+root      <span class="token number">6566</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span>  <span class="token number">15964</span>   <span class="token number">920</span> pts<span class="token operator">/</span><span class="token number">0</span>    <span class="token constant">S</span><span class="token operator">+</span>   <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">13</span>   <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">00</span> grep <span class="token operator">--</span>color<span class="token operator">=</span>auto php
+</code></pre></div><p>忽略最后一行（这是我们正在执行的 <code>grep</code> 命令），可观察到有 <code>php-fpm</code> 进程正在运行中。</p> <p>若 PHP-FPM 进程不存在，那么输出将只有孤零零的 <code>grep</code>：</p> <div class="language-php extra-class"><pre class="language-php"><code>root      <span class="token number">6722</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span>  <span class="token number">15964</span>   <span class="token number">920</span> pts<span class="token operator">/</span><span class="token number">0</span>    <span class="token constant">S</span><span class="token operator">+</span>   <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">24</span>   <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">00</span> grep <span class="token operator">--</span>color<span class="token operator">=</span>auto php
+</code></pre></div><blockquote><p>提示：你可以结合上文提到的 <code>service</code> 命令，将服务进程手动停止试试看；测试完毕不要忘记再次启动。</p></blockquote> <h2 id="安装-git-和-composer"><a href="#安装-git-和-composer" class="header-anchor">#</a> 安装 Git 和 Composer</h2> <p>Git 和 Composer 是部署 PHP 项目时必不可少的两款工具。用它们代替原有 SCP 方案有许多好处：</p> <ul><li>安全</li> <li>快速</li> <li>可回滚</li> <li>易管理</li> <li>...</li></ul> <p>好处非常非常多。实际上，正如之前提到的「在生产环境中这样做很危险」，直接使用 SCP 或压缩包传输代码是万万不可取的，具体原因请见文末。</p> <h3 id="安装-git"><a href="#安装-git" class="header-anchor">#</a> 安装 Git</h3> <p>依然使用 APT 安装：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt</span> <span class="token function">install</span> -y <span class="token function">git</span>
+</code></pre></div><h3 id="安装-composer"><a href="#安装-composer" class="header-anchor">#</a> 安装 Composer</h3> <p>Composer 比较特殊，不能通过 APT 安装。虽然网络上流传着一大堆从第三方服务器直接下载 <code>composer.phar</code> 文件的安装方式，但根据 Composer 的官方文档，正确的安装姿势应当为：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">wget</span> https://raw.githubusercontent.com/composer/getcomposer.org/master/web/installer -O - -q <span class="token operator">|</span> php -- --filename<span class="token operator">=</span>composer --install-dir<span class="token operator">=</span>/usr/local/bin
+</code></pre></div><blockquote><p>以上修改自 <a href="https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md" target="_blank" rel="noopener noreferrer">https://getcomposer.org/doc/faqs/how-to-in...<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，另一种比较复杂的安装方式可参考 https://getcomposer.org/download/。你可以不必关心该脚本的具体意义，通常它只需执行一次。</p> <p>注意：通过第三方服务器、直接下载 <code>composer.phar</code> 不进行任何检查，均无法保证 Composer 正常运行，且存在安全风险！请务必遵循官方文档内的说明。</p></blockquote> <p>稍等片刻，将会出现以下输出：</p> <div class="language-php extra-class"><pre class="language-php"><code>All settings correct <span class="token keyword">for</span> using Composer
+Downloading<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><p>提示当前环境检查通过，可正常使用 Composer；随后开始下载。</p> <p>鉴于众所周知的原因，大陆访问国际网络速度奇慢无比，请耐心等待。当出现以下提示时，表示已经安装成功：</p> <div class="language-php extra-class"><pre class="language-php"><code>Composer <span class="token punctuation">(</span>version <span class="token number">1.8</span><span class="token number">.4</span><span class="token punctuation">)</span> successfully installed to<span class="token punctuation">:</span> <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>bin<span class="token operator">/</span>composer
+<span class="token keyword">Use</span> it<span class="token punctuation">:</span> php <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>bin<span class="token operator">/</span>composer
+</code></pre></div><p>按照提示，我们可以使用 <code>/usr/local/bin/composer</code> 运行 Composer，当然，还有个更简单的方法：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ composer
+</code></pre></div><p>你可能会收到这样一条警告：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>Do not run Composer as root/super user<span class="token operator">!</span> See https://getcomposer.org/root <span class="token keyword">for</span> details
+</code></pre></div><p>意为请勿使用根用户运行 Composer；暂时不必关心它，我将在后续课程中详细说明。</p> <h3 id="配置-packagist-中国镜像"><a href="#配置-packagist-中国镜像" class="header-anchor">#</a> 配置 Packagist 中国镜像</h3> <p>这一步是可选的。如果你的服务器位于大陆，强烈建议使用可信赖的代理，或是国内 Packagist 镜像。</p> <p>推荐使用 Laravel-China 提供的 <a href="https://packagist.laravel-china.org/" target="_blank" rel="noopener noreferrer">Packagist 中国镜像<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，执行以下命令即可切换服务器内 Composer 的默认 Packagist 源：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+</code></pre></div><h3 id="拓展-为什么生产环境中万万不可使用-scp-传输代码"><a href="#拓展-为什么生产环境中万万不可使用-scp-传输代码" class="header-anchor">#</a> 拓展：为什么生产环境中万万不可使用 SCP 传输代码？</h3> <p>更准确地说，这个问题应该是：<strong>为什么不可使用 SCP 将整个 Laravel 应用传输到服务器的 Nginx 站点目录？</strong>。</p> <p><strong>SCP 传输文件</strong> 这一操作本身不存在任何问题；不过，本地开发时 <code>APP_DEBUG</code>（调试模式）通常为打开状态，并且 <code>APP_KEY</code>（应用密钥）已经生成为一个固定值，若是利用 SCP 将整个目录传输到服务器并直接公开，那么 <code>.env</code>文件内的值也会照搬到服务器内。</p> <p>调试模式时展示的详细错误信息虽然有利于排查问题，但在生产环境开启极易引发安全漏洞；至于应用密钥，Laravel 将使用它加密 Cookie 等信息，在本地和线上绝对不应当使用相同值，更严格地说，线上的 <code>APP_KEY</code> 必须完全随机并确保不被任何人获得。</p> <p>虽然你可以上传后再修改它们的值，或是使用类似 Rsync 等支持忽略特定文件的方式。但其一，不方便、易受人为失误影响；其二，无法享受 Git + Composer 的大量优势。</p> <p>综上所述，在实际部署过程中，<strong>绝对不推荐使用 SCP 传输代码</strong>。</p> <h2 id="安装-mysql"><a href="#安装-mysql" class="header-anchor">#</a> 安装 MySQL</h2> <h3 id="安装-mysql-5-7"><a href="#安装-mysql-5-7" class="header-anchor">#</a> 安装 MySQL 5.7</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">sudo</span> <span class="token function">apt</span> update <span class="token comment"># 更新源</span>
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y mysql-server mysql-client <span class="token comment"># 安装 MySQL 服务端及客户端</span>
+$ <span class="token function">sudo</span> mysql_secure_installation <span class="token comment"># 设置。在这里可以设置 root 密码、删除测试数据库、禁止远程访问（即只能本地访问或者 via SSH：通过 SSH 访问）等等。</span>
+</code></pre></div><h3 id="安装-mysql-8-0"><a href="#安装-mysql-8-0" class="header-anchor">#</a> 安装 MySQL 8.0</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">wget</span>  -c  https://repo.mysql.com/mysql-apt-config_0.8.13-1_all.deb <span class="token comment"># 下载 MySQL 8.0 的 deb 包</span>
+$ <span class="token function">sudo</span> dpkg  -i  mysql-apt-config_0.8.10-1_all.deb <span class="token comment"># 安装 deb 包</span>
+$ <span class="token function">sudo</span> <span class="token function">apt</span> update
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y mysql-server mysql-client
+$ <span class="token function">sudo</span> mysql_secure_installation
+</code></pre></div><h3 id="进行数据库设置"><a href="#进行数据库设置" class="header-anchor">#</a> 进行数据库设置</h3> <div class="language- extra-class"><pre class="language-text"><code>root@VM-0-3-ubuntu:~# mysql_secure_installation
+
+Securing the MySQL server deployment.
+
+Connecting to MySQL using a blank password.
+
+VALIDATE PASSWORD PLUGIN can be used to test passwords
+and improve security. It checks the strength of password
+and allows the users to set only those passwords which are
+secure enough. Would you like to setup VALIDATE PASSWORD plugin?
+
+Press y|Y for Yes, any other key for No: 
+</code></pre></div><p>是否使用VALIDATE PASSWORD插件，来检查用户设置的密码强度？我们输入 <code>y</code></p> <div class="language- extra-class"><pre class="language-text"><code>There are three levels of password validation policy:
+
+LOW    Length &gt;= 8    //弱强度
+MEDIUM Length &gt;= 8, numeric, mixed case, and special characters //
+STRONG Length &gt;= 8, numeric, mixed case, special characters and dictionary     //高强度             file
+
+Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 
+</code></pre></div><p>系统为我们提供了三个密码验证策略供我们选择，我们这里选择高强度 <code>2</code></p> <div class="language- extra-class"><pre class="language-text"><code>Please set the password for root here.
+
+New password: 
+</code></pre></div><p>输入 大小写字母 + 数字 + 字符的密码，输入完毕回车即可</p> <div class="language- extra-class"><pre class="language-text"><code>Estimated strength of the password: 100 
+Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : 
+</code></pre></div><p>密码强度： 100 ，询问我们是否使用密码，继续设置。   我们输入<code>y</code></p> <div class="language- extra-class"><pre class="language-text"><code>By default, a MySQL installation has an anonymous user,
+allowing anyone to log into MySQL without having to have
+a user account created for them. This is intended only for
+testing, and to make the installation go a bit smoother.
+You should remove them before moving into a production
+environment.
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : 
+</code></pre></div><p>默认情况下，MySQL安装有一个匿名用户，允许任何人登录MySQL而不必拥有为他们创建的用户帐户。 这仅适用于
+测试，并使安装更顺畅。您应该在进入生产之前将其删除环境。 输入<code>y</code></p> <div class="language- extra-class"><pre class="language-text"><code>Normally, root should only be allowed to connect from
+'localhost'. This ensures that someone cannot guess at
+the root password from the network.
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : 
+</code></pre></div><p>通常，只允许root连接'localhost' 的。 这可以确保有人无法猜测来自网络的root密码。禁止远程登录  输入<code>y</code></p> <div class="language- extra-class"><pre class="language-text"><code>By default, MySQL comes with a database named 'test' that
+anyone can access. This is also intended only for testing,
+and should be removed before moving into a production
+environment.
+
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : 
+</code></pre></div><p>默认情况下，MySQL附带一个名为'test'的数据库,任何人都可以访问 这也仅用于测试，并且应该在进入生产之前将其删除
+环境。访问它并删除测试数据库。输入<code>y</code></p> <div class="language- extra-class"><pre class="language-text"><code>Reloading the privilege tables will ensure that all changes
+made so far will take effect immediately.
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
+</code></pre></div><p>至此，我们对数据库的配置设置完毕，输入<code>y</code>，立即生效。</p> <p>安装完数据库后，mysql默认是不允许远程连接。m</p> <p>mysql默认是只允许本地连接的。所以我们需要修改一个配置文件。然而最新版本的mysql跟以前目录结构不太一样，最新版本的允许远程连接放在/etc/mysql/mysql.conf.d/mysqld.cnf 这个配置文件下，搜索bind-address = 127.0.0.1 这行，把它注释掉，然后是用命令service mysql restart重启mysql服务就可以了。</p> <h2 id="部署应用代码"><a href="#部署应用代码" class="header-anchor">#</a> 部署应用代码</h2> <h3 id="使用-git-拉取项目-https-协议"><a href="#使用-git-拉取项目-https-协议" class="header-anchor">#</a> 使用 Git 拉取项目（HTTPS 协议）</h3> <p>登录到服务器，执行：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> /var/www/
+</code></pre></div><p><code>cd</code> 命令用于切换当前工作目录，<code>/var/www</code> 是 Nginx 默认的站点存放目录。</p> <p>随后便可以将仓库克隆到本地了：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">git</span> clone https://github.com/wi1dcard/hello-deployment.git deployment
+</code></pre></div><blockquote><p>提示：若仓库包含大量提交历史，以上命令可能耗时较久；你可以尝试使用 <code>--depth</code> 选项来优化，详情请搜索 <code>Git 浅克隆</code> 等关键字。</p></blockquote> <p>请将命令中的 URL 替换为刚刚从 GitHub 或其它仓库托管平台内复制的链接。末尾的 <code>deployment</code> 参数表示将此仓库克隆至当前工作目录下的 <code>deployment</code> 子目录内。</p> <p>稍等将会出现以下输出：</p> <div class="language-php extra-class"><pre class="language-php"><code>Cloning into <span class="token single-quoted-string string">'hello-deployment'</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+remote<span class="token punctuation">:</span> Enumerating objects<span class="token punctuation">:</span> <span class="token number">130</span><span class="token punctuation">,</span> done<span class="token punctuation">.</span>
+remote<span class="token punctuation">:</span> Counting objects<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">130</span><span class="token operator">/</span><span class="token number">130</span><span class="token punctuation">)</span><span class="token punctuation">,</span> done<span class="token punctuation">.</span>
+remote<span class="token punctuation">:</span> Compressing objects<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">95</span><span class="token operator">/</span><span class="token number">95</span><span class="token punctuation">)</span><span class="token punctuation">,</span> done<span class="token punctuation">.</span>
+remote<span class="token punctuation">:</span> Total <span class="token number">130</span> <span class="token punctuation">(</span>delta <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span> reused <span class="token number">105</span> <span class="token punctuation">(</span>delta <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pack<span class="token operator">-</span>reused <span class="token number">0</span>
+Receiving objects<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">130</span><span class="token operator">/</span><span class="token number">130</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2.73</span> MiB <span class="token operator">|</span> <span class="token number">850.00</span> KiB<span class="token operator">/</span>s<span class="token punctuation">,</span> done<span class="token punctuation">.</span>
+Resolving deltas<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">50</span><span class="token operator">/</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span> done<span class="token punctuation">.</span>
+Checking connectivity<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> done<span class="token punctuation">.</span>
+</code></pre></div><p>如果你的项目是「私有」的，那么可能需要输入用户名和密码：</p> <div class="language-php extra-class"><pre class="language-php"><code>Cloning into <span class="token single-quoted-string string">'hello-deployment'</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+Username <span class="token keyword">for</span> <span class="token single-quoted-string string">'https://github.com'</span><span class="token punctuation">:</span> <span class="token operator">&lt;</span>输入你的用户名<span class="token operator">&gt;</span>
+Password <span class="token keyword">for</span> <span class="token single-quoted-string string">'https://wi1dcard@github.com'</span><span class="token punctuation">:</span> <span class="token operator">&lt;</span>请输入你的密码<span class="token operator">&gt;</span>
+</code></pre></div><blockquote><p>提示：还记得之前提到的吗？密码输入是不可见的。</p></blockquote> <h3 id="使用-composer-安装依赖"><a href="#使用-composer-安装依赖" class="header-anchor">#</a> 使用 Composer 安装依赖</h3> <p>首先，请切换至 <code>deployment</code> 目录内：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> deployment
+</code></pre></div><p>接着执行：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ composer <span class="token function">install</span>
+</code></pre></div><p>稍等片刻，你可能会看到这样的警告：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>Failed to download foo/bar from dist: The <span class="token function">zip</span> extension and <span class="token function">unzip</span> <span class="token builtin class-name">command</span> are both missing, skipping.
+Now trying to download from <span class="token builtin class-name">source</span>
+</code></pre></div><p>意为 PHP Zip 扩展和 <code>unzip</code> 命令均找不到，此时 Composer 会尝试从依赖的 Git 仓库内直接克隆源码，这是不推荐的；因此我们使用 <code>Ctrl + C</code>（macOS 为 <code>Cmd + C</code>）中止正在运行的命令。</p> <p>针对该警告信息，可以想到两种解决思路：</p> <ul><li>使用之前小节提到的 <code>apt-cache search</code> 搜索 <code>php zip</code> 关键字，查找 Zip 扩展并安装。</li> <li>安装 <code>unzip</code> 命令。</li></ul> <p>第一种方法本节不再赘述，我们来尝试第二种方法。首先，尝试手动执行 <code>unzip</code>，确认它的确未安装：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">unzip</span>
+The program <span class="token string">'unzip'</span> is currently not installed. You can <span class="token function">install</span> it by typing:
+<span class="token function">apt</span> <span class="token function">install</span> <span class="token function">unzip</span>
+</code></pre></div><p>看样子在当前系统中确实找不到 <code>unzip</code>。不过，贴心的 APT 帮我们找到了包含 <code>unzip</code> 的软件包，并直接提供了安装命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">unzip</span>
+</code></pre></div><p>稍等片刻便安装好了。此时再次执行：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">unzip</span>
+UnZip <span class="token number">6.00</span> of <span class="token number">20</span> April <span class="token number">2009</span>, by Debian. Original by Info-ZIP.
+<span class="token punctuation">..</span>.
+</code></pre></div><p>完美。</p> <p>实际上，不仅是 Composer，其它多数命令都支持使用 <code>Ctrl + C</code> 中止运行；如果 <code>Ctrl + C</code> 无效，你也可以试试 <code>Ctrl + D</code>；另外，结合 APT 的提示和 <code>apt-cache search</code>，可以帮助我们很快地解决绝大多数命令缺失的错误，而无需遵从百度来的手动而又复杂的源码编译步骤。</p> <p>我们回到主题，再次运行 <code>composer install</code>：</p> <div class="language-php extra-class"><pre class="language-php"><code>Loading composer repositories with package information
+Installing dependencies <span class="token punctuation">(</span>including <span class="token keyword">require</span><span class="token operator">-</span>dev<span class="token punctuation">)</span> from lock file
+Package operations<span class="token punctuation">:</span> <span class="token number">72</span> installs<span class="token punctuation">,</span> <span class="token number">0</span> updates<span class="token punctuation">,</span> <span class="token number">0</span> removals
+  <span class="token operator">-</span> Installing dragonmantank<span class="token operator">/</span>cron<span class="token operator">-</span>expression <span class="token punctuation">(</span>v2<span class="token punctuation">.</span><span class="token number">2.0</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Downloading <span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">)</span>
+  <span class="token operator">-</span> Installing erusev<span class="token operator">/</span>parsedown <span class="token punctuation">(</span><span class="token number">1.7</span><span class="token number">.1</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Downloading <span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">)</span>
+  <span class="token operator">-</span> Installing symfony<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">-</span>dumper <span class="token punctuation">(</span>v4<span class="token punctuation">.</span><span class="token number">2.3</span><span class="token punctuation">)</span><span class="token punctuation">:</span> Downloading <span class="token punctuation">(</span>connecting<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+</code></pre></div><p>恭喜，等待安装完毕即可。</p> <h3 id="配置环境变量"><a href="#配置环境变量" class="header-anchor">#</a> 配置环境变量</h3> <p>依赖安装完成后，我们还需要将 <code>.env.example</code> 文件复制为 <code>.env</code> 文件，并生成 <code>APP_KEY</code> 密钥：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> /var/www/deployment
+$ php -r <span class="token string">&quot;file_exists('.env') || copy('.env.example', '.env');&quot;</span>
+$ php artisan key:generate --ansi
+</code></pre></div><blockquote><p>提示：实际上，以上两条命令都是从部署应用的 <code>composer.json</code> - <code>scripts</code> 小节内摘抄出来的，这也解释了为何使用 <code>laravel new</code> 创建项目后 <code>.env</code> 文件就已经存在。有兴趣可深入了解 <a href="https://getcomposer.org/doc/articles/scripts.md" target="_blank" rel="noopener noreferrer">Composer Scripts<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p></blockquote> <h3 id="配置文件所有者"><a href="#配置文件所有者" class="header-anchor">#</a> 配置文件所有者</h3> <p>最后，别忘记修改文件所有者：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">chown</span> -R www-data:www-data <span class="token builtin class-name">.</span>
+</code></pre></div><p>由于目前所在的工作目录为 <code>/var/www/deployment</code>，所以可用表示当前工作目录的 <code>.</code> 代替之前的 <code>/var/www/deployment</code>，它们是等效的。</p> <p>至此，本小节目标完成。你可以通过 <code>ll</code> 命令来列出当前目录：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ ll
+total <span class="token number">440</span>
+drwxr-xr-x <span class="token number">13</span> www-data www-data   <span class="token number">4096</span> Mar  <span class="token number">9</span> 01:26 ./
+drwxr-xr-x  <span class="token number">5</span> root     root       <span class="token number">4096</span> Mar  <span class="token number">9</span> 00:49 <span class="token punctuation">..</span>/
+drwxr-xr-x  <span class="token number">6</span> www-data www-data   <span class="token number">4096</span> Mar  <span class="token number">9</span> 00:45 app/
+-rw-r--r--  <span class="token number">1</span> www-data www-data   <span class="token number">1686</span> Mar  <span class="token number">9</span> 00:45 artisan
+<span class="token punctuation">..</span>.
+</code></pre></div><h2 id="配置-nginx-站点信息"><a href="#配置-nginx-站点信息" class="header-anchor">#</a> 配置 Nginx 站点信息</h2> <h3 id="nginx-站点配置"><a href="#nginx-站点配置" class="header-anchor">#</a> Nginx 站点配置</h3> <p>根据 <a href="https://learnku.com/docs/laravel/5.8/deployment" target="_blank" rel="noopener noreferrer">Laravel 5.8 部署文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 的说明，我们可直接拿到一份现成的 Nginx 配置文件，稍作调整即可：</p> <div class="language-nginx extra-class"><pre class="language-nginx"><code><span class="token keyword">server</span> <span class="token punctuation">{</span>
+    <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
+    <span class="token keyword">server_name</span> laravel<span class="token operator">-</span>deployment<span class="token punctuation">.</span>wi1dcard<span class="token punctuation">.</span>cn<span class="token punctuation">;</span> <span class="token comment"># 此为必修改项，请替换为服务器公网 IP 或域名</span>
+    <span class="token keyword">root</span> <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>deployment<span class="token operator">/</span>public<span class="token punctuation">;</span> <span class="token comment"># 此为必修改项，请注意指向站点根目录的 public 子目录</span>
+
+    <span class="token keyword">add_header</span> X<span class="token operator">-</span>Frame<span class="token operator">-</span>Options <span class="token string">&quot;SAMEORIGIN&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">add_header</span> X<span class="token operator">-</span>XSS<span class="token operator">-</span>Protection <span class="token string">&quot;1; mode=block&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">add_header</span> X<span class="token operator">-</span>Content<span class="token operator">-</span>Type<span class="token operator">-</span>Options <span class="token string">&quot;nosniff&quot;</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">index</span> <span class="token keyword">index</span><span class="token punctuation">.</span>html <span class="token keyword">index</span><span class="token punctuation">.</span>htm <span class="token keyword">index</span><span class="token punctuation">.</span>php<span class="token punctuation">;</span>
+
+    <span class="token keyword">charset</span> utf<span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span><span class="token operator">/</span> <span class="token operator">/</span><span class="token keyword">index</span><span class="token punctuation">.</span>php<span class="token operator">?</span><span class="token variable">$query_string</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">location</span> <span class="token operator">=</span> <span class="token operator">/</span>favicon<span class="token punctuation">.</span>ico <span class="token punctuation">{</span> <span class="token keyword">access_log</span> off<span class="token punctuation">;</span> <span class="token keyword">log_not_found</span> off<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">location</span> <span class="token operator">=</span> <span class="token operator">/</span>robots<span class="token punctuation">.</span>txt  <span class="token punctuation">{</span> <span class="token keyword">access_log</span> off<span class="token punctuation">;</span> <span class="token keyword">log_not_found</span> off<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token keyword">error_page</span> <span class="token number">404</span> <span class="token operator">/</span><span class="token keyword">index</span><span class="token punctuation">.</span>php<span class="token punctuation">;</span>
+
+    <span class="token keyword">location</span> <span class="token operator">~</span> \<span class="token punctuation">.</span>php$ <span class="token punctuation">{</span>
+        <span class="token keyword">fastcgi_pass</span> unix<span class="token punctuation">:</span><span class="token operator">/</span>var<span class="token operator">/</span>run<span class="token operator">/</span>php<span class="token operator">/</span>php7<span class="token punctuation">.</span><span class="token number">2</span><span class="token operator">-</span>fpm<span class="token punctuation">.</span>sock<span class="token punctuation">;</span> <span class="token comment"># 请注意核对 PHP 版本</span>
+        <span class="token keyword">fastcgi_index</span> <span class="token keyword">index</span><span class="token punctuation">.</span>php<span class="token punctuation">;</span>
+        <span class="token keyword">fastcgi_param</span> SCRIPT_FILENAME <span class="token variable">$realpath_root</span><span class="token variable">$fastcgi_script_name</span><span class="token punctuation">;</span>
+        <span class="token keyword">include</span> fastcgi_params<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">location</span> <span class="token operator">~</span> <span class="token operator">/</span>\<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token operator">?</span><span class="token operator">!</span>well<span class="token operator">-</span>known<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token punctuation">{</span>
+        <span class="token keyword">deny</span> all<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>提示：关于以上 Nginx 配置项的解析，可参见 <a href="https://wi1dcard.cn/posts/laravel-recommended-nginx-conf-analysis/" target="_blank" rel="noopener noreferrer">这篇博客<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p></blockquote> <p>通常我们仅需修改 <code>server_name</code>、<code>root</code> 和 <code>fastcgi_pass</code>；请注意阅读 <code>#</code> 后的注释。</p> <p>我们将以上内容保存到本地文件（例如 <code>deployment.conf</code>）内，使用 SCP 即可上传至服务器：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">scp</span> ~/deployment.conf root@laravel-deployment.wi1dcard.cn:/etc/nginx/sites-enabled/
+</code></pre></div><blockquote><p>提示：如果你熟悉 <code>vi</code> 等文本编辑器，也可以直接在服务器上操作，此处不再展开。</p></blockquote> <p>其中：</p> <ul><li><code>~/deployment.conf</code> 请替换为配置文件的实际保存路径，该路径位于本地。</li> <li><code>/etc/nginx/sites-enabled/</code> 为存放 Nginx 站点配置的目录，该目录位于服务器。</li></ul> <h3 id="重载-nginx"><a href="#重载-nginx" class="header-anchor">#</a> 重载 Nginx</h3> <p>配置完成后，请务必重启（Restart）或重载（Reload）Nginx。</p> <p>什么是 <strong>重载</strong>？实际上，直接重启 Nginx 是不安全的。原因有二：</p> <ul><li>在 Nginx 进程结束再重新运行的过程中，将造成极短时间的闪断。虽然这一时间通常很短（一般来说在秒级别），但倘若面对大量并发，还是极易造成一部分请求无法访问，即服务中断。</li> <li>在重启的过程中，若此时 Nginx 恰好正在处理请求，与客户端的 TCP 连接将会断开，客户端无法收到正确响应，造成前后端信息不一致。</li></ul> <p>在之前的小节中，已经提到重启 Nginx 的方法；</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">service</span> nginx restart
+</code></pre></div><p>同样地，亦可使用 <code>service</code> 命令重载 Nginx：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">service</span> nginx reload
+</code></pre></div><p>另一种等效的方法是：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ nginx -s reload
+</code></pre></div><h3 id="最终效果"><a href="#最终效果" class="header-anchor">#</a> 最终效果</h3> <p>在浏览器内输入服务器公网 IP 或域名并访问，你将会看到 Laravel 应用的默认主页：</p> <p><img src="https://raw.githubusercontent.com/wi1dcard/laravel-deployment/master/src/images/f3eede815abbbd80a255d1c6c9da0b1c.png" alt="img"></p> <p>恭喜你，部署成功。</p> <h2 id="生产环境的必要优化"><a href="#生产环境的必要优化" class="header-anchor">#</a> 生产环境的必要优化</h2> <h3 id="nginx-配置"><a href="#nginx-配置" class="header-anchor">#</a> Nginx 配置</h3> <p>对于 Laravel 应用来说，优化 Nginx 配置所带来的性能提升可谓微不足道。因此不建议在中小型项目中花费较多精力调优 Nginx。</p> <p>不过，有一点值得注意：</p> <div class="language-php extra-class"><pre class="language-php"><code>server <span class="token punctuation">{</span>
+    <span class="token shell-comment comment"># ...</span>
+    location <span class="token operator">~</span><span class="token operator">*</span> \<span class="token punctuation">.</span><span class="token punctuation">(</span>js<span class="token operator">|</span>css<span class="token punctuation">)</span>$ <span class="token punctuation">{</span>
+        expires <span class="token number">24</span>h<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token shell-comment comment">#...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过以上配置，可使 Nginx 匹配请求 URI，若以 <code>js</code> 或 <code>css</code> 结尾，则将响应头 <code>Expires</code> 的值设置为 <code>24h</code>返回。客户端浏览器将根据该值建立资源缓存，并在指定时间后过期，因此可节省部分服务器静态资源流量。<code>24h</code> 可根据需要调整，若使用 CDN 服务分发静态资源，则不必配置此项。</p> <h3 id="laravel-的配置缓存与路由缓存"><a href="#laravel-的配置缓存与路由缓存" class="header-anchor">#</a> Laravel 的配置缓存与路由缓存</h3> <p>开启 <strong>配置缓存</strong> 和 <strong>路由缓存</strong> 能够在一定程度上提升 Laravel 的性能。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ php artisan config:cache <span class="token comment"># 生成配置缓存</span>
+</code></pre></div><blockquote><p>注意：当开启配置缓存后，<code>env()</code> 函数将会失效；它将会永远返回 <code>null</code>；因此务必确保在非配置文件内，未直接调用该函数。</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code>$ php artisan route:cache <span class="token comment"># 生成路由缓存</span>
+</code></pre></div><blockquote><p>注意：路由缓存仅支持控制器风格；若路由注册时存在闭包（Closures），则无法使用该功能。</p> <p>注意：生成缓存后，对配置和路由的修改将不会生效，需再次执行缓存命令，或使用 <code>php artisan cache:clear</code> 命令清除它们。</p></blockquote> <h3 id="composer"><a href="#composer" class="header-anchor">#</a> Composer</h3> <p>在安装依赖时，建议使用以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ composer <span class="token function">install</span> --optimize-autoloader --no-dev
+</code></pre></div><p>其中，<code>--optimize-autoloader</code> 表示生成优化后的自动加载器，虽然生成过程可能较慢，但换来的是提高运行时的效率。<code>--no-dev</code> 表示不安装 composer.json 中 <code>require-dev</code> 声明的扩展包，在生产环境中我们不需要这些开发依赖。</p> <h3 id="再谈文件权限"><a href="#再谈文件权限" class="header-anchor">#</a> 再谈文件权限</h3> <p>文件权限直接关系到服务器安全与否。通常情况下，我们应当遵循「最小权限原则」，即权限越小越好。对于 Laravel 来说，我个人比较倾向的权限配置为 <code>750</code>：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">chmod</span> -R <span class="token number">750</span> /var/www/deployment
+</code></pre></div><p>你可以通过在线工具 <a href="https://chmod-calculator.com/" target="_blank" rel="noopener noreferrer">Chmod Calculator<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 来解析八进制权限数字：</p> <p>以上是 <code>750</code> 所代表的权限，即文件所有者可 <strong>读、写、执行</strong>，文件所有组可 <strong>读、执行</strong>，其余用户 <strong>均不可</strong>。</p> <p>也就是说，运行 Nginx 和 PHP-FPM 的 <code>www-data</code> 用户，可读、写、执行；<code>www-data</code> 用户组内的用户可读、执行。</p> <p>更加严格安全的另一个权限推荐是 <code>640</code>，不过务必确保 <code>www-data</code> 用户具备 <code>bootstrap/cache</code> 和 <code>storage</code> 目录的 <strong>读、写</strong> 权限，在 Laravel 应用运行过程中是需要读写它们的。</p> <h3 id="杂项"><a href="#杂项" class="header-anchor">#</a> 杂项</h3> <p>根据应用本身的逻辑不同，涉及的 Laravel 功能也不一样。针对部分项目，你有可能还需要执行以下 Artisan 命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ php artisan storage:link <span class="token comment"># 软链接 app/storage 到 public 目录，以便公开访问</span>
+$ php artisan migrate <span class="token comment"># 执行迁移</span>
+$ php artisan db:seed <span class="token comment"># 执行数据填充</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/super-eggs/vuepress-blog/edit/master/docs/Wamp/server_deployment.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Wamp/laradock.html" class="prev">
+        LaraDock
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.693e6c19.js" defer></script><script src="/assets/js/2.3304c2e1.js" defer></script><script src="/assets/js/60.7898b9b9.js" defer></script>
+  </body>
+</html>

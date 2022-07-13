@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Deployer 部署工具 | SuperEggs</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/log.ico" type="image/jpg">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script src="/js/jquery-3.5.min.js"></script>
+    <script src="/js/cursor.min.js"></script>
+    <meta name="description" content="分享生活高效技能,保持勇敢，坚持有趣，生命不息，折腾不止！">
+    <meta property="og:site_name" content="SuperEggs">
+    <meta property="og:title" content="Deployer 部署工具">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/Wamp/deployer.html">
+    <meta name="twitter:title" content="Deployer 部署工具">
+    <meta name="twitter:url" content="/Wamp/deployer.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="html,css,jquery,thinkphp,laravel,docker,linux,manjaro">
+    <meta name="auther" content="SuperEggs">
+    <link rel="preload" href="/assets/css/0.styles.5f689f29.css" as="style"><link rel="preload" href="/assets/js/app.693e6c19.js" as="script"><link rel="preload" href="/assets/js/2.3304c2e1.js" as="script"><link rel="preload" href="/assets/js/55.25bacde7.js" as="script"><link rel="prefetch" href="/assets/js/10.34123518.js"><link rel="prefetch" href="/assets/js/11.f0e24eb8.js"><link rel="prefetch" href="/assets/js/12.5e75a974.js"><link rel="prefetch" href="/assets/js/13.db0bf381.js"><link rel="prefetch" href="/assets/js/14.ed324319.js"><link rel="prefetch" href="/assets/js/15.f40e8254.js"><link rel="prefetch" href="/assets/js/16.d8f963c5.js"><link rel="prefetch" href="/assets/js/17.250470cc.js"><link rel="prefetch" href="/assets/js/18.5161c52b.js"><link rel="prefetch" href="/assets/js/19.afb8dd7a.js"><link rel="prefetch" href="/assets/js/20.c8248808.js"><link rel="prefetch" href="/assets/js/21.e818d83d.js"><link rel="prefetch" href="/assets/js/22.69d0a99c.js"><link rel="prefetch" href="/assets/js/23.92b9837f.js"><link rel="prefetch" href="/assets/js/24.124a82a4.js"><link rel="prefetch" href="/assets/js/25.1c0271e6.js"><link rel="prefetch" href="/assets/js/26.34e44644.js"><link rel="prefetch" href="/assets/js/27.4f89b112.js"><link rel="prefetch" href="/assets/js/28.82ed427e.js"><link rel="prefetch" href="/assets/js/29.64fae044.js"><link rel="prefetch" href="/assets/js/3.1c0cc69b.js"><link rel="prefetch" href="/assets/js/30.dc7d1b9b.js"><link rel="prefetch" href="/assets/js/31.a273a940.js"><link rel="prefetch" href="/assets/js/32.ca99c448.js"><link rel="prefetch" href="/assets/js/33.4129d67d.js"><link rel="prefetch" href="/assets/js/34.a49e24e6.js"><link rel="prefetch" href="/assets/js/35.4ba458c0.js"><link rel="prefetch" href="/assets/js/36.7412ff8c.js"><link rel="prefetch" href="/assets/js/37.35c3a72c.js"><link rel="prefetch" href="/assets/js/38.ebf390fb.js"><link rel="prefetch" href="/assets/js/39.6b308832.js"><link rel="prefetch" href="/assets/js/4.e5a930e9.js"><link rel="prefetch" href="/assets/js/40.968d571d.js"><link rel="prefetch" href="/assets/js/41.a1f587bf.js"><link rel="prefetch" href="/assets/js/42.9f358bc3.js"><link rel="prefetch" href="/assets/js/43.4f19f41e.js"><link rel="prefetch" href="/assets/js/44.a27ad98a.js"><link rel="prefetch" href="/assets/js/45.fb26a2d8.js"><link rel="prefetch" href="/assets/js/46.aa66c6d7.js"><link rel="prefetch" href="/assets/js/47.00ae1556.js"><link rel="prefetch" href="/assets/js/48.699e8e33.js"><link rel="prefetch" href="/assets/js/49.0f79ef04.js"><link rel="prefetch" href="/assets/js/5.2d78753d.js"><link rel="prefetch" href="/assets/js/50.2428dcc2.js"><link rel="prefetch" href="/assets/js/51.829dcccc.js"><link rel="prefetch" href="/assets/js/52.f2dfda6b.js"><link rel="prefetch" href="/assets/js/53.225de2db.js"><link rel="prefetch" href="/assets/js/54.b91ed453.js"><link rel="prefetch" href="/assets/js/56.2a58cece.js"><link rel="prefetch" href="/assets/js/57.48eab866.js"><link rel="prefetch" href="/assets/js/58.5cf8ca6e.js"><link rel="prefetch" href="/assets/js/59.458178cc.js"><link rel="prefetch" href="/assets/js/6.66329e4b.js"><link rel="prefetch" href="/assets/js/60.7898b9b9.js"><link rel="prefetch" href="/assets/js/61.5f651468.js"><link rel="prefetch" href="/assets/js/62.cd190cb0.js"><link rel="prefetch" href="/assets/js/63.0d472232.js"><link rel="prefetch" href="/assets/js/64.e8a8ffe7.js"><link rel="prefetch" href="/assets/js/65.8a66ff7d.js"><link rel="prefetch" href="/assets/js/66.0492741b.js"><link rel="prefetch" href="/assets/js/67.204dadcb.js"><link rel="prefetch" href="/assets/js/68.7d5b0a8f.js"><link rel="prefetch" href="/assets/js/69.ed735059.js"><link rel="prefetch" href="/assets/js/7.44229983.js"><link rel="prefetch" href="/assets/js/70.0f643f0b.js"><link rel="prefetch" href="/assets/js/71.a226be62.js"><link rel="prefetch" href="/assets/js/8.51a4d2f9.js"><link rel="prefetch" href="/assets/js/9.ee30d1ab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5f689f29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/log.png" alt="SuperEggs" class="logo"> <span class="site-name can-hide">SuperEggs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link router-link-active">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link router-link-active">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Wamp</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Wamp/Minikube.html" class="sidebar-link">minikube</a></li><li><a href="/Wamp/" aria-current="page" class="sidebar-link">Dockerfile</a></li><li><a href="/Wamp/deployer.html" aria-current="page" class="active sidebar-link">Deployer 部署工具</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Wamp/deployer.html#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/Wamp/deployer.html#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/Wamp/deployer.html#配置脚本" class="sidebar-link">配置脚本</a></li><li class="sidebar-sub-header"><a href="/Wamp/deployer.html#开始使用" class="sidebar-link">开始使用</a></li></ul></li><li><a href="/Wamp/docker.html" class="sidebar-link">Docker</a></li><li><a href="/Wamp/elasticsearch.html" class="sidebar-link">elasticsearch</a></li><li><a href="/Wamp/etcd.html" class="sidebar-link">etcd</a></li><li><a href="/Wamp/laradock.html" class="sidebar-link">LaraDock</a></li><li><a href="/Wamp/server_deployment.html" class="sidebar-link">使用一键脚本部署</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="deployer-部署工具"><a href="#deployer-部署工具" class="header-anchor">#</a> Deployer 部署工具</h1> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>Deployer 是一个使用 PHP 开发的轻量级项目部署工具，Deployer 不需要在目标服务器上安装任何客户端即可使用，它的原理是通过 SSH 登录到目标服务器，然后执行脚本中定义好的 Shell 命令。</p> <p>同时 Deployer 内置了一批常见项目、框架的部署脚本，例如 Laravel、WordPress 等等，当我们需要部署相关项目时，只需要调整一些参数就可以直接使用。</p> <p><a href="https://deployer.org/" target="_blank" rel="noopener noreferrer">官网文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <p>安装部署器有三种方法：</p> <ol><li>下载 phar 存档</li> <li>Composer 安装</li> <li>局部 Composer 安装</li></ol> <h3 id="下载-phar-存档"><a href="#下载-phar-存档" class="header-anchor">#</a> 下载 phar 存档</h3> <p>要将部署器安装为 phar 存档，运行以下命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">curl</span> -LO https://deployer.org/deployer.phar
+<span class="token function">mv</span> deployer.phar /usr/local/bin/dep
+<span class="token function">chmod</span> +x /usr/local/bin/dep
+</code></pre></div><p>如果您需要另一个版本的 Deployer，您可以在<a href="https://deployer.org/download" target="_blank" rel="noopener noreferrer">下载页面<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>上找到它。稍后，要升级 Deployer，运行命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>dep self-update
+</code></pre></div><p>要升级到下一个主要版本（如果可用），请使用该选项：<code>--upgrade (-u)</code></p> <div class="language-sh extra-class"><pre class="language-sh"><code>dep self-update --upgrade
+</code></pre></div><h3 id="composer-安装"><a href="#composer-安装" class="header-anchor">#</a> composer 安装</h3> <p>要将 Deployer 源版本与 composer 一起安装，运行命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>composer require deployer/deployer --dev
+</code></pre></div><p>您也可以在全局范围内安装它：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>composer global require deployer/deployer
+</code></pre></div><blockquote><p>如果之前已经安装过 deployer，请再次执行这个命令以更新到最新版。</p></blockquote> <p>更多信息： https://getcomposer.org/doc/03-cli.md#global</p> <p>然后要使用 Deployer，请运行以下命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>php vendor/bin/dep
+</code></pre></div><blockquote><p>如果您使用这两种方法安装了Deployer，则运行命令将更喜欢 composer 安装的版本。<code>dep</code></p></blockquote> <blockquote><p>如果您有依赖冲突，您可以使用&quot;分布  Composer 安装&quot;</p></blockquote> <h3 id="分布-composer-安装"><a href="#分布-composer-安装" class="header-anchor">#</a> 分布 Composer 安装</h3> <p>要用 Composer 安装 Deployer 分布 版本，运行命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>composer require deployer/dist --dev
+</code></pre></div><p>然后要使用 Deployer，请运行以下命令：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>php vendor/bin/dep
+</code></pre></div><h3 id="laradock-安装"><a href="#laradock-安装" class="header-anchor">#</a> Laradock 安装</h3> <ol><li><p>打开 <code>.env</code> 文件</p></li> <li><p>搜索 <code>WORKSPACE_INSTALL_DEPLOYER</code></p></li> <li><p>将其设置为true</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>WORKSPACE_INSTALL_DEPLOYER=true
+</code></pre></div></li> <li><p>重新构建这个容器<code>docker-compose build workspace</code></p></li></ol> <h3 id="打包-phar"><a href="#打包-phar" class="header-anchor">#</a> 打包 phar</h3> <p>如果您想从源代码构建部署程序，则从 GitHub 克隆项目：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> clone https://github.com/deployphp/deployer.git
+</code></pre></div><p>然后在项目目录中运行以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>php bin/build
+</code></pre></div><p>这将构建 phar 存档。<code>deployer.phar</code></p> <h3 id="自动完成"><a href="#自动完成" class="header-anchor">#</a> 自动完成</h3> <p>部署器附带了 bash/zsh/fish 的自动完成脚本，因此您不需要记住所有任务和选项。要安装，运行以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>dep autocomplete
+</code></pre></div><p>并按照说明操作。</p> <h3 id="安装完成"><a href="#安装完成" class="header-anchor">#</a> 安装完成</h3> <div class="language-php extra-class"><pre class="language-php"><code>dep
+</code></pre></div><p><img src="https://i.loli.net/2021/04/26/4GfkMxNJRhBd561.png" alt="image-20210426151139721"></p> <p>可以看到有正常的输出，说明安装成功。</p> <h2 id="配置脚本"><a href="#配置脚本" class="header-anchor">#</a> 配置脚本</h2> <h3 id="创建部署脚本"><a href="#创建部署脚本" class="header-anchor">#</a> 创建部署脚本</h3> <p>现在我们需要创建一个目录用于放置部署脚本：</p> <div class="language-php extra-class"><pre class="language-php"><code>$ mkdir <span class="token operator">-</span>p <span class="token operator">~</span><span class="token operator">/</span>code<span class="token operator">/</span>deploy
+$ cd <span class="token operator">~</span><span class="token operator">/</span>code<span class="token operator">/</span>deploy<span class="token operator">-</span>laravel
+$ dep init
+</code></pre></div><p><code>dep init</code> 命令用来创建一个部署脚本，会询问我们项目类型，我们是 Laravel 项目所以输入 <code>1</code> 然后回车；接下来询问 <code>Repository</code> 也就是我们代码仓库的地址，大家填入自己的 github 仓库地址即可：</p> <blockquote><p>注意：这里要填 Https 形式的 Github 仓库地址，因为 SSH 格式的地址需要服务器有 Deploy Key 才可以正常访问。</p></blockquote> <p><a href="https://cdn.learnku.com/uploads/images/201901/05/5320/sNoYb7d4U8.png!large" target="_blank" rel="noopener noreferrer"><img src="https://cdn.learnku.com/uploads/images/201901/05/5320/sNoYb7d4U8.png!large" alt="file"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>接下来会询问是否允许 Deployer 收集匿名的部署数据以改善项目，大家根据自己的情况填入 <code>yes</code> 或者 <code>no</code>：</p> <p><a href="https://cdn.learnku.com/uploads/images/201808/25/5320/9KYgJzfd8r.png?imageView2/2/w/1240/h/0" target="_blank" rel="noopener noreferrer"><img src="https://cdn.learnku.com/uploads/images/201808/25/5320/9KYgJzfd8r.png?imageView2/2/w/1240/h/0" alt="file"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>可以看到 Deployer 在当前目录下创建了一个名为 <code>deploy.php</code> 的文件。</p> <p>我们现在来看看这个文件里有哪些东西：</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token keyword">namespace</span> <span class="token package">Deployer</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 引入官方的 Laravel 部署脚本</span>
+<span class="token keyword">require</span> <span class="token single-quoted-string string">'recipe/laravel.php'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 设置一个名为 application 的环境变量，值为 my_project</span>
+<span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'application'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'my_project'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 设置一个名为 repository，值为初始化脚本时输入的 github 仓库地址</span>
+<span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'repository'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'https://github.com/leo108/laravel-shop-advanced-57.git'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 设置环境变量，不需要关心</span>
+<span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'git_tty'</span><span class="token punctuation">,</span> <span class="token boolean constant">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// shared_files / shared_dirs 这两个环境变量是数组格式，add 函数可以往数组里添加值</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'shared_files'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'shared_dirs'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Deployer 会把这个变量下的目录加上写权限</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'writable_dirs'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 添加一台服务器，服务器 IP/域名 是 project.com</span>
+<span class="token function">host</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'project.com'</span><span class="token punctuation">)</span>
+    <span class="token comment">// 设置一个这台服务器独享的环境变量，名为 deploy_path，值为 ~/my_project</span>
+    <span class="token comment">// Deployer 会把花括号包裹起来的字符串替换成对应的环境变量</span>
+    <span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy_path'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'~/{{application}}'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定义一个名为 build 的任务</span>
+<span class="token function">task</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'build'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 这个任务的内容是执行 cd ~/my_project &amp;&amp; build 命令</span>
+    <span class="token function">run</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'cd {{release_path}} &amp;&amp; build'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定义一个后置钩子，当 deploy:failed 任务被执行之后，Deployer 会执行 deploy:unlock 任务</span>
+<span class="token function">after</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:failed'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'deploy:unlock'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定义一个前置钩子，在执行 deploy:symlink 任务之前先执行 artisan:migrate</span>
+<span class="token function">before</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'deploy:symlink'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'artisan:migrate'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code></pre></div><p>可以看到在这个部署文件里并没有太多涉及到部署逻辑的地方，这是因为大部分的部署逻辑都在 <code>recipe/laravel.php</code> 这个 Deployer 自带的脚本中写好了，我们来看看这个文件的内容，这个文件在本地的路径是 <code>~/.composer/vendor/deployer/deployer/recipe/laravel.php</code>，我们也可以在 github 上直接查看 <a href="https://github.com/deployphp/deployer/blob/master/recipe/laravel.php" target="_blank" rel="noopener noreferrer">github.com/deployphp/deployer/blob...<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 。</p> <p>这里面大部分内容都比较浅显易懂，这里就不一一解释了。</p> <p>我们查看一下这个文件的最底部，可以看到定义了一个名为 <code>deploy</code> 任务，这个是 Deployer 中的默认任务，当我们使用 Deployer 部署而又没有指定具体的任务时，Deployer 就会默认执行 <code>deploy</code> 任务。</p> <p>这个 <code>deploy</code> 任务的内容是一个数组，这代表 <code>deploy</code> 是一个任务组，Deployer 会按照数组中的顺序依次执行任务。</p> <h2 id="开始使用"><a href="#开始使用" class="header-anchor">#</a> 开始使用</h2> <h3 id="部署"><a href="#部署" class="header-anchor">#</a> 部署</h3> <p>阅读有关<a href="https://deployer.org/docs/configuration.html" target="_blank" rel="noopener noreferrer">配置部署<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>的有关内容。</p> <p>现在，让我们部署我们的应用程序：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>dep deploy
+</code></pre></div><p>若要在输出中包含额外的详细信息，可以使用以下选项增加详细程度：<code>--verbose</code></p> <ul><li><code>-v</code>对于正常输出，</li> <li><code>-vv</code>要进行更详细的输出，</li> <li><code>-vvv</code>用于调试。</li></ul> <p>部署器将在主机上创建以下目录：</p> <ul><li><code>releases</code>包含发布 dirs，</li> <li><code>shared</code>包含共享文件和 dirs，</li> <li><code>current</code>符号链接到当前版本</li> <li>配置主机以从 <code>current</code> 中为公共目录服务。</li></ul> <p>默认情况下，部署程序保留最后 5 个版本，但您可以通过修改关联的参数来增加此数量：</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token function">set</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'keep_releases'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="回滚代码"><a href="#回滚代码" class="header-anchor">#</a> 回滚代码</h3> <p>如果部署过程中出现错误或新版本出现问题，只需运行以下命令即可回滚到以前的工作版本：</p> <div class="language-sh extra-class"><pre class="language-sh"><code>dep rollback
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/super-eggs/vuepress-blog/edit/master/docs/Wamp/deployer.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Wamp/" class="prev router-link-active">
+        Dockerfile
+      </a></span> <span class="next"><a href="/Wamp/docker.html">
+        Docker
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.693e6c19.js" defer></script><script src="/assets/js/2.3304c2e1.js" defer></script><script src="/assets/js/55.25bacde7.js" defer></script>
+  </body>
+</html>

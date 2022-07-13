@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chromedp 小尝试 | SuperEggs</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/log.ico" type="image/jpg">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script src="/js/jquery-3.5.min.js"></script>
+    <script src="/js/cursor.min.js"></script>
+    <meta name="description" content="分享生活高效技能,保持勇敢，坚持有趣，生命不息，折腾不止！">
+    <meta property="og:site_name" content="SuperEggs">
+    <meta property="og:title" content="Chromedp 小尝试">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/Go_Practice/Chromedp.html">
+    <meta name="twitter:title" content="Chromedp 小尝试">
+    <meta name="twitter:url" content="/Go_Practice/Chromedp.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="html,css,jquery,thinkphp,laravel,docker,linux,manjaro">
+    <meta name="auther" content="SuperEggs">
+    <link rel="preload" href="/assets/css/0.styles.5f689f29.css" as="style"><link rel="preload" href="/assets/js/app.693e6c19.js" as="script"><link rel="preload" href="/assets/js/2.3304c2e1.js" as="script"><link rel="preload" href="/assets/js/29.64fae044.js" as="script"><link rel="prefetch" href="/assets/js/10.34123518.js"><link rel="prefetch" href="/assets/js/11.f0e24eb8.js"><link rel="prefetch" href="/assets/js/12.5e75a974.js"><link rel="prefetch" href="/assets/js/13.db0bf381.js"><link rel="prefetch" href="/assets/js/14.ed324319.js"><link rel="prefetch" href="/assets/js/15.f40e8254.js"><link rel="prefetch" href="/assets/js/16.d8f963c5.js"><link rel="prefetch" href="/assets/js/17.250470cc.js"><link rel="prefetch" href="/assets/js/18.5161c52b.js"><link rel="prefetch" href="/assets/js/19.afb8dd7a.js"><link rel="prefetch" href="/assets/js/20.c8248808.js"><link rel="prefetch" href="/assets/js/21.e818d83d.js"><link rel="prefetch" href="/assets/js/22.69d0a99c.js"><link rel="prefetch" href="/assets/js/23.92b9837f.js"><link rel="prefetch" href="/assets/js/24.124a82a4.js"><link rel="prefetch" href="/assets/js/25.1c0271e6.js"><link rel="prefetch" href="/assets/js/26.34e44644.js"><link rel="prefetch" href="/assets/js/27.4f89b112.js"><link rel="prefetch" href="/assets/js/28.82ed427e.js"><link rel="prefetch" href="/assets/js/3.1c0cc69b.js"><link rel="prefetch" href="/assets/js/30.dc7d1b9b.js"><link rel="prefetch" href="/assets/js/31.a273a940.js"><link rel="prefetch" href="/assets/js/32.ca99c448.js"><link rel="prefetch" href="/assets/js/33.4129d67d.js"><link rel="prefetch" href="/assets/js/34.a49e24e6.js"><link rel="prefetch" href="/assets/js/35.4ba458c0.js"><link rel="prefetch" href="/assets/js/36.7412ff8c.js"><link rel="prefetch" href="/assets/js/37.35c3a72c.js"><link rel="prefetch" href="/assets/js/38.ebf390fb.js"><link rel="prefetch" href="/assets/js/39.6b308832.js"><link rel="prefetch" href="/assets/js/4.e5a930e9.js"><link rel="prefetch" href="/assets/js/40.968d571d.js"><link rel="prefetch" href="/assets/js/41.a1f587bf.js"><link rel="prefetch" href="/assets/js/42.9f358bc3.js"><link rel="prefetch" href="/assets/js/43.4f19f41e.js"><link rel="prefetch" href="/assets/js/44.a27ad98a.js"><link rel="prefetch" href="/assets/js/45.fb26a2d8.js"><link rel="prefetch" href="/assets/js/46.aa66c6d7.js"><link rel="prefetch" href="/assets/js/47.00ae1556.js"><link rel="prefetch" href="/assets/js/48.699e8e33.js"><link rel="prefetch" href="/assets/js/49.0f79ef04.js"><link rel="prefetch" href="/assets/js/5.2d78753d.js"><link rel="prefetch" href="/assets/js/50.2428dcc2.js"><link rel="prefetch" href="/assets/js/51.829dcccc.js"><link rel="prefetch" href="/assets/js/52.f2dfda6b.js"><link rel="prefetch" href="/assets/js/53.225de2db.js"><link rel="prefetch" href="/assets/js/54.b91ed453.js"><link rel="prefetch" href="/assets/js/55.25bacde7.js"><link rel="prefetch" href="/assets/js/56.2a58cece.js"><link rel="prefetch" href="/assets/js/57.48eab866.js"><link rel="prefetch" href="/assets/js/58.5cf8ca6e.js"><link rel="prefetch" href="/assets/js/59.458178cc.js"><link rel="prefetch" href="/assets/js/6.66329e4b.js"><link rel="prefetch" href="/assets/js/60.7898b9b9.js"><link rel="prefetch" href="/assets/js/61.5f651468.js"><link rel="prefetch" href="/assets/js/62.cd190cb0.js"><link rel="prefetch" href="/assets/js/63.0d472232.js"><link rel="prefetch" href="/assets/js/64.e8a8ffe7.js"><link rel="prefetch" href="/assets/js/65.8a66ff7d.js"><link rel="prefetch" href="/assets/js/66.0492741b.js"><link rel="prefetch" href="/assets/js/67.204dadcb.js"><link rel="prefetch" href="/assets/js/68.7d5b0a8f.js"><link rel="prefetch" href="/assets/js/69.ed735059.js"><link rel="prefetch" href="/assets/js/7.44229983.js"><link rel="prefetch" href="/assets/js/70.0f643f0b.js"><link rel="prefetch" href="/assets/js/71.a226be62.js"><link rel="prefetch" href="/assets/js/8.51a4d2f9.js"><link rel="prefetch" href="/assets/js/9.ee30d1ab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5f689f29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/log.png" alt="SuperEggs" class="logo"> <span class="site-name can-hide">SuperEggs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link router-link-active">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link router-link-active">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Go_Practice</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Go_Practice/Chromedp.html" aria-current="page" class="active sidebar-link">Chromedp 小尝试</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Go_Practice/Chromedp.html#_1-chromedp是什么" class="sidebar-link">1 Chromedp是什么</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/Chromedp.html#_2-为什么不使用selenium" class="sidebar-link">2 为什么不使用Selenium</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/Chromedp.html#_3-文章解决了什么需求" class="sidebar-link">3 文章解决了什么需求</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/Chromedp.html#_4-如何使用chromedp进行二维码登陆" class="sidebar-link">4 如何使用chromedp进行二维码登陆</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/Chromedp.html#_5-如何将二维码展示在无图形化的终端上-与chromedp无关-属于额外内容" class="sidebar-link">5. 如何将二维码展示在无图形化的终端上（与chromedp无关，属于额外内容）</a></li><li class="sidebar-sub-header"><a href="/Go_Practice/Chromedp.html#_6-如何保存cookies实现短时间免登陆" class="sidebar-link">6. 如何保存Cookies实现短时间免登陆</a></li></ul></li><li><a href="/Go_Practice/Cobra.html" class="sidebar-link">golang命令行库Cobra的使用</a></li><li><a href="/Go_Practice/" aria-current="page" class="sidebar-link">colly介绍</a></li><li><a href="/Go_Practice/Singo.html" class="sidebar-link">Singo 使用手册</a></li><li><a href="/Go_Practice/go-gin-api.html" class="sidebar-link">go-gin-api</a></li><li><a href="/Go_Practice/goquery.html" class="sidebar-link">goquery selector(选择器) 示例</a></li><li><a href="/Go_Practice/gui-walk.html" class="sidebar-link">使用golang制作GUI图形界面</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="chromedp-小尝试"><a href="#chromedp-小尝试" class="header-anchor">#</a> Chromedp 小尝试</h1> <blockquote><ol><li><a href="https://github.com/chromedp/chromedp" target="_blank" rel="noopener noreferrer">Github源码 - chromedp<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://gitee.com/avtion/chromedp-learning" target="_blank" rel="noopener noreferrer">文章项目Gitee源码<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li>文章来源：<a href="https://studygolang.com/topics/12596" target="_blank" rel="noopener noreferrer">Golang爬虫终极杀器——Chromedp让你成为二维码登陆终结者（教程） - Go语言中文网 - Golang中文社区 (studygolang.com)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></blockquote> <h2 id="_1-chromedp是什么"><a href="#_1-chromedp是什么" class="header-anchor">#</a> 1 Chromedp是什么</h2> <p><code>chromedp</code>是一个<code>更快</code>、<code>更简单</code>的Golang库用于调用支持<code>Chrome DevTools协议</code>的浏览器，同时不需要额外的依赖（例如<code>Selenium</code>和<code>PhantomJS</code>）</p> <blockquote><p>Chrome和Golang都与Google有着相当密切的关系，而Chrome DevTools其实就是Chrome浏览器按下F12之后的控制终端</p></blockquote> <h2 id="_2-为什么不使用selenium"><a href="#_2-为什么不使用selenium" class="header-anchor">#</a> 2 为什么不使用Selenium</h2> <p>对于<code>Golang</code>开发来说，使用<code>chromedp</code>更为便捷，因为它仅仅需要<code>Chrome</code>浏览器而并不需要依赖<code>ChromeDriver</code>，省去了依赖问题，有助于自动化的构建和多平台架构的迁移</p> <h2 id="_3-文章解决了什么需求"><a href="#_3-文章解决了什么需求" class="header-anchor">#</a> 3 文章解决了什么需求</h2> <ol><li>如何使用<code>chromedp</code>进行二维码登陆</li> <li>如何将二维码展示在无图形化的终端上（<code>makiuchi-d/gozxing</code>解码 <code>skip2/ go-qrcode</code>编码）</li> <li>如何保存Cookies实现短时间免登陆</li></ol> <blockquote><p>网站会更新，文章不保证更新，请务必学会举一反三</p></blockquote> <h2 id="_4-如何使用chromedp进行二维码登陆"><a href="#_4-如何使用chromedp进行二维码登陆" class="header-anchor">#</a> 4 如何使用chromedp进行二维码登陆</h2> <h3 id="_4-1-安装chromedp"><a href="#_4-1-安装chromedp" class="header-anchor">#</a> 4.1 安装chromedp</h3> <ol><li>下载并安装Chrome浏览器</li> <li>创建Golang项目，开启<code>Go Module</code>(在项目目录下使用终端输入<code>go mod init</code>)</li> <li>在项目目录下使用终端输入：<code>go get -u github.com/chromedp/chromedp</code>（如果有依赖问题请删除<code>-u</code>）</li></ol> <h3 id="_4-2-尝试打开网站-以金山文档https-account-wps-cn-为例"><a href="#_4-2-尝试打开网站-以金山文档https-account-wps-cn-为例" class="header-anchor">#</a> 4.2 尝试打开网站（以金山文档<code>https://account.wps.cn/</code>为例）</h3> <ol><li><p>重新设置chromedp使用<code>&quot;有头&quot;</code>的方式打开，以便于我们进行<code>debug</code></p> <div class="language-golang extra-class"><pre class="language-text"><code>func main(){
+ // chromdp依赖context上限传递参数
+ ctx, _ := chromedp.NewExecAllocator(
+     context.Background(),
+
+     // 以默认配置的数组为基础，覆写headless参数
+     // 当然也可以根据自己的需要进行修改，这个flag是浏览器的设置
+     append(
+         chromedp.DefaultExecAllocatorOptions[:],
+         chromedp.Flag(&quot;headless&quot;, false),
+     )...,
+ )
+}
+</code></pre></div></li> <li><p>创建chromedp上下文对象</p> <div class="language-golang extra-class"><pre class="language-text"><code>func main(){
+ // chromdp依赖context上限传递参数
+ ...
+
+ // 创建新的chromedp上下文对象，超时时间的设置不分先后
+ // 注意第二个返回的参数是cancel()，只是我省略了
+ ctx, _ = context.WithTimeout(ctx, 30*time.Second)
+ ctx, _ = chromedp.NewContext(
+     ctx,
+     // 设置日志方法
+     chromedp.WithLogf(log.Printf),
+ )
+
+ // 通常可以使用 defer cancel() 去取消
+ // 但是在Windows环境下，我们希望程序能顺带关闭掉浏览器
+ // 如果不希望浏览器关闭，使用cancel()方法即可
+ // defer cancel()
+ // defer chromedp.Cancel(ctx)
+}
+</code></pre></div></li> <li><p>执行自定义的任务</p> <div class="language-golang extra-class"><pre class="language-text"><code>func main(){
+ // chromdp依赖context上限传递参数
+ ...
+
+ // 创建新的chromedp上下文对象，超时时间的设置不分先后
+ // 注意第二个返回的参数是cancel()，只是我省略了
+ ...
+
+ // 执行我们自定义的任务 - myTasks函数在第4步
+ if err := chromedp.Run(ctx, myTasks()); err != nil {
+     log.Fatal(err)
+     return
+ }
+}
+</code></pre></div></li> <li><p>至此程序的初始化过程已经完成，接下来就是任务——打开登陆页面</p> <div class="language-golang extra-class"><pre class="language-text"><code>// 自定义任务
+func myTasks() chromedp.Tasks {
+ return chromedp.Tasks{
+     // 1. 打开金山文档的登陆界面
+     chromedp.Navigate(loginURL),
+ }
+}
+</code></pre></div></li> <li><p>运行一下程序，可以看到Chrome被打开，同时访问了我们指定的网站</p></li></ol> <p><img src="https://i.loli.net/2021/06/18/sn2h8t6Jje4RPZ3.png" alt="1.png"></p> <h3 id="_4-3-获取二维码-点击过程"><a href="#_4-3-获取二维码-点击过程" class="header-anchor">#</a> 4.3 获取二维码（点击过程）</h3> <ol><li><p>需要点击<code>微信登陆</code>按钮，先找到按钮的<code>选择器</code>，右键按钮并在菜单中点击<code>检查</code>，然后可以看到按钮的元素<img src="https://i.loli.net/2021/06/18/YKcqg1EseXMFDat.png" alt="2.png"></p></li> <li><p>右键元素打开菜单找到<code>copy</code>下的<code>copy selector</code>，即获取到<code>选择器</code><img src="https://i.loli.net/2021/06/18/Szr8ci4exXCJ2to.png" alt="3.png"></p></li> <li><p>我们尝试点击微信登陆按钮，发现还需要点击一下确认，重复上述步骤获取<code>确认按钮</code>的选择器<img src="https://i.loli.net/2021/06/18/RrPnckKOdtNQlYs.png" alt="4.png"></p></li> <li><p>用代码执行上述点击步骤</p> <div class="language-golang extra-class"><pre class="language-text"><code>// 自定义任务
+func myTasks() chromedp.Tasks {
+ return chromedp.Tasks{
+     // 1. 打开金山文档的登陆界面
+     chromedp.Navigate(loginURL),
+
+     // 2. 点击微信登陆按钮
+     // #wechat &gt; span:nth-child(2)
+     chromedp.Click(`#wechat &gt; span:nth-child(2)`),
+
+     // 3. 点击确认按钮
+     // #dialog &gt; div.dialog-wrapper &gt; div &gt; div.dialog-footer &gt; div.dialog-footer-ok
+     chromedp.Click(`#dialog &gt; div.dialog-wrapper &gt; div &gt; div.dialog-footer &gt; div.dialog-footer-ok`),
+ }
+}
+</code></pre></div></li> <li><p>运行程序即可直达二维码展示界面<img src="https://i.loli.net/2021/06/18/ciKuH4lveorM3sp.png" alt="5.png"></p></li> <li><p>用同样的方式，获取<code>二维码图片</code>的<code>选择器</code><img src="https://i.loli.net/2021/06/18/HkUvJl4GdXZwFSD.png" alt="6.png"></p></li> <li><p>用代码实现获取二维码，有两点需要注意，第一是二维码有加载过程，第二是二维码是元素渲染，我们需要用截图的方式获取（也可以用<code>js</code>来获取对应的<code>href</code>并下载，但是为了照顾小白，选择最简单的）</p></li></ol> <div class="language-golang extra-class"><pre class="language-text"><code>func myTasks() chromedp.Tasks {
+    return chromedp.Tasks{
+        // 1. 打开金山文档的登陆界面
+        ...
+
+        // 2. 点击微信登陆按钮
+        ...
+
+        // 3. 点击确认按钮
+        ...
+
+        // 4. 获取二维码
+        // #wximport
+        getCode(),
+    }
+}
+
+func getCode() chromedp.ActionFunc {
+    return func(ctx context.Context) (err error) {
+        // 1. 用于存储图片的字节切片
+        var code []byte
+
+        // 2. 截图
+        // 注意这里需要注明直接使用ID选择器来获取元素（chromedp.ByID）
+        if err = chromedp.Screenshot(`#wximport`, &amp;code, chromedp.ByID).Do(ctx); err != nil {
+            return
+        }
+
+        // 3. 保存文件
+        if err = ioutil.WriteFile(&quot;code.png&quot;, code, 0755); err != nil {
+            return
+        }
+        return
+    }
+}
+</code></pre></div><ol><li>执行程序即可发现目录下已经存储了二维码图片文件，我们可以通过扫描此二维码进行登陆，与浏览器上扫描为同一种效果<img src="https://i.loli.net/2021/06/18/7QOMBmvtiVRfDWb.png" alt="7.png"></li></ol> <h2 id="_5-如何将二维码展示在无图形化的终端上-与chromedp无关-属于额外内容"><a href="#_5-如何将二维码展示在无图形化的终端上-与chromedp无关-属于额外内容" class="header-anchor">#</a> 5. 如何将二维码展示在无图形化的终端上（与chromedp无关，属于额外内容）</h2> <ol><li>在上述步骤中，我们已经获取了二维码，接下来我们需要在终端显示二维码，首先是解码，这里使用<code>gozxing</code>库</li></ol> <div class="language-golang extra-class"><pre class="language-text"><code>func printQRCode(code []byte) (err error) {
+    // 1. 因为我们的字节流是图像，所以我们需要先解码字节流
+    img, _, err := image.Decode(bytes.NewReader(code))
+    if err != nil {
+        return
+    }
+
+    // 2. 然后使用gozxing库解码图片获取二进制位图
+    bmp, err := gozxing.NewBinaryBitmapFromImage(img)
+    if err != nil {
+        return
+    }
+
+    // 3. 用二进制位图解码获取gozxing的二维码对象
+    res, err := qrcode.NewQRCodeReader().Decode(bmp, nil)
+    if err != nil {
+        return
+    }
+    return
+}
+</code></pre></div><ol><li>然后重新编码来输出二维码到终端，这里使用<a href="https://studygolang.com/topics/github.com/skip2/go-qrcode" target="_blank" rel="noopener noreferrer"><code>go-qrcode</code><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>库</li></ol> <div class="language-golang extra-class"><pre class="language-text"><code>// 请注意import的库发生了重名
+import (
+    &quot;github.com/makiuchi-d/gozxing&quot;
+    &quot;github.com/makiuchi-d/gozxing/qrcode&quot;
+    goQrcode &quot;github.com/skip2/go-qrcode&quot;
+)
+
+
+func printQRCode(code []byte) (err error) {
+    // 1. 因为我们的字节流是图像，所以我们需要先解码字节流
+    ...
+
+    // 2. 然后使用gozxing库解码图片获取二进制位图
+    ...
+
+    // 3. 用二进制位图解码获取gozxing的二维码对象
+    ...
+
+    // 4. 用结果来获取go-qrcode对象（注意这里我用了库的别名）
+    qr, err := goQrcode.New(res.String(), goQrcode.High)
+    if err != nil {
+        return
+    }
+
+    // 5. 输出到标准输出流
+    fmt.Println(qr.ToSmallString(false))
+
+    return
+}
+</code></pre></div><ol><li><p>修改我们第二步的过程</p> <div class="language-golang extra-class"><pre class="language-text"><code>func getCode() chromedp.ActionFunc {
+ return func(ctx context.Context) (err error) {
+     // 1. 用于存储图片的字节切片
+     ...
+
+     // 2. 截图
+     // 注意这里需要注明直接使用ID选择器来获取元素（chromedp.ByID）
+     ...
+
+     // 3. 把二维码输出到标准输出流
+     if err = printQRCode(code); err != nil {
+         return err
+     }
+     return
+ }
+}
+</code></pre></div></li> <li><p>运行程序即可查看效果<img src="https://i.loli.net/2021/06/18/G4UwEtCnbp2AkR5.png" alt="8.png"></p></li></ol> <h2 id="_6-如何保存cookies实现短时间免登陆"><a href="#_6-如何保存cookies实现短时间免登陆" class="header-anchor">#</a> 6. 如何保存Cookies实现短时间免登陆</h2> <ol><li><p>在上述过程中，我们可以通过二维码扫描登陆，网站会在登陆之后进行跳转，跳转后我们需要保存<code>cookies</code>来维持我们的登录状态，代码实现如下</p> <div class="language-golang extra-class"><pre class="language-text"><code>// 保存Cookies
+func saveCookies() chromedp.ActionFunc {
+ return func(ctx context.Context) (err error) {
+     // 等待二维码登陆
+     if err = chromedp.WaitVisible(`#app`, chromedp.ByID).Do(ctx); err != nil {
+         return
+     }
+
+     // cookies的获取对应是在devTools的network面板中
+     // 1. 获取cookies
+     cookies, err := network.GetAllCookies().Do(ctx)
+     if err != nil {
+         return
+     }
+
+     // 2. 序列化
+     cookiesData, err := network.GetAllCookiesReturns{Cookies: cookies}.MarshalJSON()
+     if err != nil {
+         return
+     }
+
+     // 3. 存储到临时文件
+     if err = ioutil.WriteFile(&quot;cookies.tmp&quot;, cookiesData, 0755); err != nil {
+         return
+     }
+     return
+ }
+}
+</code></pre></div></li> <li><p>获取到Cookies之后，我们需要在程序运行时将Cookies从临时文件中加载到浏览器中</p> <div class="language-golang extra-class"><pre class="language-text"><code>// 加载Cookies
+func loadCookies() chromedp.ActionFunc {
+ return func(ctx context.Context) (err error) {
+     // 如果cookies临时文件不存在则直接跳过
+     if _, _err := os.Stat(&quot;cookies.tmp&quot;); os.IsNotExist(_err) {
+         return
+     }
+
+     // 如果存在则读取cookies的数据
+     cookiesData, err := ioutil.ReadFile(&quot;cookies.tmp&quot;)
+     if err != nil {
+         return
+     }
+
+     // 反序列化
+     cookiesParams := network.SetCookiesParams{}
+     if err = cookiesParams.UnmarshalJSON(cookiesData); err != nil {
+         return
+     }
+
+     // 设置cookies
+     return network.SetCookies(cookiesParams.Cookies).Do(ctx)
+ }
+}
+</code></pre></div></li> <li><p>通过上述两步我们已经可以保持登陆状态，然后我们需要检查一下是否成功，这里调用浏览器执行<code>js</code>脚本获取当前页面的网址，判断是否已经个人中心页面，如果为真，则停止操作</p> <div class="language-golang extra-class"><pre class="language-text"><code>// 检查是否登陆
+func checkLoginStatus() chromedp.ActionFunc {
+ return func(ctx context.Context) (err error) {
+     var url string
+     if err = chromedp.Evaluate(`window.location.href`, &amp;url).Do(ctx); err != nil {
+         return
+     }
+     if strings.Contains(url, &quot;https://account.wps.cn/usercenter/apps&quot;) {
+         log.Println(&quot;已经使用cookies登陆&quot;)
+         chromedp.Stop()
+     }
+     return
+ }
+}
+</code></pre></div></li> <li><p>最终重新设置我们的浏览器任务即可</p> <div class="language-golang extra-class"><pre class="language-text"><code>// 自定义任务
+func myTasks() chromedp.Tasks {
+ return chromedp.Tasks{
+     // 0. 加载cookies &lt;-- 变动
+     loadCookies(),
+
+     // 1. 打开金山文档的登陆界面
+     ...
+
+     // 判断一下是否已经登陆  &lt;-- 变动
+     checkLoginStatus(),
+
+     // 2. 点击微信登陆按钮
+     // #wechat &gt; span:nth-child(2)
+     ...
+
+     // 3. 点击确认按钮
+     // #dialog &gt; div.dialog-wrapper &gt; div &gt; div.dialog-footer &gt; div.dialog-footer-ok
+     ...
+
+     // 4. 获取二维码
+     // #wximport
+     ...
+
+     // 5. 若二维码登录后，浏览器会自动跳转到用户信息页面  &lt;-- 变动
+     saveCookies(),
+ }
+}
+</code></pre></div></li> <li><p>我们使用<code>已经登陆的cookies</code>运行程序可以发现我们成功跳过登陆过程<img src="https://i.loli.net/2021/06/18/DY8tvcJAOa6WKrl.png" alt="9.png"></p></li></ol> <p>完整代码：</p> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">&quot;bytes&quot;</span>
+	<span class="token string">&quot;context&quot;</span>
+	<span class="token string">&quot;fmt&quot;</span>
+	<span class="token string">&quot;github.com/chromedp/cdproto/network&quot;</span>
+	<span class="token string">&quot;github.com/chromedp/chromedp&quot;</span>
+	<span class="token string">&quot;github.com/makiuchi-d/gozxing&quot;</span>
+	<span class="token string">&quot;github.com/makiuchi-d/gozxing/qrcode&quot;</span>
+	goQrcode <span class="token string">&quot;github.com/skip2/go-qrcode&quot;</span>
+	<span class="token string">&quot;image&quot;</span>
+	<span class="token string">&quot;io/ioutil&quot;</span>
+	<span class="token string">&quot;log&quot;</span>
+	<span class="token string">&quot;os&quot;</span>
+	<span class="token string">&quot;strings&quot;</span>
+	<span class="token string">&quot;time&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> loginURL <span class="token operator">=</span> <span class="token string">&quot;https://account.wps.cn/&quot;</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// chromdp 依赖context 传递参数</span>
+	ctx<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">:=</span> chromedp<span class="token punctuation">.</span><span class="token function">NewExecAllocator</span><span class="token punctuation">(</span>
+		context<span class="token punctuation">.</span><span class="token function">Background</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token comment">// 以默认配置的数组为基础，覆写headless参数</span>
+		<span class="token comment">// 当然也可以根据自己的需要进行修改，这个flag是浏览器的设置</span>
+		<span class="token function">append</span><span class="token punctuation">(</span>
+			chromedp<span class="token punctuation">.</span>DefaultExecAllocatorOptions<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+			chromedp<span class="token punctuation">.</span><span class="token function">Flag</span><span class="token punctuation">(</span><span class="token string">&quot;headless&quot;</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">,</span>
+	<span class="token punctuation">)</span>
+
+	<span class="token comment">// 创建新的chromedp上下文对象，超时时间的设置不分先后</span>
+	<span class="token comment">// 注意第二个返回的参数是cancel()，只是我省略了</span>
+	ctx<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">WithTimeout</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token number">30</span><span class="token operator">*</span>time<span class="token punctuation">.</span>Second<span class="token punctuation">)</span>
+	ctx<span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">=</span> chromedp<span class="token punctuation">.</span><span class="token function">NewContext</span><span class="token punctuation">(</span>
+		ctx<span class="token punctuation">,</span>
+		<span class="token comment">// 设置日志方法</span>
+		chromedp<span class="token punctuation">.</span><span class="token function">WithLogf</span><span class="token punctuation">(</span>log<span class="token punctuation">.</span>Printf<span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token punctuation">)</span>
+	<span class="token comment">// 通常可以使用 defer cancel() 去取消</span>
+	<span class="token comment">// 但是在Windows环境下，我们希望程序能顺带关闭掉浏览器</span>
+	<span class="token comment">// 如果不希望浏览器关闭，使用cancel()方法即可</span>
+	<span class="token comment">// defer cancel()</span>
+	<span class="token comment">// defer chromedp.Cancel(ctx)</span>
+
+	<span class="token comment">// 执行我们自定义的任务 - myTasks函数在第4步</span>
+	<span class="token keyword">if</span> err <span class="token operator">:=</span> chromedp<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token function">myTasks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatal</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">myTasks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> chromedp<span class="token punctuation">.</span>Tasks <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> chromedp<span class="token punctuation">.</span>Tasks<span class="token punctuation">{</span>
+		<span class="token comment">// 0. 加载 cookies</span>
+		<span class="token function">loadCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+		<span class="token comment">// 1. 打开金山文档的登录界面</span>
+		chromedp<span class="token punctuation">.</span><span class="token function">Navigate</span><span class="token punctuation">(</span>loginURL<span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+		<span class="token comment">// 判断一下是否已经登陆</span>
+		<span class="token function">checkLoginStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+		<span class="token comment">// 2. 点击微信登录按钮</span>
+		<span class="token comment">// #wechat &gt; span:nth-child(2)</span>
+		chromedp<span class="token punctuation">.</span><span class="token function">Click</span><span class="token punctuation">(</span><span class="token string">`#wechat &gt; span:nth-child(2)`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+		<span class="token comment">// 3. 点击确认按钮</span>
+		<span class="token comment">//#dialog &gt; div.dialog-wrapper &gt; div &gt; div.dialog-footer &gt; div.dialog-footer-ok</span>
+		chromedp<span class="token punctuation">.</span><span class="token function">Click</span><span class="token punctuation">(</span><span class="token string">`#dialog &gt; div.dialog-wrapper &gt; div &gt; div.dialog-footer &gt; div.dialog-footer-ok`</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+		<span class="token comment">// 4. 获取二维码</span>
+		<span class="token comment">// #wximport</span>
+		<span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+		<span class="token comment">// 5. 若二维码登录后，浏览器会自动跳转到用户信息页面</span>
+		<span class="token function">saveCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// getCode 获取二维码的过程</span>
+<span class="token keyword">func</span> <span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> chromedp<span class="token punctuation">.</span>ActionFunc <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">(</span>err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 1. 用于存储图片的字节切片</span>
+		<span class="token keyword">var</span> code <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span>
+
+		<span class="token comment">// 2. 截图</span>
+		<span class="token comment">// 注意这里需要注明直接使用ID选择器来获取元素（chromedp.ByID）</span>
+		<span class="token keyword">if</span> err <span class="token operator">=</span> chromedp<span class="token punctuation">.</span><span class="token function">Screenshot</span><span class="token punctuation">(</span><span class="token string">`#wximport`</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>code<span class="token punctuation">,</span> chromedp<span class="token punctuation">.</span>ByID<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Do</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// 3 保存文件</span>
+		<span class="token comment">//if err = ioutil.WriteFile(&quot;code.png&quot;, code, 0755); err != nil {</span>
+		<span class="token comment">//	return</span>
+		<span class="token comment">//}</span>
+		<span class="token keyword">if</span> err <span class="token operator">=</span> <span class="token function">printQRCode</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> err
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 输出二维码</span>
+<span class="token keyword">func</span> <span class="token function">printQRCode</span><span class="token punctuation">(</span>code <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 1. 因为我们的字节流是图像,所以我们需要先解码字节流</span>
+	img<span class="token punctuation">,</span> <span class="token boolean">_</span><span class="token punctuation">,</span> err <span class="token operator">:=</span> image<span class="token punctuation">.</span><span class="token function">Decode</span><span class="token punctuation">(</span>bytes<span class="token punctuation">.</span><span class="token function">NewReader</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 2. 然后使用 gozxing 库家吗图片获取二进制位图</span>
+	bmp<span class="token punctuation">,</span> err <span class="token operator">:=</span> gozxing<span class="token punctuation">.</span><span class="token function">NewBinaryBitmapFromImage</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 3. 用二进制图解码获取 gozxing 的二维码对象</span>
+	res<span class="token punctuation">,</span> err <span class="token operator">:=</span> qrcode<span class="token punctuation">.</span><span class="token function">NewQRCodeReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Decode</span><span class="token punctuation">(</span>bmp<span class="token punctuation">,</span> <span class="token boolean">nil</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 4. 用结果来获取 goqrcode 对象 (注意这里我用了库的别名）</span>
+	qr<span class="token punctuation">,</span> err <span class="token operator">:=</span> goQrcode<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span><span class="token function">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> goQrcode<span class="token punctuation">.</span>High<span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 5. 输出到标准输出流</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>qr<span class="token punctuation">.</span><span class="token function">ToSmallString</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+	<span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 保存Cookies</span>
+<span class="token keyword">func</span> <span class="token function">saveCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span> chromedp<span class="token punctuation">.</span>ActionFunc <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">(</span>err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 等待二维码登录</span>
+		<span class="token keyword">if</span> err <span class="token operator">=</span> chromedp<span class="token punctuation">.</span><span class="token function">WaitVisible</span><span class="token punctuation">(</span><span class="token string">`#app`</span><span class="token punctuation">,</span> chromedp<span class="token punctuation">.</span>ByID<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Do</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">// cookies的获取对应是在devTools的network面板中</span>
+		<span class="token comment">// 1. 获取cookies</span>
+		cookies<span class="token punctuation">,</span> err <span class="token operator">:=</span> network<span class="token punctuation">.</span><span class="token function">GetAllCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Do</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+		<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// 2. 序列化</span>
+		cookiesData<span class="token punctuation">,</span> err <span class="token operator">:=</span> network<span class="token punctuation">.</span>GetAllCookiesReturns<span class="token punctuation">{</span>Cookies<span class="token punctuation">:</span> cookies<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">MarshalJSON</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// 3. 存储到临时文件</span>
+		<span class="token keyword">if</span> err <span class="token operator">=</span> ioutil<span class="token punctuation">.</span><span class="token function">WriteFile</span><span class="token punctuation">(</span><span class="token string">&quot;cookies.tmp&quot;</span><span class="token punctuation">,</span> cookiesData<span class="token punctuation">,</span> <span class="token number">0755</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">loadCookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span> chromedp<span class="token punctuation">.</span>ActionFunc <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">(</span>err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 如果 cookies 临时文件不存在则直接跳过</span>
+		<span class="token keyword">if</span> <span class="token boolean">_</span><span class="token punctuation">,</span> _err <span class="token operator">:=</span> os<span class="token punctuation">.</span><span class="token function">Stat</span><span class="token punctuation">(</span><span class="token string">&quot;cookies.tmp&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> os<span class="token punctuation">.</span><span class="token function">IsNotExist</span><span class="token punctuation">(</span>_err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// 如果存在,则读取 cookies 的数据</span>
+		cookiesData<span class="token punctuation">,</span> err <span class="token operator">:=</span> ioutil<span class="token punctuation">.</span><span class="token function">ReadFile</span><span class="token punctuation">(</span><span class="token string">&quot;cookies.tmp&quot;</span><span class="token punctuation">)</span>
+		<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">//反序列化</span>
+		cookiesParams <span class="token operator">:=</span> network<span class="token punctuation">.</span>SetCookiesParams<span class="token punctuation">{</span><span class="token punctuation">}</span>
+		<span class="token keyword">if</span> err <span class="token operator">=</span> cookiesParams<span class="token punctuation">.</span><span class="token function">UnmarshalJSON</span><span class="token punctuation">(</span>cookiesData<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// 设置 cookies</span>
+		<span class="token keyword">return</span> network<span class="token punctuation">.</span><span class="token function">SetCookies</span><span class="token punctuation">(</span>cookiesParams<span class="token punctuation">.</span>Cookies<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Do</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 检查是否登陆</span>
+<span class="token keyword">func</span> <span class="token function">checkLoginStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span> chromedp<span class="token punctuation">.</span>ActionFunc <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">(</span>err <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">var</span> url <span class="token builtin">string</span>
+		<span class="token keyword">if</span> err <span class="token operator">=</span> chromedp<span class="token punctuation">.</span><span class="token function">Evaluate</span><span class="token punctuation">(</span><span class="token string">`window.location.href`</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>url<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Do</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">if</span> strings<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token string">&quot;https://account.wps.cn/usercenter/apps&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			log<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;已经使用cookies登陆&quot;</span><span class="token punctuation">)</span>
+			chromedp<span class="token punctuation">.</span><span class="token function">Stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/super-eggs/vuepress-blog/edit/master/docs/Go_Practice/Chromedp.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/Go_Practice/Cobra.html">
+        golang命令行库Cobra的使用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.693e6c19.js" defer></script><script src="/assets/js/2.3304c2e1.js" defer></script><script src="/assets/js/29.64fae044.js" defer></script>
+  </body>
+</html>

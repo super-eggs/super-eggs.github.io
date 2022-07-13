@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Laradock入门 | SuperEggs</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/log.ico" type="image/jpg">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script src="/js/jquery-3.5.min.js"></script>
+    <script src="/js/cursor.min.js"></script>
+    <meta name="description" content="分享生活高效技能,保持勇敢，坚持有趣，生命不息，折腾不止！">
+    <meta property="og:site_name" content="SuperEggs">
+    <meta property="og:title" content="Laradock入门">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/Docker/">
+    <meta name="twitter:title" content="Laradock入门">
+    <meta name="twitter:url" content="/Docker/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="html,css,jquery,thinkphp,laravel,docker,linux,manjaro">
+    <meta name="auther" content="SuperEggs">
+    <link rel="preload" href="/assets/css/0.styles.5f689f29.css" as="style"><link rel="preload" href="/assets/js/app.693e6c19.js" as="script"><link rel="preload" href="/assets/js/2.3304c2e1.js" as="script"><link rel="preload" href="/assets/js/21.e818d83d.js" as="script"><link rel="prefetch" href="/assets/js/10.34123518.js"><link rel="prefetch" href="/assets/js/11.f0e24eb8.js"><link rel="prefetch" href="/assets/js/12.5e75a974.js"><link rel="prefetch" href="/assets/js/13.db0bf381.js"><link rel="prefetch" href="/assets/js/14.ed324319.js"><link rel="prefetch" href="/assets/js/15.f40e8254.js"><link rel="prefetch" href="/assets/js/16.d8f963c5.js"><link rel="prefetch" href="/assets/js/17.250470cc.js"><link rel="prefetch" href="/assets/js/18.5161c52b.js"><link rel="prefetch" href="/assets/js/19.afb8dd7a.js"><link rel="prefetch" href="/assets/js/20.c8248808.js"><link rel="prefetch" href="/assets/js/22.69d0a99c.js"><link rel="prefetch" href="/assets/js/23.92b9837f.js"><link rel="prefetch" href="/assets/js/24.124a82a4.js"><link rel="prefetch" href="/assets/js/25.1c0271e6.js"><link rel="prefetch" href="/assets/js/26.34e44644.js"><link rel="prefetch" href="/assets/js/27.4f89b112.js"><link rel="prefetch" href="/assets/js/28.82ed427e.js"><link rel="prefetch" href="/assets/js/29.64fae044.js"><link rel="prefetch" href="/assets/js/3.1c0cc69b.js"><link rel="prefetch" href="/assets/js/30.dc7d1b9b.js"><link rel="prefetch" href="/assets/js/31.a273a940.js"><link rel="prefetch" href="/assets/js/32.ca99c448.js"><link rel="prefetch" href="/assets/js/33.4129d67d.js"><link rel="prefetch" href="/assets/js/34.a49e24e6.js"><link rel="prefetch" href="/assets/js/35.4ba458c0.js"><link rel="prefetch" href="/assets/js/36.7412ff8c.js"><link rel="prefetch" href="/assets/js/37.35c3a72c.js"><link rel="prefetch" href="/assets/js/38.ebf390fb.js"><link rel="prefetch" href="/assets/js/39.6b308832.js"><link rel="prefetch" href="/assets/js/4.e5a930e9.js"><link rel="prefetch" href="/assets/js/40.968d571d.js"><link rel="prefetch" href="/assets/js/41.a1f587bf.js"><link rel="prefetch" href="/assets/js/42.9f358bc3.js"><link rel="prefetch" href="/assets/js/43.4f19f41e.js"><link rel="prefetch" href="/assets/js/44.a27ad98a.js"><link rel="prefetch" href="/assets/js/45.fb26a2d8.js"><link rel="prefetch" href="/assets/js/46.aa66c6d7.js"><link rel="prefetch" href="/assets/js/47.00ae1556.js"><link rel="prefetch" href="/assets/js/48.699e8e33.js"><link rel="prefetch" href="/assets/js/49.0f79ef04.js"><link rel="prefetch" href="/assets/js/5.2d78753d.js"><link rel="prefetch" href="/assets/js/50.2428dcc2.js"><link rel="prefetch" href="/assets/js/51.829dcccc.js"><link rel="prefetch" href="/assets/js/52.f2dfda6b.js"><link rel="prefetch" href="/assets/js/53.225de2db.js"><link rel="prefetch" href="/assets/js/54.b91ed453.js"><link rel="prefetch" href="/assets/js/55.25bacde7.js"><link rel="prefetch" href="/assets/js/56.2a58cece.js"><link rel="prefetch" href="/assets/js/57.48eab866.js"><link rel="prefetch" href="/assets/js/58.5cf8ca6e.js"><link rel="prefetch" href="/assets/js/59.458178cc.js"><link rel="prefetch" href="/assets/js/6.66329e4b.js"><link rel="prefetch" href="/assets/js/60.7898b9b9.js"><link rel="prefetch" href="/assets/js/61.5f651468.js"><link rel="prefetch" href="/assets/js/62.cd190cb0.js"><link rel="prefetch" href="/assets/js/63.0d472232.js"><link rel="prefetch" href="/assets/js/64.e8a8ffe7.js"><link rel="prefetch" href="/assets/js/65.8a66ff7d.js"><link rel="prefetch" href="/assets/js/66.0492741b.js"><link rel="prefetch" href="/assets/js/67.204dadcb.js"><link rel="prefetch" href="/assets/js/68.7d5b0a8f.js"><link rel="prefetch" href="/assets/js/69.ed735059.js"><link rel="prefetch" href="/assets/js/7.44229983.js"><link rel="prefetch" href="/assets/js/70.0f643f0b.js"><link rel="prefetch" href="/assets/js/71.a226be62.js"><link rel="prefetch" href="/assets/js/8.51a4d2f9.js"><link rel="prefetch" href="/assets/js/9.ee30d1ab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5f689f29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/log.png" alt="SuperEggs" class="logo"> <span class="site-name can-hide">SuperEggs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Docker</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Docker/Minikube.html" class="sidebar-link">minikube</a></li><li><a href="/Docker/" aria-current="page" class="active sidebar-link">Laradock入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Docker/#laradock无法安装解决方法汇总" class="sidebar-link">Laradock无法安装解决方法汇总</a></li><li class="sidebar-sub-header"><a href="/Docker/#无法从github下载nvm解决办法" class="sidebar-link">无法从github下载nvm解决办法</a></li><li class="sidebar-sub-header"><a href="/Docker/#导出laradock镜像" class="sidebar-link">导出laradock镜像</a></li><li class="sidebar-sub-header"><a href="/Docker/#导入laradock镜像" class="sidebar-link">导入laradock镜像</a></li><li class="sidebar-sub-header"><a href="/Docker/#遇到问题" class="sidebar-link">遇到问题</a></li></ul></li><li><a href="/Docker/elasticsearch.html" class="sidebar-link">elasticsearch</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker-lnmp"><a href="#docker-lnmp" class="header-anchor">#</a> Docker-LNMP</h1> <blockquote><p>systemOS: debian 8+</p></blockquote> <p>校对时间:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cp</span>  /usr/share/zoneinfo/Asia/ShangHai  /etc/localtime
+</code></pre></div><ul><li>安装Docker</li></ul> <div class="language-$bash extra-class"><pre class="language-text"><code>sudo pacman -S docker
+</code></pre></div><ul><li>安装Dockercompose</li></ul> <div class="language-$bash extra-class"><pre class="language-text"><code>curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+
+chmod +x /usr/local/bin/docker-compose
+</code></pre></div><p>测试安装是否成功：</p> <div class="language- extra-class"><pre class="language-text"><code>docker -v
+docker-compose -version
+</code></pre></div><p>建立 Docker 组加入当前用户：</p> <div class="language-$bash extra-class"><pre class="language-text"><code>sudo groupadd docker
+sudo usermod -aG docker $USER
+</code></pre></div><p>开机启动docker：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> docker 
+<span class="token function">sudo</span> systemctl start docker
+
+// 重启docker
+systemctl daemon-reload
+systemctl restart docker
+</code></pre></div><p>有时候pull image 的时候很慢可以添加国内源</p> <div class="language-$json extra-class"><pre class="language-text"><code>// sudo vim /etc/docker/daemon.json
+
+{
+    &quot;registry-mirrors&quot;: [
+    &quot;https://kfwkfulq.mirror.aliyuncs.com&quot;,
+    &quot;https://2lqq34jg.mirror.aliyuncs.com&quot;,
+    &quot;https://pee6w651.mirror.aliyuncs.com&quot;,
+    &quot;https://registry.docker-cn.com&quot;,
+    &quot;http://hub-mirror.c.163.com&quot;
+    ]
+}
+</code></pre></div><ul><li>Laradock</li></ul> <p>Wike: http://laradock.io/</p> <p>快速开始：克隆Laradock</p> <div class="language-$xslt extra-class"><pre class="language-text"><code>git clone https://github.com/Laradock/laradock.git
+</code></pre></div><p>自定义配置</p> <div class="language-$xslt extra-class"><pre class="language-text"><code>cd laradock
+cp env-example .env
+</code></pre></div><p>运行容器</p> <div class="language-$xslt extra-class"><pre class="language-text"><code>docker-compose up -d nginx phpmyadmin workspace 
+</code></pre></div><p>连接数据库</p> <div class="language-$xslt extra-class"><pre class="language-text"><code>DB_HOST=mysql //记得是：mysql, 不是127.0.0.1
+REDIS_HOST=redis
+</code></pre></div><p>Ps: .env 文件是基本的配置文件，大家可以根据自己的需求更改配置，需要注意的是，如果默认安装了mysql:8.0,但是我想安装mysql:5.6怎么办？</p> <div class="language-$xslt extra-class"><pre class="language-text"><code>vim .env
+ESC
+:/mysql
+</code></pre></div><p>找到mysql，然后【MYSQL_VERSION=5.6】直接写版本就可以 最后需要build一下，并且删除之前的mysql缓存数据</p> <div class="language-$xslt extra-class"><pre class="language-text"><code>cd laradock
+rm -rf ~/.laradock
+docker-compose build mysql
+docker-compose up -d nginx mysql phpmyadmin
+</code></pre></div><h1 id="docker-swarm"><a href="#docker-swarm" class="header-anchor">#</a> docker-swarm</h1> <div class="language- extra-class"><pre class="language-text"><code># master
+docker swarm init --advertise-addr 192.168.99.100
+rclone mount DriveName:Folder LocalFolder --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000
+</code></pre></div><h1 id="laradock扩展应用"><a href="#laradock扩展应用" class="header-anchor">#</a> Laradock扩展应用</h1> <blockquote><p>相应文件夹可以到github或者群里获取。</p></blockquote> <p>.env</p> <div class="language-.env extra-class"><pre class="language-text"><code>## httpbin 
+HTTPBIN_PORT=8085
+
+## wordPress
+WORDPRESS_PORT=8086
+WORDPRESS_HTML=./wordpress
+
+## emby 
+# bash: mkdir -p emby/config emby/Data emby/Pan
+EMBY_IMAGE=emby/embyserver
+EMBY_HTTP_PORT=8085
+EMBY_HTTPS_PORT=8086
+EMBY_CONFIG_PATH=./emby/config
+EMBY_SHAREDIR_PATH=./emby/data
+EMBY_CLOUD_PATH=/home/orangbus/Pan
+
+## jellyfin
+# bash：mkdir -p /home/video &amp;&amp; mkdir -p ./jellyfin/config cache
+JELLYFIN_IMAGE=jellyfin/jellyfin:latest
+JELLYFIN_HTTP_PORT=8096
+JELLYFIN_CONFIG=./jellyfin/config
+JELLYFIN_CACHE=./jellyfin/cache
+JELLYFIN_VIDEO_PATH=/home/video
+
+# nextCloud ############################
+# bash: mkdir nextcloud &amp;&amp; cd nextcloud &amp;&amp; mkdir -p NextCloud Apps Config Data Theme
+NEXTCLOUD_PORT=8083
+NEXTCLOUD=./nextcloud/NextCloud
+NEXTCLOUD_APPS=./nextcloud/Apps
+NEXTCLOUD_CONFIG=./nextcloud/Config
+NEXTCLOUD_DATA=./nextcloud/Data
+NEXTCLOUD_THEME=./nextcloud/Theme
+
+# 百度网盘
+BAIDU_PORT=8088
+BAIDU_PATH=./baidu/data
+
+# aria2
+# bash: mkdir aria2 &amp;&amp; mkdir -p Download config
+ARIA2_HTTP_PORT=8089
+ARIA2_POER1=6800
+ARIA2_POER2=16881
+ARIA2_SECRET=admin  # 密码
+ARIA2_DOWNLOAD_DIR=./aria2/Download
+ARIA2_CONFIG=./aria2/config
+
+</code></pre></div><p>docker-compose</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># httpin </span>
+    <span class="token key atrule">httpbin</span><span class="token punctuation">:</span>
+      <span class="token key atrule">container_name</span><span class="token punctuation">:</span> httpbin
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> kennethreitz/httpbin
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 8085<span class="token punctuation">:</span><span class="token number">80</span>
+      
+<span class="token comment"># wordPress 生产环境请自行修改数据库账号密码</span>
+    <span class="token key atrule">wordpress</span><span class="token punctuation">:</span>
+      <span class="token key atrule">container_name</span><span class="token punctuation">:</span> wordpress
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> wordpress
+      <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+        <span class="token key atrule">WORDPRESS_DB_HOST</span><span class="token punctuation">:</span> mysql
+        <span class="token key atrule">WORDPRESS_DB_USER</span><span class="token punctuation">:</span> root
+        <span class="token key atrule">WORDPRESS_DB_PASSWORD</span><span class="token punctuation">:</span> root
+        <span class="token key atrule">WORDPRESS_DB_NAME</span><span class="token punctuation">:</span> wordpress
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>WORDPRESS_HTML<span class="token punctuation">}</span><span class="token punctuation">:</span>/var/www/html
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;${WORDPRESS_PORT}:80&quot;</span>
+      <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> mysql
+        <span class="token punctuation">-</span> nginx
+        <span class="token punctuation">-</span> php<span class="token punctuation">-</span>fpm
+      <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> frontend
+        <span class="token punctuation">-</span> backend
+
+<span class="token comment"># emby</span>
+    <span class="token key atrule">emby</span><span class="token punctuation">:</span>
+      <span class="token key atrule">container_name</span><span class="token punctuation">:</span> emby
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>EMBY_IMAGE<span class="token punctuation">}</span>
+      <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;${EMBY_HTTP_PORT}:8096&quot;</span>
+      <span class="token punctuation">-</span> <span class="token string">&quot;${EMBY_HTTPS_PORT}:8920&quot;</span>
+      <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+        <span class="token key atrule">UID</span><span class="token punctuation">:</span> <span class="token number">1000</span>
+        <span class="token key atrule">GID</span><span class="token punctuation">:</span> <span class="token number">100</span>
+        <span class="token key atrule">GIDLIST</span><span class="token punctuation">:</span> <span class="token number">100</span>
+        <span class="token key atrule">DEVICE</span><span class="token punctuation">:</span> /dev/dri<span class="token punctuation">:</span>/dev/dri
+        <span class="token key atrule">RUNTIME</span><span class="token punctuation">:</span> nvidia
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> $<span class="token punctuation">{</span>EMBY_CONFIG_PATH<span class="token punctuation">}</span><span class="token punctuation">:</span>/config
+      <span class="token punctuation">-</span> $<span class="token punctuation">{</span>EMBY_SHAREDIR_PATH<span class="token punctuation">}</span><span class="token punctuation">:</span>/mnt/shareDir
+      <span class="token punctuation">-</span> $<span class="token punctuation">{</span>EMBY_CLOUD_PATH<span class="token punctuation">}</span><span class="token punctuation">:</span>/mnt/CloudDrive
+
+<span class="token comment"># jellyfin</span>
+	<span class="token key atrule">jellyfin</span><span class="token punctuation">:</span>
+      <span class="token key atrule">container_name</span><span class="token punctuation">:</span> jellyfin
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> jellyfin/jellyfin<span class="token punctuation">:</span>$<span class="token punctuation">{</span>JELLYFIN_IMAGE<span class="token punctuation">}</span>
+      <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      	<span class="token punctuation">-</span> <span class="token string">&quot;${JELLYFIN_HTTP_PORT}:8096&quot;</span>
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> $<span class="token punctuation">{</span>JELLYFIN_CONFIG<span class="token punctuation">}</span><span class="token punctuation">:</span>/config
+      <span class="token punctuation">-</span> $<span class="token punctuation">{</span>JELLYFIN_CACHE<span class="token punctuation">}</span><span class="token punctuation">:</span>/cache
+      <span class="token punctuation">-</span> $<span class="token punctuation">{</span>JELLYFIN_VIDEO_PATH<span class="token punctuation">}</span><span class="token punctuation">:</span>/video
+
+<span class="token comment">### nextCloud $$$$$$$$$$$$$$$$$$</span>
+
+    <span class="token key atrule">nextcloud</span><span class="token punctuation">:</span>
+      <span class="token key atrule">container_name</span><span class="token punctuation">:</span> nextcloud
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> nextcloud
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>NEXTCLOUD<span class="token punctuation">}</span><span class="token punctuation">:</span>/var/www/html
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>NEXTCLOUD_APPS<span class="token punctuation">}</span><span class="token punctuation">:</span>/var/www/html/custom_apps
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>NEXTCLOUD_DATA<span class="token punctuation">}</span><span class="token punctuation">:</span>/var/www/html/data
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>NEXTCLOUD_CONFIG<span class="token punctuation">}</span><span class="token punctuation">:</span>/var/www/html/config
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>NEXTCLOUD_THEME<span class="token punctuation">}</span><span class="token punctuation">:</span>/var/www/html/themes
+      <span class="token key atrule">depends_on</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> nginx
+        <span class="token punctuation">-</span> php<span class="token punctuation">-</span>fpm
+        <span class="token punctuation">-</span> mysql
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;${NEXTCLOUD_PORT}:80&quot;</span>
+      <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> frontend
+        <span class="token punctuation">-</span> backend
+
+<span class="token comment"># 百度网盘</span>
+    <span class="token key atrule">baidu</span><span class="token punctuation">:</span>
+      <span class="token key atrule">container_name</span><span class="token punctuation">:</span> baidupcs
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> auska/docker<span class="token punctuation">-</span>baidupcs
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>BAIDU_PATH<span class="token punctuation">}</span><span class="token punctuation">:</span>/root/Download
+      <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> PGID=1001
+        <span class="token punctuation">-</span> PUID=1001
+        <span class="token punctuation">-</span> TZ=Asia/Shanghai
+        <span class="token punctuation">-</span> PORT=1999
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;${BAIDU_PORT}:1999&quot;</span>
+
+<span class="token comment"># aria2</span>
+    <span class="token key atrule">aria2</span><span class="token punctuation">:</span>
+      <span class="token key atrule">container_name</span><span class="token punctuation">:</span> aria2
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> auska/docker<span class="token punctuation">-</span>aria2
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>ARIA2_DOWNLOAD_DIR<span class="token punctuation">}</span><span class="token punctuation">:</span>/mnt/Download
+        <span class="token punctuation">-</span> $<span class="token punctuation">{</span>ARIA2_CONFIG<span class="token punctuation">}</span><span class="token punctuation">:</span>/config
+      <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> PUID=0
+        <span class="token punctuation">-</span> PGID=0
+        <span class="token punctuation">-</span> RPC=6800
+        <span class="token punctuation">-</span> TZ=Asia/Shanghai
+        <span class="token punctuation">-</span> SECRET=$<span class="token punctuation">{</span>ARIA2_SECRET<span class="token punctuation">}</span>
+      <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;${ARIA2_HTTP_PORT}:80&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;${ARIA2_POER1}:6800&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;${ARIA2_POER2}:16881&quot;</span>
+
+</code></pre></div><h2 id="laradock无法安装解决方法汇总"><a href="#laradock无法安装解决方法汇总" class="header-anchor">#</a> Laradock无法安装解决方法汇总</h2> <h3 id="镜像导入"><a href="#镜像导入" class="header-anchor">#</a> 镜像导入</h3> <h3 id="修改hosts"><a href="#修改hosts" class="header-anchor">#</a> 修改hosts</h3> <h3 id="替换无法下载链接"><a href="#替换无法下载链接" class="header-anchor">#</a> 替换无法下载链接</h3> <h2 id="无法从github下载nvm解决办法"><a href="#无法从github下载nvm解决办法" class="header-anchor">#</a> 无法从github下载nvm解决办法</h2> <p>容器里面无法下载，那么我们就先下载好放在<code>workspace</code> 目录下</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">wget</span> http://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh pathTo/laradck/workspace
+</code></pre></div><p>编辑<code>workspace</code> 文件夹下面的<code>dockerfile</code> 文件</p> <p>搜索：<code>COPY ./aliases.sh /home/laradock/aliases.sh</code> 在下面添加一行</p> <div class="language-bash extra-class"><pre class="language-bash"><code>COPY ./nvm.sh /home/laradock/nvm.sh
+</code></pre></div><p>在<code>chown laradock:laradock /home/laradock/aliases.sh &amp;&amp; \</code> 下面添加一行</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">chown</span> laradock:laradock /home/laradock/nvm.sh <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+</code></pre></div><p>替换下载地址 <code>mkdir -p $NVM_DIR &amp;&amp; \</code> 下面替换（大概在677行左右）</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh <span class="token operator">|</span> <span class="token function">bash</span> <span class="token punctuation">\</span>
+<span class="token comment"># 替换为</span>
+<span class="token function">cat</span> /home/laradock/nvm.sh <span class="token operator">|</span> <span class="token function">bash</span> <span class="token punctuation">\</span>
+</code></pre></div><p>重新启动一下<code>workspace</code> 就可以啦</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker-compose up -d workspace
+</code></pre></div><p>如果还是不行，那就过几分钟重新再执行上面的命令，多试几次就好了，根据我安装这么多次经验，一般这样就可以安装好了，如果家里网络不是很好的话，建议蹭一下邻居的wifi，不然这玩意真的太难下载了，只要安装好了后面就好升级啥的了。（其实这玩意难安装是因为<code>workspace</code> 这个玩意，但是我一般用的是google云或者国外的服务器很快就安装好了）</p> <h1 id="laradock离线安装"><a href="#laradock离线安装" class="header-anchor">#</a> Laradock离线安装</h1> <p>有时候家里的网络慢或者各种原因，我们在启动laradock的时候总是会安装失败，其中95%的原因是下载docker镜像导致的，那么今天教大家如果离线安装（不太推荐，但是万不得已可是尝试一下）</p> <blockquote><p>本机安装了docker , docker-compsoe</p> <p>需要一个云主机，最好是国外的，国内的也可以，（我没有怎么办，腾讯云有免费体验15天活动，可以尝试一下，或者加群找群主帮你处理）</p></blockquote> <p>流程：</p> <ol><li>现在云主机上下载并启动laradock</li> <li>打包已经下载的镜像</li> <li>下载打包镜像到本地</li> <li>从本地导入下载的镜像</li></ol> <p>马上操练起来（假设你已经会基本使用laradock）</p> <h2 id="导出laradock镜像"><a href="#导出laradock镜像" class="header-anchor">#</a> 导出laradock镜像</h2> <p>列出所有进项，</p> <p><img src="/images/dockerimage.png" alt=""></p> <div class="language-bash extra-class"><pre class="language-bash"><code>➜  laradock git:<span class="token punctuation">(</span>master<span class="token punctuation">)</span> ✗ docker images    
+laradock_nginx        latest         b7ba928e59d2        <span class="token number">3</span> days ago           <span class="token number">27</span>.2MB
+
+</code></pre></div><p>挨个导出，然后下载到本地</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker save -o laradock_nginx.tar laradock_nginx
+</code></pre></div><p>此时会在当前目录下生成一个<code>laradock_nginx.tar</code> 的文件，</p> <h2 id="导入laradock镜像"><a href="#导入laradock镜像" class="header-anchor">#</a> 导入laradock镜像</h2> <div class="language-bash extra-class"><pre class="language-bash"><code>docker load -i laradock_nginx.tar
+</code></pre></div><p>到此就可以直接启用了。</p> <h1 id="window10使用laradock"><a href="#window10使用laradock" class="header-anchor">#</a> window10使用Laradock</h1> <p>起因：公司没人用linux，但是我又懒得去折腾window了，有什么办法可以在window环境下使用linux的开发环境，答案有。</p> <p>大概思路：</p> <p>1、window开启虚拟换支持，配置wsl</p> <p>2、安装window下的linux子系统。</p> <p>3、在linux系统下安装docker，并配置成功启动laradock。</p> <p>4、远程同步开发。</p> <p>是不是迫不及待了，马上操练起来。</p> <h2 id="遇到问题"><a href="#遇到问题" class="header-anchor">#</a> 遇到问题</h2> <blockquote><p>成功安装了docker，但是无法使用</p></blockquote> <p>1、如果你参考我的步骤来，理论没问题，我在多台电脑成功配置ok。</p> <p>2、重启一下终端，或者电脑。</p> <p>3、请查看dock<code>docker</code> 和 <code>docker-compose</code> 的版本是否是最新的，以及权限问题。</p> <blockquote><p>如何使用账号密码远程连接linux</p></blockquote> <p>安装 <code>ssh</code></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">ssh</span>
+</code></pre></div><p>修改 ==sudo vim /etc/ssh/sshd_config== 文件，是 <code>sshd_config</code>  不是 <code>ssh_config</code></p> <div class="language-text extra-class"><pre class="language-text"><code>将 #PasswordAuthentication no 的注释去掉，并且将 no 修改为 yes
+将 #PermitRootLogin prohibit-password 的注释去掉，将 prohibit-password 改为 yes
+</code></pre></div><p>重启ssh：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> systemctl restart sshd
+// or
+<span class="token function">sudo</span> <span class="token function">service</span> <span class="token function">ssh</span> restart
+</code></pre></div><h1 id="错误汇总"><a href="#错误汇总" class="header-anchor">#</a> 错误汇总</h1> <blockquote><p>Service 'mysql' failed to build: error pulling image configuration: Get &quot;https://registry-1.docker.io/v2/library/mysql/blobs/sha256:718a6da099d82183c064a964523c0deca80619cb033aadd15854771fe592a480&quot;: dial tcp: lookup registry-1.docker.io: no such host</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>sudo echo &quot;servername 8.8.8.8&quot; &gt;&gt; /etc/resolv.conf
+</code></pre></div><blockquote><p>ERROR: Service 'phpmyadmin' failed to build: Get &quot;https://registry-1.docker.io/v2/&quot;: dial tcp: lookup registry-1.docker.io: no such host</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code>//第一步：创建daemon.json文件
+<span class="token function">sudo</span> <span class="token function">vim</span> /etc/docker/daemon.json
+
+//第二步：重启docker
+<span class="token function">sudo</span> systemctl daemon-reload
+<span class="token function">sudo</span> systemctl restart docker
+
+//第三步：执行docker-compose的时候需要在文件所在目录执行
+</code></pre></div><blockquote><p>docker起不来报错：Failed to start Docker Application Container Engine</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>/etc/docker/daemon.json
+这个文件的格式不对，或者因为防火墙原因
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/super-eggs/vuepress-blog/edit/master/docs/Docker/README.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Docker/Minikube.html" class="prev">
+        minikube
+      </a></span> <span class="next"><a href="/Docker/elasticsearch.html">
+        elasticsearch
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.693e6c19.js" defer></script><script src="/assets/js/2.3304c2e1.js" defer></script><script src="/assets/js/21.e818d83d.js" defer></script>
+  </body>
+</html>

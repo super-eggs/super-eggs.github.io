@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker | SuperEggs</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="shortcut icon" href="/log.ico" type="image/jpg">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script src="/js/jquery-3.5.min.js"></script>
+    <script src="/js/cursor.min.js"></script>
+    <meta name="description" content="分享生活高效技能,保持勇敢，坚持有趣，生命不息，折腾不止！">
+    <meta property="og:site_name" content="SuperEggs">
+    <meta property="og:title" content="Docker">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/Wamp/docker.html">
+    <meta name="twitter:title" content="Docker">
+    <meta name="twitter:url" content="/Wamp/docker.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="keywords" content="html,css,jquery,thinkphp,laravel,docker,linux,manjaro">
+    <meta name="auther" content="SuperEggs">
+    <link rel="preload" href="/assets/css/0.styles.5f689f29.css" as="style"><link rel="preload" href="/assets/js/app.693e6c19.js" as="script"><link rel="preload" href="/assets/js/2.3304c2e1.js" as="script"><link rel="preload" href="/assets/js/56.2a58cece.js" as="script"><link rel="prefetch" href="/assets/js/10.34123518.js"><link rel="prefetch" href="/assets/js/11.f0e24eb8.js"><link rel="prefetch" href="/assets/js/12.5e75a974.js"><link rel="prefetch" href="/assets/js/13.db0bf381.js"><link rel="prefetch" href="/assets/js/14.ed324319.js"><link rel="prefetch" href="/assets/js/15.f40e8254.js"><link rel="prefetch" href="/assets/js/16.d8f963c5.js"><link rel="prefetch" href="/assets/js/17.250470cc.js"><link rel="prefetch" href="/assets/js/18.5161c52b.js"><link rel="prefetch" href="/assets/js/19.afb8dd7a.js"><link rel="prefetch" href="/assets/js/20.c8248808.js"><link rel="prefetch" href="/assets/js/21.e818d83d.js"><link rel="prefetch" href="/assets/js/22.69d0a99c.js"><link rel="prefetch" href="/assets/js/23.92b9837f.js"><link rel="prefetch" href="/assets/js/24.124a82a4.js"><link rel="prefetch" href="/assets/js/25.1c0271e6.js"><link rel="prefetch" href="/assets/js/26.34e44644.js"><link rel="prefetch" href="/assets/js/27.4f89b112.js"><link rel="prefetch" href="/assets/js/28.82ed427e.js"><link rel="prefetch" href="/assets/js/29.64fae044.js"><link rel="prefetch" href="/assets/js/3.1c0cc69b.js"><link rel="prefetch" href="/assets/js/30.dc7d1b9b.js"><link rel="prefetch" href="/assets/js/31.a273a940.js"><link rel="prefetch" href="/assets/js/32.ca99c448.js"><link rel="prefetch" href="/assets/js/33.4129d67d.js"><link rel="prefetch" href="/assets/js/34.a49e24e6.js"><link rel="prefetch" href="/assets/js/35.4ba458c0.js"><link rel="prefetch" href="/assets/js/36.7412ff8c.js"><link rel="prefetch" href="/assets/js/37.35c3a72c.js"><link rel="prefetch" href="/assets/js/38.ebf390fb.js"><link rel="prefetch" href="/assets/js/39.6b308832.js"><link rel="prefetch" href="/assets/js/4.e5a930e9.js"><link rel="prefetch" href="/assets/js/40.968d571d.js"><link rel="prefetch" href="/assets/js/41.a1f587bf.js"><link rel="prefetch" href="/assets/js/42.9f358bc3.js"><link rel="prefetch" href="/assets/js/43.4f19f41e.js"><link rel="prefetch" href="/assets/js/44.a27ad98a.js"><link rel="prefetch" href="/assets/js/45.fb26a2d8.js"><link rel="prefetch" href="/assets/js/46.aa66c6d7.js"><link rel="prefetch" href="/assets/js/47.00ae1556.js"><link rel="prefetch" href="/assets/js/48.699e8e33.js"><link rel="prefetch" href="/assets/js/49.0f79ef04.js"><link rel="prefetch" href="/assets/js/5.2d78753d.js"><link rel="prefetch" href="/assets/js/50.2428dcc2.js"><link rel="prefetch" href="/assets/js/51.829dcccc.js"><link rel="prefetch" href="/assets/js/52.f2dfda6b.js"><link rel="prefetch" href="/assets/js/53.225de2db.js"><link rel="prefetch" href="/assets/js/54.b91ed453.js"><link rel="prefetch" href="/assets/js/55.25bacde7.js"><link rel="prefetch" href="/assets/js/57.48eab866.js"><link rel="prefetch" href="/assets/js/58.5cf8ca6e.js"><link rel="prefetch" href="/assets/js/59.458178cc.js"><link rel="prefetch" href="/assets/js/6.66329e4b.js"><link rel="prefetch" href="/assets/js/60.7898b9b9.js"><link rel="prefetch" href="/assets/js/61.5f651468.js"><link rel="prefetch" href="/assets/js/62.cd190cb0.js"><link rel="prefetch" href="/assets/js/63.0d472232.js"><link rel="prefetch" href="/assets/js/64.e8a8ffe7.js"><link rel="prefetch" href="/assets/js/65.8a66ff7d.js"><link rel="prefetch" href="/assets/js/66.0492741b.js"><link rel="prefetch" href="/assets/js/67.204dadcb.js"><link rel="prefetch" href="/assets/js/68.7d5b0a8f.js"><link rel="prefetch" href="/assets/js/69.ed735059.js"><link rel="prefetch" href="/assets/js/7.44229983.js"><link rel="prefetch" href="/assets/js/70.0f643f0b.js"><link rel="prefetch" href="/assets/js/71.a226be62.js"><link rel="prefetch" href="/assets/js/8.51a4d2f9.js"><link rel="prefetch" href="/assets/js/9.ee30d1ab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5f689f29.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/log.png" alt="SuperEggs" class="logo"> <span class="site-name can-hide">SuperEggs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link router-link-active">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具软件" class="dropdown-title"><span class="title">工具软件</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具软件" class="mobile-dropdown-title"><span class="title">工具软件</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/windows.html" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/01brew.html" class="nav-link">
+  Brew
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/02yarn.html" class="nav-link">
+  Yarn
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/goland.html" class="nav-link">
+  Goland
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="go" class="dropdown-title"><span class="title">go</span> <span class="arrow down"></span></button> <button type="button" aria-label="go" class="mobile-dropdown-title"><span class="title">go</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Go/" class="nav-link">
+  go Wiki
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Practice/" class="nav-link">
+  go 实践
+</a></li><li class="dropdown-item"><!----> <a href="/Go_Packages/" class="nav-link">
+  go 包
+</a></li></ul></div></div><div class="nav-item"><a href="/Laravel/" class="nav-link">
+  Laravel
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发环境" class="dropdown-title"><span class="title">开发环境</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发环境" class="mobile-dropdown-title"><span class="title">开发环境</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Wamp/" class="nav-link router-link-active">
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Config.html" class="nav-link">
+  配置文件
+</a></li><li class="dropdown-item"><!----> <a href="/Linux/Tool.html" class="nav-link">
+  生产工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Code" class="dropdown-title"><span class="title">Code</span> <span class="arrow down"></span></button> <button type="button" aria-label="Code" class="mobile-dropdown-title"><span class="title">Code</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Css.html" class="nav-link">
+  Css样式收藏
+</a></li><li class="dropdown-subitem"><a href="/Code/Layui.html" class="nav-link">
+  Layui笔记
+</a></li><li class="dropdown-subitem"><a href="/Code/Javascript.html" class="nav-link">
+  Javascript手册
+</a></li><li class="dropdown-subitem"><a href="/Code/Menu.html" class="nav-link">
+  在线手册
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/Code/VueNote.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><h4>
+          Php
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Code/Php.html" class="nav-link">
+  Php使用技巧
+</a></li><li class="dropdown-subitem"><a href="/Code/Thinkphp.html" class="nav-link">
+  ThinkPhp
+</a></li><li class="dropdown-subitem"><a href="/Code/LaraCode.html" class="nav-link">
+  LaraCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/MyNote/" class="nav-link">
+  MyNote
+</a></div><div class="nav-item"><a href="/WebNote/" class="nav-link">
+  WebNote
+</a></div><div class="nav-item"><a href="/EMS/" class="nav-link">
+  EMS
+</a></div> <a href="https://github.com/super-eggs/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Wamp</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Wamp/Minikube.html" class="sidebar-link">minikube</a></li><li><a href="/Wamp/" aria-current="page" class="sidebar-link">Dockerfile</a></li><li><a href="/Wamp/deployer.html" class="sidebar-link">Deployer 部署工具</a></li><li><a href="/Wamp/docker.html" aria-current="page" class="active sidebar-link">Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Wamp/docker.html#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/Wamp/docker.html#macos-docker-安装" class="sidebar-link">MacOS Docker 安装</a></li><li class="sidebar-sub-header"><a href="/Wamp/docker.html#docker-镜像加速" class="sidebar-link">Docker 镜像加速</a></li><li class="sidebar-sub-header"><a href="/Wamp/docker.html#docker-常用命令" class="sidebar-link">Docker 常用命令</a></li></ul></li><li><a href="/Wamp/elasticsearch.html" class="sidebar-link">elasticsearch</a></li><li><a href="/Wamp/etcd.html" class="sidebar-link">etcd</a></li><li><a href="/Wamp/laradock.html" class="sidebar-link">LaraDock</a></li><li><a href="/Wamp/server_deployment.html" class="sidebar-link">使用一键脚本部署</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker"><a href="#docker" class="header-anchor">#</a> Docker</h1> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <h3 id="什么是-docker"><a href="#什么是-docker" class="header-anchor">#</a> 什么是 Docker</h3> <p><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 是一个开发、运输、运行应用程序的开放平台。</p> <p>Docker可以使你将应用程序和你的基础架构(设备)分离，因此你可以快速的交付你软件。</p> <p>使用Docker，你可以管理应用程序一样管理你的基础架构，通过使用Docker的methodologies来快速的传输、测试和部署代码，可以显著的缩短编写代码和生成环境中运行的代码之间的延迟。</p> <p>Docker 是一个开源的应用容器引擎，基于 <a href="https://www.runoob.com/go/go-tutorial.html" target="_blank" rel="noopener noreferrer">Go 语言<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 并遵从 Apache2.0 协议开源。</p> <p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p> <p>容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。</p> <h3 id="docker的应用场景"><a href="#docker的应用场景" class="header-anchor">#</a> Docker的应用场景</h3> <ul><li>Web 应用的自动化打包和发布。</li> <li>自动化测试和持续集成、发布。</li> <li>在服务型环境中部署和调整数据库或其他的后台应用。</li> <li>从头编译或者扩展现有的 OpenShift 或 Cloud Foundry 平台来搭建自己的 PaaS 环境。</li></ul> <h3 id="docker-的优点"><a href="#docker-的优点" class="header-anchor">#</a> Docker 的优点</h3> <p>Docker 是一个用于开发，交付和运行应用程序的开放平台。Docker 使您能够将应用程序与基础架构分开，从而可以快速交付软件。借助 Docker，您可以与管理应用程序相同的方式来管理基础架构。通过利用 Docker 的方法来快速交付，测试和部署代码，您可以大大减少编写代码和在生产环境中运行代码之间的延迟。</p> <h4 id="_1、快速-一致地交付您的应用程序"><a href="#_1、快速-一致地交付您的应用程序" class="header-anchor">#</a> 1、快速，一致地交付您的应用程序</h4> <p>Docker 允许开发人员使用您提供的应用程序或服务的本地容器在标准化环境中工作，从而简化了开发的生命周期。</p> <p>容器非常适合持续集成和持续交付（CI / CD）工作流程，请考虑以下示例方案：</p> <ul><li>您的开发人员在本地编写代码，并使用 Docker 容器与同事共享他们的工作。</li> <li>他们使用 Docker 将其应用程序推送到测试环境中，并执行自动或手动测试。</li> <li>当开发人员发现错误时，他们可以在开发环境中对其进行修复，然后将其重新部署到测试环境中，以进行测试和验证。</li> <li>测试完成后，将修补程序推送给生产环境，就像将更新的镜像推送到生产环境一样简单。</li></ul> <h4 id="_2、响应式部署和扩展"><a href="#_2、响应式部署和扩展" class="header-anchor">#</a> 2、响应式部署和扩展</h4> <p>Docker 是基于容器的平台，允许高度可移植的工作负载。Docker 容器可以在开发人员的本机上，数据中心的物理或虚拟机上，云服务上或混合环境中运行。</p> <p>Docker 的可移植性和轻量级的特性，还可以使您轻松地完成动态管理的工作负担，并根据业务需求指示，实时扩展或拆除应用程序和服务。</p> <h4 id="_3、在同一硬件上运行更多工作负载"><a href="#_3、在同一硬件上运行更多工作负载" class="header-anchor">#</a> 3、在同一硬件上运行更多工作负载</h4> <p>Docker 轻巧快速。它为基于虚拟机管理程序的虚拟机提供了可行、经济、高效的替代方案，因此您可以利用更多的计算能力来实现业务目标。Docker 非常适合于高密度环境以及中小型部署，而您可以用更少的资源做更多的事情。</p> <h2 id="macos-docker-安装"><a href="#macos-docker-安装" class="header-anchor">#</a> MacOS Docker 安装</h2> <h3 id="使用-homebrew-安装"><a href="#使用-homebrew-安装" class="header-anchor">#</a> 使用 Homebrew 安装</h3> <p>macOS 我们可以使用 Homebrew 来安装 Docker。</p> <p>Homebrew 的 Cask 已经支持 Docker for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ brew <span class="token function">install</span> --cask --appdir<span class="token operator">=</span>/Applications docker
+
+<span class="token operator">==</span><span class="token operator">&gt;</span> Creating Caskroom at /usr/local/Caskroom
+<span class="token operator">==</span><span class="token operator">&gt;</span> We<span class="token string">'ll set permissions properly so we won'</span>t need <span class="token function">sudo</span> <span class="token keyword">in</span> the future
+Password:          <span class="token comment"># 输入 macOS 密码</span>
+<span class="token operator">==</span><span class="token operator">&gt;</span> Satisfying dependencies
+<span class="token operator">==</span><span class="token operator">&gt;</span> Downloading https://download.docker.com/mac/stable/21090/Docker.dmg
+<span class="token comment">######################################################################## 100.0%</span>
+<span class="token operator">==</span><span class="token operator">&gt;</span> Verifying checksum <span class="token keyword">for</span> Cask docker
+<span class="token operator">==</span><span class="token operator">&gt;</span> Installing Cask docker
+<span class="token operator">==</span><span class="token operator">&gt;</span> Moving App <span class="token string">'Docker.app'</span> to <span class="token string">'/Applications/Docker.app'</span><span class="token builtin class-name">.</span>
+<span class="token operator">&amp;</span><span class="token comment">#x1f37a;  docker was successfully installed!</span>
+</code></pre></div><p>在载入 Docker app 后，点击 Next，可能会询问你的 macOS 登陆密码，你输入即可。之后会弹出一个 Docker 运行的提示窗口，状态栏上也有有个小鲸鱼的图标（<img src="https://www.runoob.com/wp-content/uploads/2018/01/1515480613-2248-whale-x.png" alt="img">）。</p> <h3 id="手动下载安装"><a href="#手动下载安装" class="header-anchor">#</a> 手动下载安装</h3> <p>如果需要手动下载，请点击以下链接下载 <a href="https://download.docker.com/mac/stable/Docker.dmg" target="_blank" rel="noopener noreferrer">Stable<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 或 <a href="https://download.docker.com/mac/edge/Docker.dmg" target="_blank" rel="noopener noreferrer">Edge<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 版本的 Docker for Mac。</p> <ol><li>如同 macOS 其它软件一样，安装也非常简单，双击下载的 .dmg 文件，然后将鲸鱼图标拖拽到 Application 文件夹即可。</li></ol> <p><img src="https://i.loli.net/2021/04/26/ew4hojkFPalbnq6.png" alt="Install Docker app"></p> <ol start="2"><li>在应用程序文件夹中双击以启动 Docker。（在下面的示例中，应用程序文件夹处于&quot;网格&quot;视图模式。<code>Docker.app</code></li></ol> <p><img src="https://i.loli.net/2021/04/26/IN1g6dHuDn5TSRl.png" alt="Docker app in Hockeyapp"></p> <p>顶部状态栏中的 Docker 菜单指示 Docker 桌面正在运行，并且从终端访问。<img src="/Users/guozhiyuan/Library/Application Support/typora-user-images/image-20210426141648089.png" alt="image-20210426141648089" style="zoom:50%;"></p> <p>如果您刚刚安装了该应用程序，Docker 桌面将启动入职教程。教程包括一个简单的练习，以建立一个示例Docker图像，运行它作为一个容器，推送和保存图像到Docker集线器。<img src="https://i.loli.net/2021/04/26/dtT1oE7rmSzfHV3.png" alt="Docker Quick Start tutorial"></p> <h2 id="docker-镜像加速"><a href="#docker-镜像加速" class="header-anchor">#</a> Docker 镜像加速</h2> <p>鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，我们可以需要配置加速器来解决。Docker 官方和国内很多云服务商都提供了国内加速器服务，例如：</p> <ul><li>科大镜像：<strong>https://docker.mirrors.ustc.edu.cn/</strong></li> <li>网易：<strong>https://hub-mirror.c.163.com/</strong></li> <li>阿里云：<strong>https://&lt;你的ID&gt;.mirror.aliyuncs.com</strong></li> <li>七牛云加速器：<strong>https://reg-mirror.qiniu.com</strong></li></ul> <p>当配置某一个加速器地址之后，若发现拉取不到镜像，请切换到另一个加速器地址。国内各大云服务商均提供了 Docker 镜像加速服务，建议根据运行 Docker 的云平台选择对应的镜像加速服务。</p> <p>阿里云镜像获取地址：https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors，登陆后，左侧菜单选中镜像加速器就可以看到你的专属地址了：</p> <img src="https://i.loli.net/2021/04/26/QgOBrFETulWbned.png" alt="image-20210426142322840" style="zoom:50%;"> <p>在任务栏点击 Docker Desktop 应用图标 -&gt; Perferences，在左侧导航菜单选择 Docker Engine，在右侧输入栏编辑 json 文件。将<code>https://&lt;你的ID&gt;.mirror.aliyuncs.com</code>加到&quot;<code>registry-mirrors</code>&quot;的数组里，点击 <code>Apply &amp; Restart</code>按钮，等待Docker重启并应用配置的镜像加速器。</p> <h2 id="docker-常用命令"><a href="#docker-常用命令" class="header-anchor">#</a> Docker 常用命令</h2> <h3 id="docker-ps-命令"><a href="#docker-ps-命令" class="header-anchor">#</a> Docker ps 命令</h3> <p><strong>ocker ps :</strong> 列出容器</p> <h4 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h4> <div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token function">ps</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span>
+</code></pre></div><p>OPTIONS说明：</p> <ul><li><code>-a</code> :显示所有的容器，包括未运行的。</li> <li><code>-f</code> :根据条件过滤显示的内容。</li> <li><code>--format</code> :指定返回值的模板文件。</li> <li><code>-l</code> :显示最近创建的容器。</li> <li><code>-n</code> :列出最近创建的n个容器。</li> <li><code>--no-trunc</code> :不截断输出。</li> <li><code>-q</code> :静默模式，只显示容器编号。</li> <li><code>-s</code> :显示总的文件大小。</li></ul> <h4 id="实例"><a href="#实例" class="header-anchor">#</a> 实例</h4> <p>列出所有在运行的容器信息。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>runoob@runoob:~$ docker <span class="token function">ps</span>
+CONTAINER ID   IMAGE          COMMAND                <span class="token punctuation">..</span>.  PORTS                    NAMES
+09b93464c2f7   nginx:latest   <span class="token string">&quot;nginx -g 'daemon off&quot;</span> <span class="token punctuation">..</span>.  <span class="token number">80</span>/tcp, <span class="token number">443</span>/tcp          myrunoob
+96f7f14e99ab   mysql:5.6      <span class="token string">&quot;docker-entrypoint.sh&quot;</span> <span class="token punctuation">..</span>.  <span class="token number">0.0</span>.0.0:3306-<span class="token operator">&gt;</span><span class="token number">3306</span>/tcp   mymysql
+</code></pre></div><p>输出详情介绍：</p> <p><strong>CONTAINER ID:</strong> 容器 ID。</p> <p><strong>IMAGE:</strong> 使用的镜像。</p> <p><strong>COMMAND:</strong> 启动容器时运行的命令。</p> <p><strong>CREATED:</strong> 容器的创建时间。</p> <p><strong>STATUS:</strong> 容器状态。</p> <p>状态有7种：</p> <ul><li>created（已创建）</li> <li>restarting（重启中）</li> <li>running（运行中）</li> <li>removing（迁移中）</li> <li>paused（暂停）</li> <li>exited（停止）</li> <li>dead（死亡）</li></ul> <p><strong>PORTS:</strong> 容器的端口信息和使用的连接类型（tcp\udp）。</p> <p><strong>NAMES:</strong> 自动分配的容器名称。</p> <p>列出最近创建的5个容器信息。</p> <div class="language- extra-class"><pre class="language-text"><code>runoob@runoob:~$ docker ps -n 5
+CONTAINER ID        IMAGE               COMMAND                   CREATED           
+09b93464c2f7        nginx:latest        &quot;nginx -g 'daemon off&quot;    2 days ago   ...     
+b8573233d675        nginx:latest        &quot;/bin/bash&quot;               2 days ago   ...     
+b1a0703e41e7        nginx:latest        &quot;nginx -g 'daemon off&quot;    2 days ago   ...    
+f46fb1dec520        5c6e1090e771        &quot;/bin/sh -c 'set -x \t&quot;   2 days ago   ...   
+a63b4a5597de        860c279d2fec        &quot;bash&quot;                    2 days ago   ...
+</code></pre></div><p>列出所有创建的容器ID。</p> <div class="language- extra-class"><pre class="language-text"><code>runoob@runoob:~$ docker ps -a -q
+09b93464c2f7
+b8573233d675
+b1a0703e41e7
+f46fb1dec520
+a63b4a5597de
+6a4aa42e947b
+de7bb36e7968
+43a432b73776
+664a8ab1a585
+ba52eb632bbd
+...
+</code></pre></div><p><strong>根据条件过滤显示的内容</strong></p> <p>根据标签过滤</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker run -d --name=test-nginx --label color=blue nginx
+$ docker ps --filter &quot;label=color&quot;
+$ docker ps --filter &quot;label=color=blue&quot;
+</code></pre></div><p>根据名称过滤</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker ps --filter&quot;name=test-nginx&quot;
+</code></pre></div><p>根据状态过滤</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker ps -a --filter 'exited=0'
+$ docker ps --filter status=running
+$ docker ps --filter status=paused
+</code></pre></div><p>根据镜像过滤</p> <div class="language- extra-class"><pre class="language-text"><code>#镜像名称
+$ docker ps --filter ancestor=nginx
+
+#镜像ID
+$ docker ps --filter ancestor=d0e008c6cf02
+</code></pre></div><p>根据启动顺序过滤</p> <div class="language- extra-class"><pre class="language-text"><code>$ docker ps -f before=9c3527ed70ce
+$ docker ps -f since=6e63f6ff38b0
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/super-eggs/vuepress-blog/edit/master/docs/Wamp/docker.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Wamp/deployer.html" class="prev">
+        Deployer 部署工具
+      </a></span> <span class="next"><a href="/Wamp/elasticsearch.html">
+        elasticsearch
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div class="reading-progress top" data-v-21b39eda><div class="progress" data-v-21b39eda></div></div></div></div>
+    <script src="/assets/js/app.693e6c19.js" defer></script><script src="/assets/js/2.3304c2e1.js" defer></script><script src="/assets/js/56.2a58cece.js" defer></script>
+  </body>
+</html>
